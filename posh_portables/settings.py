@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,7 +26,7 @@ SECRET_KEY = 'django-insecure-oxq=7fe4*_%wmyyw!ph&wbeutgb=9k-=+s6+8&$a3l8#8at$o*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-pecheylaure-mp5poshport-futze2h2pn3.ws-us106.gitpod.io']
+ALLOWED_HOSTS = ['8000-pecheylaure-mp5poshport-xt9xerlm3wd.ws-eu106.gitpod.io']
 
 
 # Application definition
@@ -37,6 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites', #creates the proper callback urls when creating user
+    'allauth',
+    'allauth.account', #login, user registration
+    'allauth.socialaccount', #handles login via Google and social media accounts
 ]
 
 MIDDLEWARE = [
@@ -60,12 +65,22 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
+                'django.contrib.auth.context_processors.auth', # required by allauth, do not remove, see notes in google docs
                 'django.contrib.messages.context_processors.messages',
             ],
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by email
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SITE_ID = 1
 
 WSGI_APPLICATION = 'posh_portables.wsgi.application'
 
