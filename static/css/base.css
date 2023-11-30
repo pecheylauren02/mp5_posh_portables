@@ -58,6 +58,11 @@ body {
     border: 1px solid black !important;
 }
 
+/* background of free delivery banner */
+.bg-black {
+    background: #000 !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
