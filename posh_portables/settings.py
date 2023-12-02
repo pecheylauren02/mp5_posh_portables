@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'allauth.account', #login, user registration
     'allauth.socialaccount', #handles login via Google and social media accounts
     'home',
+    'products',
 ]
 
 MIDDLEWARE = [
