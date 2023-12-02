@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/home_background_two.jpg') no-repeat center center fixed;
+    background: url('/media/home_cover.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
@@ -30,8 +30,8 @@ body {
 /* All buttons */
 
 .shop-now-button {
-    background: black;
-    color: white;
+    background: #000;
+    color: #fff;
     min-width: 260px;
 }
 
@@ -61,6 +61,17 @@ body {
 /* background of free delivery banner */
 .bg-black {
     background: #000 !important;
+}
+
+/* For the background of white image of the products */
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: #fff;
+    z-index: -1;
 }
 
 /* -------------------------------- Media Queries */
