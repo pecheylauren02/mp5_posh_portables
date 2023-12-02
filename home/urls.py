@@ -1,4 +1,4 @@
-from django.contrib import admin
+# from django.contrib import admin DELETE IF NOT USED
 from django.urls import path
 from . import views
 
