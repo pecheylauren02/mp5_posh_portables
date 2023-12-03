@@ -17,10 +17,10 @@
                 Gaming Accessories
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Laptops & Monitors</a>
-                <a href="" class="dropdown-item">Speakers and Head Gear</a>
-                <a href="" class="dropdown-item">Keyboards</a>
-                <a href="{% url 'products' %}" class="dropdown-item">All Gaming Accessories</a>
+                <a href="{% url 'products' %}?category=laptops_and_monitors" class="dropdown-item">Laptops & Monitors</a>
+                <a href="{% url 'products' %}?category=speakers_and_headgear" class="dropdown-item">Speakers and Head Gear</a>
+                <a href="{% url 'products' %}?category=keyboards" class="dropdown-item">Keyboards</a>
+                <a href="{% url 'products' %}?category=laptops_and_monitors,speakers_and_headgear,keyboards" class="dropdown-item">All Gaming Accessories</a>
             </div>
         </li>
 
@@ -40,10 +40,10 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=twenty_five_off" class="dropdown-item">25% off</a>
+                <a href="{% url 'products' %}?category=package_deals" class="dropdown-item">Package Deals</a>
+                <!-- <a href="" class="dropdown-item">Clearance</a> -->
+                <a href="{% url 'products' %}?category=twenty_five_off,package_deals" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
