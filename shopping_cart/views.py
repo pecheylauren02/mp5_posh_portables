@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 # Create your views here.
 
 def view_shopping_cart(request):
-    """ A view that renders the bag contents page """
+    """ A view that renders the shopping cart contents page """
 
     return render(request, 'shopping_cart/shopping_cart.html')
 
@@ -22,5 +22,4 @@ def add_to_shopping_cart(request, item_id):
         shopping_cart[item_id] = quantity
 
     request.session['shopping_cart'] = shopping_cart
-    print(request.session['shopping_cart'])
     return redirect(redirect_url)
