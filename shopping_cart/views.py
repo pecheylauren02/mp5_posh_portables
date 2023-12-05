@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, HttpResponse
 
 # Create your views here.
 
@@ -29,7 +29,21 @@ def adjust_shopping_cart(request, item_id):
     if quantity > 0:
         shopping_cart[item_id] = quantity
     else:
-        shopping_cart.pop[item_id]
+        shopping_cart.pop(item_id)
 
     request.session['shopping_cart'] = shopping_cart
     return redirect(reverse('view_shopping_cart'))
+
+def remove_from_shopping_cart(request, item_id):
+    """ Remove the item from the shopping cart """
+    try:
+        shopping_cart = request.session.get('shopping_cart', {})
+        shopping_cart.pop(item_id, None)
+        request.session['shopping_cart'] = shopping_cart
+        return HttpResponse(status=200)
+    except KeyError:
+        return HttpResponse(status=404)
+    except Exception as e:
+        print(f"Error: {e}")
+        return HttpResponse(status=500)
+

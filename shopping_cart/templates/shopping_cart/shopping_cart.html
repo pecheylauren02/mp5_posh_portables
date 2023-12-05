@@ -76,7 +76,7 @@
                         </form>
                         <!-- To update or delete products from the shopping cart -->
                         <a class="update-link text-info"><small>Update</small></a>
-                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Delete</small></a>
+                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                         </a>
 
 
@@ -145,16 +145,17 @@
 
     // Remove item and reload on click
     $('.remove-item').click(function(e) {
+        e.preventDefault();  // Prevent the default link behavior
         var csrfToken = "{{ csrf_token }}";
         var itemId = $(this).attr('id').split('remove_')[1];
-        var url = `/shopping_cart/remove/${itemId}`;
+        var url = `/shopping_cart/remove/${itemId}/`;
         var data = {'csrfmiddlewaretoken': csrfToken};
 
         $.post(url, data)
         .done(function() {
             location.reload();
         });
-    })
+    });
 
 
 </script>
