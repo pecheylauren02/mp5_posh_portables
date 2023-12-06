@@ -82,7 +82,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth', # required by allauth, do not remove, see notes in google docs
                 'django.contrib.messages.context_processors.messages',
-                'shopping_cart.contexts.shopping_cart_contents'
+                'django.template.context_processors.media',
+                'shopping_cart.contexts.shopping_cart_contents',
             ],
             # Contains all tags we want available throughout
             'builtins': [
