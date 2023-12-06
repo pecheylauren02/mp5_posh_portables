@@ -32,20 +32,26 @@ ALLOWED_HOSTS = ['8000-pecheylaure-mp5poshport-xt9xerlm3wd.ws-eu106.gitpod.io']
 # Application definition
 
 INSTALLED_APPS = [
+    # Django builtin and allauth apps
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.sites', #creates the proper callback urls when creating user
+    'django.contrib.sites', 
     'allauth',
-    'allauth.account', #login, user registration
-    'allauth.socialaccount', #handles login via Google and social media accounts
+    'allauth.account',
+    'allauth.socialaccount', 
+    
+    # Posh Portable project apps
     'home',
     'products',
     'shopping_cart',
     'checkout',
+
+    # Other apps
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -59,6 +65,8 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'posh_portables.urls'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TEMPLATES = [
     {
@@ -76,6 +84,11 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'shopping_cart.contexts.shopping_cart_contents'
             ],
+            # Contains all tags we want available throughout
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
