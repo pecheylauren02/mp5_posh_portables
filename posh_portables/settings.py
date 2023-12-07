@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-pecheylaure-mp5poshport-xt9xerlm3wd.ws-eu106.gitpod.io', 'posh-portables.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['8000-pecheylaure-mp5poshport-xt9xerlm3wd.ws-eu106.gitpod.io', 'posh-portables.herokuapp.com', 'localhost', 'posh-portables-6801c9648247.herokuapp.com',]
 
 
 # Application definition
