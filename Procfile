@@ -1,1 +1,1 @@
-web: gunicorn posh_portables.wsgi: application
+web: gunicorn posh_portables.wsgi:application
