@@ -33,6 +33,26 @@ class Stripe_Webhook_Handler:
         shipping_details = intent.shipping
         grand_total = round(stripe_charge.amount / 100, 2) # updated
 
+        # Cleans the data in the shipping details
+        for field, value in shipping_details.address.items():
+            if value == "":
+                shipping_details.address[field] = None
+        
+        order_exists = False
+        order = Order.objects.get(
+            first_name_iexact=shipping_details.name,
+            email_iexact=shipping_details.email,
+            phone_iexact=shipping_details.phone,
+            country_iexact=shipping_details.country,
+            postcode_iexact=shipping_details.postal_code,
+            city_iexact=shipping_details.city,
+            street_address1_iexact=shipping_details.line1,
+            street_address2_iexact=shipping_details.line2,
+            state_iexact=shipping_details.state,
+            grand_total=grand_total,
+        )
+
+
 
     def handle_payment_intent_payment_failed(self, event):
         """
