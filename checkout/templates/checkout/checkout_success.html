@@ -59,6 +59,24 @@
                     </div>
                 </div>
 
+                <!-- Check that this works -->
+                {% for item in order.lineitems.all %}
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="small mb-0 text-black font-weight-bold">
+                            {{ item.product.name }}
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="small mb-0">
+                            {{ item.quantity }} @ ${{ item.product.price }} each
+                        </p>
+                    </div>
+                </div>
+                {% endfor %}
+
+
+
                 <div class="row">
                     <div class="col">
                         <small class="text-muted">Delivering To:</small>
