@@ -81,6 +81,29 @@ class Stripe_Webhook_Handler:
                 stripe_pid=pid,
             )
 
+            for item_id, item_data in json.loads(shopping_cart).items():
+                product = Product.objects.get(id=item_id)
+
+                if isinstance(item_data, int):
+                    # Product without sizes
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        product=product,
+                        quantity=item_data,
+                    )
+                    order_line_item.save()
+                else:
+                    # Handle cases where products might have additional details (e.g., color, etc.)
+                    # Adjust the code based on your specific data structure and requirements.
+                    order_line_item = OrderLineItem(
+                        order=order,
+                        product=product,
+                        quantity=item_data.get('quantity', 1),  # Assuming a default quantity if not specified
+                        # Add more fields as needed based on your product model
+                    )
+                    order_line_item.save()
+
+
 
 
     def handle_payment_intent_payment_failed(self, event):
