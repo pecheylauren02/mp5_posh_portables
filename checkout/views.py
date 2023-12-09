@@ -4,8 +4,8 @@ from django.conf import settings
 
 # For the order form
 from .forms import OrderForm
-from .models import OrderLineItem
-from products.model import Product
+from .models import Order, OrderLineItem
+from products.models import Product
 from shopping_cart.contexts import shopping_cart_contents
 
 import stripe 
