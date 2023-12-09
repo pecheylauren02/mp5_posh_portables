@@ -1,5 +1,9 @@
 from django.http import HttpResponse
+from .models import Order, OrderLineItem
+from products.models import Product
 
+import json
+import time
 
 class Stripe_Webhook_Handler:
     """Handle Stripe webhooks"""
@@ -39,76 +43,79 @@ class Stripe_Webhook_Handler:
                 shipping_details.address[field] = None
         
         order_exists = False
-        try:
-            order = Order.objects.get(
-                first_name_iexact=shipping_details.name,
-                email_iexact=shipping_details.email,
-                phone_iexact=shipping_details.phone,
-                country_iexact=shipping_details.country,
-                postcode_iexact=shipping_details.postal_code,
-                city_iexact=shipping_details.city,
-                street_address1_iexact=shipping_details.line1,
-                street_address2_iexact=shipping_details.line2,
-                state_iexact=shipping_details.state,
-                grand_total=grand_total,
-            )
+        attempt = 1
+        while attempt <= 5:
+            try:
+                order = Order.objects.get(
+                    first_name_iexact=shipping_details.name,
+                    email_iexact=shipping_details.email,
+                    phone_iexact=shipping_details.phone,
+                    country_iexact=shipping_details.country,
+                    postcode_iexact=shipping_details.postal_code,
+                    city_iexact=shipping_details.city,
+                    street_address1_iexact=shipping_details.line1,
+                    street_address2_iexact=shipping_details.line2,
+                    state_iexact=shipping_details.state,
+                    grand_total=grand_total,
+                    original_shopping_cart=shopping_cart,
+                    stripe_pid=pid,
+                )
 
-            order_exists = True
-            break
-        except Order.DoesNotExist:
+                order_exists = True
+                break
+            except Order.DoesNotExist:
                 attempt += 1
                 time.sleep(1)
 
-    if order_exists:
-        return HttpResponse(
-            content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
-            status=200)
+        if order_exists:
+            return HttpResponse(
+                content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+                status=200)
 
-    else:
-        order = None
-        try:
-            order = Order.objects.create(
-                first_name=shipping_details.name,
-                email=billing_details.email,
-                phone=shipping_details.phone,
-                country=shipping_details.address.country,
-                postcode=shipping_details.address.postal_code,
-                city=shipping_details.address.city,
-                street_address1=shipping_details.address.line1,
-                street_address2=shipping_details.address.line2,
-                county=shipping_details.address.state,
-                original_shopping_cart=shopping_cart,
-                stripe_pid=pid,
-            )
+        else:
+            order = None
+            try:
+                order = Order.objects.create(
+                    first_name=shipping_details.name,
+                    email=billing_details.email,
+                    phone=shipping_details.phone,
+                    country=shipping_details.address.country,
+                    postcode=shipping_details.address.postal_code,
+                    city=shipping_details.address.city,
+                    street_address1=shipping_details.address.line1,
+                    street_address2=shipping_details.address.line2,
+                    county=shipping_details.address.state,
+                    original_shopping_cart=shopping_cart,
+                    stripe_pid=pid,
+                )
 
-            for item_id, item_data in json.loads(shopping_cart).items():
-                product = Product.objects.get(id=item_id)
+                for item_id, item_data in json.loads(shopping_cart).items():
+                    product = Product.objects.get(id=item_id)
+                    if isinstance(item_data, int):
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            product=product,
+                            quantity=item_data,
+                        )
+                        order_line_item.save()
+                    else:
+                        # Handle cases where products might have additional details (e.g., color, etc.)
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            product=product,
+                            quantity=item_data.get('quantity', 1),  # Assuming a default quantity if not specified
+                            # Add more fields as needed based on your product model
+                        )
+                        order_line_item.save()
 
-                if isinstance(item_data, int):
-                    order_line_item = OrderLineItem(
-                        order=order,
-                        product=product,
-                        quantity=item_data,
-                    )
-                    order_line_item.save()
-                else:
-                    # Handle cases where products might have additional details (e.g., color, etc.)
-                    order_line_item = OrderLineItem(
-                        order=order,
-                        product=product,
-                        quantity=item_data.get('quantity', 1),  # Assuming a default quantity if not specified
-                        # Add more fields as needed based on your product model
-                    )
-                    order_line_item.save()
-
-        except Exception as e:
+            except Exception as e:
                 if order:
                     order.delete()
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
 
-    return HttpResponse(
+        return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
             status=200)
 
