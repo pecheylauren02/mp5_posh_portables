@@ -39,18 +39,33 @@ class Stripe_Webhook_Handler:
                 shipping_details.address[field] = None
         
         order_exists = False
-        order = Order.objects.get(
-            first_name_iexact=shipping_details.name,
-            email_iexact=shipping_details.email,
-            phone_iexact=shipping_details.phone,
-            country_iexact=shipping_details.country,
-            postcode_iexact=shipping_details.postal_code,
-            city_iexact=shipping_details.city,
-            street_address1_iexact=shipping_details.line1,
-            street_address2_iexact=shipping_details.line2,
-            state_iexact=shipping_details.state,
-            grand_total=grand_total,
-        )
+        try:
+            order = Order.objects.get(
+                first_name_iexact=shipping_details.name,
+                email_iexact=shipping_details.email,
+                phone_iexact=shipping_details.phone,
+                country_iexact=shipping_details.country,
+                postcode_iexact=shipping_details.postal_code,
+                city_iexact=shipping_details.city,
+                street_address1_iexact=shipping_details.line1,
+                street_address2_iexact=shipping_details.line2,
+                state_iexact=shipping_details.state,
+                grand_total=grand_total,
+            )
+
+            order_exists = True
+            break
+        except Order.DoesNotExist:
+                attempt += 1
+                time.sleep(1)
+
+    if order_exists:
+        return HttpResponse(
+            content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
+            status=200)
+
+        except Order.DoesNotExist:
+
 
 
 
