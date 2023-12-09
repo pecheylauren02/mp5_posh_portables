@@ -58,3 +58,15 @@ def webhook(request):
 
     print('Successful!')
     return HttpResponse(status=200)
+
+    # Setup a webhook handler
+    handler = Stripe_Webhook_Handler(request)
+
+    # Map webhook events to relevant handler functions
+    event_map = {
+        'payment_intent.succeeded': handler.handle_payment_intent_succeeded,
+        'payment_intent.payment_failed': handler.handle_payment_intent_payment_failed,
+    }
+
+    # Get the webhook type from Stripe
+    event_type = event['type']
