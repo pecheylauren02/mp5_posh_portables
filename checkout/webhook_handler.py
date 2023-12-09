@@ -64,8 +64,22 @@ class Stripe_Webhook_Handler:
             content=f'Webhook received: {event["type"]} | SUCCESS: Verified order already in database',
             status=200)
 
-        except Order.DoesNotExist:
-
+    else:
+        order = None
+        try:
+            order = Order.objects.create(
+                first_name=shipping_details.name,
+                email=billing_details.email,
+                phone=shipping_details.phone,
+                country=shipping_details.address.country,
+                postcode=shipping_details.address.postal_code,
+                city=shipping_details.address.city,
+                street_address1=shipping_details.address.line1,
+                street_address2=shipping_details.address.line2,
+                county=shipping_details.address.state,
+                original_shopping_cart=shopping_cart,
+                stripe_pid=pid,
+            )
 
 
 
