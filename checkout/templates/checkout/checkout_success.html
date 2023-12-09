@@ -59,7 +59,6 @@
                     </div>
                 </div>
 
-                <!-- Check that this works -->
                 {% for item in order.lineitems.all %}
                 <div class="row">
                     <div class="col-12 col-md-4">
@@ -80,7 +79,7 @@
                         <small class="text-muted">Delivering To:</small>
                     </div>
                 </div>
-
+                <!-- Customer name -->
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 text-black font-weight-bold">First Name</p>
@@ -89,7 +88,6 @@
                         <p class="mb-0">{{ order.first_name }}</p>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 text-black font-weight-bold">Last Name</p>
@@ -98,7 +96,7 @@
                         <p class="mb-0">{{ order.last_name }}</p>
                     </div>
                 </div>
-
+                <!-- Address information -->
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 text-black font-weight-bold">Address 1</p>
@@ -158,7 +156,7 @@
                         <p class="mb-0">{{ order.country }}</p>
                     </div>
                 </div>
-
+                <!-- Contact details -->
                 <div class="row">
                     <div class="col-12 col-md-4">
                         <p class="mb-0 text-black font-weight-bold">Phone</p>
@@ -168,10 +166,37 @@
                     </div>
                 </div>
 
-
+                <!-- Payment information -->
                 <div class="row">
                     <div class="col">
                         <small class="text-muted">Payment Information:</small>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Total of Your Order(s):</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ order.order_total }}</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Delivery Fees:</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ order.delivery_cost }}</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <p class="mb-0 text-black font-weight-bold">Grand Total</p>
+                    </div>
+                    <div class="col-12 col-md-8 text-md-right">
+                        <p class="mb-0">{{ order.grand_total }}</p>
                     </div>
                 </div>
             </div>
@@ -185,7 +210,7 @@
                 <span class="icon mr-2">
                     <i class="fas fa-gifts"></i>
                 </span>
-                <span class="text-uppercase">Now check out the latest deals!</span>
+                <span class="text-uppercase">Now check out the latest promotions on offer!</span>
             </a>
         </div>
     </div>
