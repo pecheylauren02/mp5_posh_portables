@@ -85,7 +85,6 @@ class Stripe_Webhook_Handler:
                 product = Product.objects.get(id=item_id)
 
                 if isinstance(item_data, int):
-                    # Product without sizes
                     order_line_item = OrderLineItem(
                         order=order,
                         product=product,
@@ -94,7 +93,6 @@ class Stripe_Webhook_Handler:
                     order_line_item.save()
                 else:
                     # Handle cases where products might have additional details (e.g., color, etc.)
-                    # Adjust the code based on your specific data structure and requirements.
                     order_line_item = OrderLineItem(
                         order=order,
                         product=product,
@@ -103,8 +101,16 @@ class Stripe_Webhook_Handler:
                     )
                     order_line_item.save()
 
+        except Exception as e:
+                if order:
+                    order.delete()
+                return HttpResponse(
+                    content=f'Webhook received: {event["type"]} | ERROR: {e}',
+                    status=500)
 
-
+    return HttpResponse(
+            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
+            status=200)
 
     def handle_payment_intent_payment_failed(self, event):
         """
