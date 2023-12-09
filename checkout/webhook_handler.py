@@ -2,32 +2,33 @@ from django.http import HttpResponse
 
 
 class Stripe_Webhook_Handler:
-    """ Handles Stripe Webhooks """
+    """Handle Stripe webhooks"""
 
     def __init__(self, request):
         self.request = request
 
     def handle_event(self, event):
-        """ 
-        Handles generic, unknown or unexpected webhook events 
         """
-
+        Handle a generic/unknown/unexpected webhook event
+        """
         return HttpResponse(
-            content=f'Your Webhook has been received: {event["type"]}',
+            content=f'Unhandled webhook received: {event["type"]}',
             status=200)
 
     def handle_payment_intent_succeeded(self, event):
         """
-        Handles successful payment intent webhooks from Stripe
+        Handle the payment_intent.succeeded webhook from Stripe
         """
+        intent = event.data.object
+        print(intent)
         return HttpResponse(
-            content=f'Your Webhook has been received: {event["type"]}',
+            content=f'Webhook received: {event["type"]}',
             status=200)
 
     def handle_payment_intent_payment_failed(self, event):
         """
-        Handles failed payment intent webhooks from Stripe
+        Handle the payment_intent.payment_failed webhook from Stripe
         """
         return HttpResponse(
-            content=f'Your Webhook has been received: {event["type"]}',
+            content=f'Webhook received: {event["type"]}',
             status=200)

@@ -14,12 +14,9 @@ import json
 
 @require_POST
 def cache_checkout_data(request):
-    """
-    Handles all cache checkout data
-    """
     try:
-        pid = request.POST.get('client_secret').split('secret')[0]
-        stripe.api.key = settings.STRIPE_SECRET_KEY
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
             'shopping_cart': json.dumps(request.session.get('shopping_cart', {})),
             'save_info': request.POST.get('save_info'),
