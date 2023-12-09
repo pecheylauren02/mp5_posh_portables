@@ -55,6 +55,8 @@ form.addEventListener('submit', function(ev) {
     $('#payment-form').fadeToggle(100);
     $('#loading-overlay').fadeToggle(100);
 
+    var saveInfo = Boolean($('#id-save-info').attr('checked'));
+
     stripe.confirmCardPayment(clientSecret, {
         payment_method: {
             card: card,
