@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
                 ('last_name', models.CharField(max_length=50)),
                 ('email', models.EmailField(max_length=254)),
                 ('phone', models.CharField(max_length=20)),
-                ('country', models.CharField(max_length=40)),
+                ('country', models.CharField(max_length=255)),
                 ('postcode', models.CharField(blank=True, max_length=20, null=True)),
                 ('city', models.CharField(max_length=40)),
                 ('street_address1', models.CharField(max_length=80)),
