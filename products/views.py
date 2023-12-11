@@ -78,7 +78,17 @@ def add_product(request):
     """ 
     A view that allows store owners to add products to the store
     """
-    form = ProductForm()
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'You have successfully added your product!')
+            return redirect(reverse('add_product'))
+        else:
+            messages.error(request, 'Failed to add product. Please ensure you have filled out the form correctly.')
+    else:
+        form = ProductForm()
+    
     template = 'products/add_product.html'
     context = {
         'form': form,
