@@ -647,7 +647,6 @@ A strong authentication system is vital to an e-commerce site, allowing users to
 - On successful form submission users will receive a verification email in which they must click a link to verify their email in order to sign in to their account, visiting a couple of additional pages in the process (both of which have been styled with the bespoke site styling). This provides additional security and makes sure that user emails are correct.
 - Once verified users can sign in using the Sign In form with their new details.
 
-
 **Value to User**
 
 Setting up an account allows users to access benefits such as storing their information & order history for future use & creating reviews. The verification and security provided by allauth makes this a secure process for users which improves their user experience and trust in the site.
@@ -759,6 +758,23 @@ This creates a positive user experience when taking an action that results in an
 
 </details>
 
+- - -
+
+### Future Features
+
+There are a number of features I would like to implement in the future, particularly if I were adapting this in to a real live site for an online shop as there is some functionality I feel it would really benefit from.
+
+#### Admin Messaging System
+I would like to build a messaging system, giving the site admins the ability to reply directly from the site, to be able to view the historic chain of communication, to have multiple statuses for messages e.g. in-process, and to connect messaging to the user so that users could also reply from within the site rather than via email. I would also like to add notifications to both admins and users when they receive a message, with an icon appearing in the navbar to alert them.
+
+#### Order Tracking
+I feel that an e-commerce site would also benefit from an order-tracking system which notifies admins when an order is placed and then can be tracked from within the site management area, with its status changing depending on what stage the order is at e.g. 'out for delivery' 'cancelled' etc.
+
+#### Stock Control
+I also think some sort of stock control would be useful for an e-commerce site, with products having stock supply levels and logic to hide items that are out of stock as well as notify admins when things need to be re-supplied. This would also need to be integrated with any physical shop that the owners might have and so would be a significant project.
+
+- - -
+[Go to Top](#posh-portables---a-gaming-accessories-e-commerce-site)
 - - -
 
 ## Technologies Used
