@@ -39,7 +39,7 @@
                 {% for item in shopping_cart_items %}
                     <div class="row">
                         <div class="col-2 mb-1">
-                            <a href="{% url 'product_detail' item.product.id %}">
+                            <a href="{% url 'product_detail' item.product.id %}" aria-label="Product Details page">
                                 {% if item.product.image %}
                                     <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                                 {% else %}
@@ -49,7 +49,6 @@
                         </div>
                         <div class="col-7">
                             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
-                            <p class="my-0 small">Size: {% if item.product.has_sizes %}{{ item.size|upper }}{% else %}N/A{% endif %}</p>
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
                         <div class="col-3 text-right">
@@ -96,8 +95,8 @@
                                 <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
 							{% else %}
 								<label class="form-check-label" for="id-save-info">
-                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                                    <a class="text-info" href="{% url 'account_signup' %}" aria-label="Accounts Signup page">Create an account</a> or 
+                                    <a class="text-info" href="{% url 'account_login' %}" aria-label="Accounts Login page">login</a> to save this information
                                 </label>
 							{% endif %}
 						</div>
@@ -113,7 +112,7 @@
                     </fieldset>
 
                     <div class="submit-button text-right mt-5 mb-2">                    
-						<a href="{% url 'view_shopping_cart' %}" class="btn btn-outline-black rounded">
+						<a href="{% url 'view_shopping_cart' %}" class="btn btn-outline-black rounded" aria-label="Shopping Cart Page">
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>
