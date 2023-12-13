@@ -6,7 +6,7 @@ from django.http import HttpResponse
 
 from django.contrib.auth.models import User
 from .models import Reviews
-from .forms import ReviewForm
+from .forms import CustomReviewForm
 from products.models import Product
 
 
