@@ -39,7 +39,7 @@
                 {% for item in shopping_cart_items %}
                     <div class="row">
                         <div class="col-2 mb-1">
-                            <a href="{% url 'product_detail' item.product.id %}" aria-label="Product Details page">
+                            <a href="{% url 'product_detail' item.product.id %}" aria-label="Product Details page" rel="noopener noreferrer">
                                 {% if item.product.image %}
                                     <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
                                 {% else %}
@@ -112,7 +112,7 @@
                     </fieldset>
 
                     <div class="submit-button text-right mt-5 mb-2">                    
-						<a href="{% url 'view_shopping_cart' %}" class="btn btn-outline-black rounded" aria-label="Shopping Cart Page">
+						<a href="{% url 'view_shopping_cart' %}" class="btn btn-outline-black rounded" aria-label="Shopping Cart Page" rel="noopener noreferrer">
 							<span class="icon">
 								<i class="fas fa-chevron-left"></i>
 							</span>

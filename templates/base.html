@@ -55,7 +55,7 @@
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link" aria-label="Home Page link">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link" aria-label="Home Page link" rel="noopener noreferrer">
                     <h1 class="logo-font text-black my-0"><i class="fas fa-gamepad"></i> <strong>Posh</strong> Portables
                     </h1>
                 </a>
@@ -89,16 +89,16 @@
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                             <a href="{% url 'add_product' %}" class="dropdown-item"
-                                aria-label="Manage my products link">Manage My Products</a>
+                                aria-label="Manage my products link" rel="noopener noreferrer">Manage My Products</a>
                             {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item" aria-label="My Profile link">My
+                            <a href="{% url 'profile' %}" class="dropdown-item" aria-label="My Profile link" rel="noopener noreferrer">My
                                 Profile</a>
                             <a href="{% url 'account_logout' %}" class="dropdown-item"
-                                aria-label="Logout link">Logout</a>
+                                aria-label="Logout link" rel="noopener noreferrer">Logout</a>
                             {% else %}
                             <a href="{% url 'account_signup' %}" class="dropdown-item"
-                                aria-label="Register link">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="Login link">Login</a>
+                                aria-label="Register link" rel="noopener noreferrer">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="Login link" rel="noopener noreferrer">Login</a>
                             {% endif %}
                         </div>
                     </li>

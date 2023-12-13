@@ -23,11 +23,11 @@
       <strong>Menu:</strong>
       <ul>
         {% if user.is_authenticated %}
-        <li><a href="{% url 'account_email' %}" aria-label="Change Email link">Change E-mail</a></li>
-        <li><a href="{% url 'account_logout' %}" aria-label="Sign Out link">Sign Out</a></li>
+        <li><a href="{% url 'account_email' %}" aria-label="Change Email link" rel="noopener noreferrer">Change E-mail</a></li>
+        <li><a href="{% url 'account_logout' %}" aria-label="Sign Out link" rel="noopener noreferrer">Sign Out</a></li>
         {% else %}
-        <li><a href="{% url 'account_login' %}" aria-label="Sign In link">Sign In</a></li>
-        <li><a href="{% url 'account_signup' %}" aria-label="Sign Up link">Sign Up</a></li>
+        <li><a href="{% url 'account_login' %}" aria-label="Sign In link" rel="noopener noreferrer">Sign In</a></li>
+        <li><a href="{% url 'account_signup' %}" aria-label="Sign Up link" rel="noopener noreferrer">Sign Up</a></li>
         {% endif %}
       </ul>
     </div>

@@ -16,11 +16,11 @@
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
                 {% if product.image %}
-                <a href="{{ product.image.url }}" target="_blank" rel="noopener noreferrer" aria-label="Product image link">
+                <a href="{{ product.image.url }}" target="_blank" rel="noopener noreferrer" aria-label="Product image link" rel="noopener noreferrer">
                     <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                 </a>
                 {% else %}
-                <a href="" aria-label="Product image link">
+                <a href="" aria-label="Product image link" rel="noopener noreferrer">
                     <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                 </a>
                 {% endif %}
@@ -44,8 +44,8 @@
                 {% endif %}
                 {% if request.user.is_superuser %}
                 <small class="ml-3">
-                    <a href="{% url 'edit_product' product.id %}" aria-label="Edit Products">Edit</a> |
-                    <a class="text-danger" href="{% url 'delete_product' product.id %}" aria-label="Delete Products">Delete</a>
+                    <a href="{% url 'edit_product' product.id %}" aria-label="Edit Products" rel="noopener noreferrer">Edit</a> |
+                    <a class="text-danger" href="{% url 'delete_product' product.id %}" aria-label="Delete Products" rel="noopener noreferrer">Delete</a>
                 </small>
                 {% endif %}
                 <p class="mt-3">{{ product.description }}</p>
@@ -80,7 +80,7 @@
                             </div>
 
                             <div class="col-12">
-                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded mt-5" aria-label="Continue Shopping button">
+                                <a href="{% url 'products' %}" class="btn btn-outline-black rounded mt-5" aria-label="Continue Shopping button" rel="noopener noreferrer">
                                     <span class="icon">
                                         <i class="fas fa-chevron-left"></i>
                                     </span>
