@@ -9,6 +9,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Posh Portables, an e-commerce website that sells gaming accessories">
+    <meta name="keywords"
+        content="posh portables, posh portable gaming accessories, gaming accessories, pc gaming accessories, must have pc gaming accessories, 
+        gaming laptops, gaming monitors, gaming headphones, gaming keyboards, gaming setup, gaming room accessories, 
+        best laptops and accessories, computers for gaming">
     {% endblock %}
 
     {% block extra_meta %}
@@ -83,12 +88,16 @@
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <a href="{% url 'add_product' %}" class="dropdown-item" aria-label="Manage my products link">Manage My Products</a>
+                            <a href="{% url 'add_product' %}" class="dropdown-item"
+                                aria-label="Manage my products link">Manage My Products</a>
                             {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item" aria-label="My Profile link">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item" aria-label="Logout link">Logout</a>
+                            <a href="{% url 'profile' %}" class="dropdown-item" aria-label="My Profile link">My
+                                Profile</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item"
+                                aria-label="Logout link">Logout</a>
                             {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item" aria-label="Register link">Register</a>
+                            <a href="{% url 'account_signup' %}" class="dropdown-item"
+                                aria-label="Register link">Register</a>
                             <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="Login link">Login</a>
                             {% endif %}
                         </div>
@@ -164,23 +173,28 @@
             <section class="mb-4">
                 <!-- Facebook -->
                 <a class="btn btn-outline-light btn-floating m-1"
-                    href="https://www.facebook.com/profile.php?id=61554694944684" target="_blank" rel="noopener" role="button" aria-label="Visit our Facebook page (opens in new tab)"><i
+                    href="https://www.facebook.com/profile.php?id=61554694944684" target="_blank" rel="noopener"
+                    role="button" aria-label="Visit our Facebook page (opens in new tab)"><i
                         class="fab fa-facebook-f"></i> Follow us on Facebook</a>
 
                 <!-- Social media icons -->
                 <div class="social-icons">
                     <!-- Google -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="https://google.com/" target="_blank" rel="noopener"
-                        role="button" aria-label="Visit us on Google (opens in new tab)"><i class="fab fa-google"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://google.com/" target="_blank"
+                        rel="noopener" role="button" aria-label="Visit us on Google (opens in new tab)"><i
+                            class="fab fa-google"></i></a>
                     <!-- Instagram -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" target="_blank" rel="noopener"
-                        role="button" aria-label="Visit our Instagram page (opens in new tab)"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" target="_blank"
+                        rel="noopener" role="button" aria-label="Visit our Instagram page (opens in new tab)"><i
+                            class="fab fa-instagram"></i></a>
                     <!-- Linkedin -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/" target="_blank" rel="noopener"
-                        role="button" aria-label="Visit our LinkedIn page (opens in new tab)"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/" target="_blank"
+                        rel="noopener" role="button" aria-label="Visit our LinkedIn page (opens in new tab)"><i
+                            class="fab fa-linkedin-in"></i></a>
                     <!-- Github -->
-                    <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/" target="_blank" rel="noopener"
-                        role="button" aria-label="Visit our GitHub page (opens in new tab)"><i class="fab fa-github"></i></a>
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/" target="_blank"
+                        rel="noopener" role="button" aria-label="Visit our GitHub page (opens in new tab)"><i
+                            class="fab fa-github"></i></a>
                 </div>
                 <!-- Mailchimp signup form -->
                 <div id="mc_embed_shell">
@@ -228,7 +242,7 @@
                 </div>
         </div>
         </section>
-              <!-- Copyright -->
+        <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2023 Copyright:
             <a class="text-white" href="#" aria-label="Copyright link">Lauren Pechey</a>
