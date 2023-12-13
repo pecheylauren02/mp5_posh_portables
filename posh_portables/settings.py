@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'shopping_cart',
     'checkout',
     'profiles',
+    'reviews',
 
     # Other apps
     'crispy_forms',
