@@ -1077,6 +1077,59 @@ MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 3. Click on your newly set up webhook and click on 'Signing Secret' at the top to reveal the secret value. Copy it and set it as a new config variable in Heroku:
 - STRIPE_WH_SECRET: Signing secret from new webhook.
 
+- - -
+[Go to Top](#posh-portables---a-gaming-accessories-e-commerce-site)
+- - -
+
+## Credits
+
+### Code
+
+I have found many useful sources in building this project, as this has been my first Django project I have often been reliant on a lot of Googling and trawling through documentation and Slack channels. Any code that requires crediting has been mentioned within the code itself. However below are some projects which I have found useful for more general inspiration and to help me answer the more general questions about how to approach different aspects of the project.
+
+- [Joy Zadan's K-Beauty CI PP5 Project](https://github.com/JoyZadan/shop-kbeauty): I found this project to be really helpful in getting started with how to approach mine, in particular how to approach the rating & reviews. I also used her automated testing files as a skeleton for how to approach this part of mine. I am very grateful for her clear and well explained project. I also found her README deployment really clear and easy to follow and got inspiration for how to approach mine.
+- [NyxHexen's Game Box CI MS4 Project](https://github.com/NyxHexen/CI_MS4_GB): I also found this project's testing really useful in working out how to approach automated testing, the tests have clearly been written by a skilled and experienced automated tester and helped me as a complete beginner in automated testing to begin my learning and automated testing on my project.
+- I should also credit the [Code Institute](https://codeinstitute.net/) team for their [Boutique Ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/250e2c2b8e43cccb56b4721cd8a8bd4de6686546) project as this had a big influence on my own Island Bees site. Parts of the code are heavily inspired by and adapted from Boutique Ado. Using Django and building an e-commerce site was a huge challenge and I was grateful to have this walkthrough to follow whilst I built my confidence on my own project, using it as a starting point to expand upon to create Island Bees.
+
+- - -
+
+### Content
+
+#### Text
+
+- [ChatGPT:](https://chat.openai.com/auth/login) Used to generate text for the products, reviews, messages & FAQs to quickly populate the site so my time could be better spent on building the site and my coding knowledge. **It was not used to generate any code for the project.**
+
+#### Images
+
+HOME COVER AND 404 PAGE:
+[Home Cover and 404 Page image](https://www.pexels.com/photo/white-and-black-xbox-one-controller-3945655/)
+
+AMAZON PRODUCTS:
+[10001](https://m.media-amazon.com/images/I/71OyrTkxpGL._AC_SL1500_.jpg)
+[10002](https://m.media-amazon.com/images/I/711+0tgn+6L._AC_SY300_SX300_.jpg)
+[10003](https://m.media-amazon.com/images/I/81vnNsRDo6L._AC_SL1500_.jpg)
+[10004](https://m.media-amazon.com/images/I/71eXjkfeO8L._AC_SL1500_.jpg)
+[10005](https://m.media-amazon.com/images/I/91KW9iWwXxL._AC_SL1500_.jpg)
+[10006](https://m.media-amazon.com/images/I/71P1MZ8ztDL._AC_SL1500_.jpg)
+[10007](https://m.media-amazon.com/images/I/71hdoqCHwiL._AC_SL1500_.jpg)
+[20001](https://m.media-amazon.com/images/I/71UuyaUmkhL._AC_SL1500_.jpg)
+[20002](https://m.media-amazon.com/images/I/71w-eYgrfnL._AC_SL1500_.jpg)
+[20003](https://m.media-amazon.com/images/I/51wEJVJjuLL._AC_SL1000_.jpg)
+[20004](https://m.media-amazon.com/images/I/71uGQWi6DzL._AC_SL1500_.jpg)
+[20005](https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_SL1000_.jpg)
+[20006](https://m.media-amazon.com/images/I/71EMsWRD1oL._AC_SL1500_.jpg)
+[30001](https://m.media-amazon.com/images/I/81yd9W+0doL._AC_SL1500_.jpg)
+[30002](https://m.media-amazon.com/images/I/618zZ7u3sUL._AC_SL1500_.jpg)
+[30003](https://m.media-amazon.com/images/I/61nghmq8GPL._AC_SL1500_.jpg)
+[30004](https://m.media-amazon.com/images/I/71HQVSBbTLL._AC_SL1500_.jpg)
+[30005](https://m.media-amazon.com/images/I/61ZaLWoqtcL._AC_SL1280_.jpg)
+
+- - -
+
+### Acknowledgments
+
+* My mentor Rohit Sharma for all his help and advice throughout the project.
+* The whole team at [Code Institute](https://codeinstitute.net/) for their teaching and support.
 
 - - -
 [Go to Top](#posh-portables---a-gaming-accessories-e-commerce-site)
