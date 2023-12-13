@@ -103,3 +103,19 @@ I then created a list of all the features I would like to add to the site in ord
 | Site Management - Reviews for approval                                  | 3          | 2          |
 
 ---
+
+### Structure
+
+#### Flow Diagram
+
+I created a flow diagram using [Lucidchart](https://www.lucidchart.com/pages/) to map out the structure of the site. This was an important step in the user experience design process, working out the structure and skeleton of the site, to provide the best user experience whilst keeping the user stories at the heart of the decision-making process. It allowed me to think through the paths of users through the site and what would need to link to where based on the different user stories. It would also allow me to make sure the site functioned as expected and everything was easy to find. It was also a vital tool to manage the scope of the project during the design and development stages, a blueprint to keep everything on track.
+
+![Lucid Flow Diagram](LINK HERE)
+
+### Skeleton
+
+#### Database Schema
+
+An important stage in the planning was building a database schema, as well as planning my data clearly from the beginning to make the development process as easy as possible. This database schema was informed by my work in the previous planes, the user stories, the scope chart and the flow diagram. I used [DrawSQL](https://drawsql.app/) to create a visual representation of the database, which I used throughout the development process to keep track of what my database looked like, updating it and amending it as the project grew and adapted. 
+
+![Posh Portables Database Schema]()
