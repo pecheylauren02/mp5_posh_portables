@@ -233,7 +233,7 @@ I created the designs below, making sure that all pages would work just as well 
 
 ### Products
 
-![Products Page](media/docs/feat_products.jpg)
+![Products Page](media/docs/)
 
 #### Feature Information
 
@@ -336,7 +336,7 @@ A well-designed, user-friendly place for users to search, filter and compare pro
 
 - Users can also return to the products page using the 'keep shopping' button which is styled in secondary action grey. [See Whole Site Features](#whole-site)
 
-- Users can also add a review of a product from this page using the 'add review' button. This allows users to provide feedback on products and help share information with other users. This button is styled in the non-purchasing yellow colour [See Whole Site Features](#whole-site)
+- Users can also add a review of a product from this page using the 'add review' button. This allows users to provide feedback on products and help share information with other users. This button is styled in the non-purchasing colour [See Whole Site Features](#whole-site)
 - Admins of the site will also see 'EDIT' and 'DELETE' links which allow CRUD functionality for products. (More information below.)
 
 
@@ -572,6 +572,155 @@ This page gives the user a clear indication that their purchase has been success
 
 </details>
 
+- - -
+
+### Authentication
+
+![Sign In Page](media/docs/)
+
+#### Feature Information
+
+<details><summary>Authentication Pages (AllAuth)</summary>
+
+- The project uses AllAuth to implement User login and authentication functionality. AllAuth comes with a whole load of backend functionality and front end templates that make the user, registration, sign in/out and user management easy and quick to create.
+- AllAuth provides a series of templates for all the actions required to implement authentication. The site uses these with its own bespoke styling to make them feel part of the site.
+- All the form have been styled using the [widget-tweak](https://pypi.org/project/django-widget-tweaks/) package to add styling classes to inputs, labels and error messages from within the form templates
+
+**Value to User**
+
+A strong authentication system is vital to an e-commerce site, allowing users to log in, register, manage their profile, see their order history and store their data for the next time they want to make a purchase. It improves user experience and make the process of visiting the site and making purchases quicker and smoother. The styling of the forms matches the rest of site making it feel like it belongs and building confidence and trust in the site.
+
+</details>
+
+
+<details><summary>Register</summary>
+
+- The register page allows users to set up an account
+- Accessible via the account menu to logged out users
+- A link to 'sign-in' is provided if a user already has an account
+- Form is in the standard site bespoke form styling
+- Users provide an email address (repeated to check accuracy) which is used to send a verification email
+- User also provide a username and password to access the site
+- AllAuth provides built in verification to check the password and username to make sure they are strong and not commonly used
+- Passwords are protected and site admins cannot view them (they are hashed in the admin panel).
+- If a user attempts to register with an email that is already in use the form will throw an error
+- (Buttons styled using standard site button colours [See Whole Site Features](#whole-site))
+    - Home button - takes user back to home page without registering
+    - Sign Up - submits the form
+- On successful form submission users will receive a verification email in which they must click a link to verify their email in order to sign in to their account, visiting a couple of additional pages in the process (both of which have been styled with the bespoke site styling). This provides additional security and makes sure that user emails are correct.
+- Once verified users can sign in using the Sign In form with their new details.
+
+
+**Value to User**
+
+Setting up an account allows users to access benefits such as storing their information & order history for future use & creating reviews. The verification and security provided by allauth makes this a secure process for users which improves their user experience and trust in the site.
+
+</details>
+
+<details><summary>Sign In</summary>
+
+- Allows users to sign in to their account
+- Accessible via the account menu to logged out users
+- A link to 'register' is provided if a user doesn't yet have an account
+- Form is in the standard site bespoke form styling
+- Users can sign in using their email or username
+- Users provide their account password (not visible to admins)
+- There is a checkbox to tell the site to remember the user (using standard site checkbox styling).
+- If an incorrect username/email & password are entered users the form fails to submit and users are shown an error message
+- (Buttons styled using standard site button colours [See Whole Site Features](#whole-site))
+    - Home button - takes user back to home page without registering
+    - Sign Up - submits the form
+- The page contains a 'forgot password' link if a user cannot log in
+- On successful log in users are redirected to the home page, or, if they had previously attempted to visit a page that only logged in users could visit, they will be redirected there instead.
+
+**Value to User**
+
+This allows users to access their account to use their default information for purchases as well as accessing their past orders and reviews. This improves their user experience and speeds up the process of making purchases.
+
+</details>
+
+<details><summary>Sign Out</summary>
+
+- Allows users to sign out of their account
+- Accessible via the account menu to logged in users
+- Users are taken to a page to confirm they to sign out
+- Page is in the standard site bespoke styling with a button to confirm sign out
+- On sign out users and their bag contents are removed from the session and they are redirected to the home page
+
+
+**Value to User**
+
+The ability to sign out is an important security measure to stop other users on the same computer being able to view the user's data. This makes the site more secure and promotes trust and confidence in the site.
+
+</details>
+
+<details><summary>Manage Email</summary>
+
+- The manage email page is accessible via the user profile page
+- Only logged in users can access this page & users can only view their own emails
+- Page is in the standard site bespoke styling with a button to add an email address
+- There are 3 additional buttons for managing email actions which are styled using the site colours but are smaller to signify that they are less important actions.
+- From here users can view their associated email addresses, change their primary email, re-send verification for emails and remove email addresses. They can also add additional email addresses.
+- Adding a new email sends a verification to that address.
+- There is a button to take users back to their profile page using the secondary grey styling.
+
+**Value to User**
+
+This page allows users to add or change their email as well as defining which email is used as their primary form of contact. This is a useful bonus tool for users to manage their account and improve their user experience.
+
+</details>
+
+<details><summary>Change Password</summary>
+
+- The change password is accessible via the user profile page
+- Only logged in users can access this page & users can change their own password
+- Page is in the standard site bespoke styling with a button to submit form
+- There is a button to take users back to their profile page using the secondary grey styling.
+- Users must submit their current password and their new password twice to check for accuracy
+- The new password is checked for common or insecure passwords, the form will not submit if these are used and the users are shown an error message.
+- This page is only for users who know their current password and wish to change it. The forgot password page is available for users who have forgotten their password and cannot sign in. (See below).
+
+**Value to User**
+
+This page allows users to change their current password if they are concerned about security and password management. This improves their trust in the site, the site's security and their user experience.
+
+
+</details>
+
+<details><summary>Forgot Password</summary>
+
+- The forgot password page is accessible via the sign in page for users who attempt to sign in but cannot remember their password.
+- The user is prompted to enter their email address
+- If a user enters an email address that is not in the database they will be notified in an error message
+- If the user enters a correct email they will be sent an email with a link to the password reset page
+- Once on the password reset page the user is able to reset their password and sign in to the site with the new password but submitting another form.
+- All pages are in the standard site bespoke styling with a button to submit forms, a grey home button to return to the home page and colours and fonts that reflect the rest of the site. 
+
+**Value to User**
+
+The ability to reset a password is very important to users who have forgotten their password, it allows them to gain access to their account data including their order history and reviews which would otherwise be inaccessible to them. It is a vital part of site authentication.
+
+</details>
+
+- - -
+
+### Error Pages
+
+![Reviews](media/docs/)
+
+
+#### Feature Information
+
+<details><summary>Error Pages</summary>
+
+- The site has bespoke error pages for the main errors that the site might throw up (400)
+- They feature a link to the home page so users can navigate back to a page that exists and works without using the nav or browser back button.
+
+**Value to User**
+
+This creates a positive user experience when taking an action that results in an error. It means they don't feel like they have left the site entirely and are quickly able to get back home again.
+
+</details>
 
 - - -
 
