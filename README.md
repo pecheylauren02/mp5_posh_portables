@@ -235,12 +235,39 @@ I created the designs below, making sure that all pages would work just as well 
 
 ![Products Page](media/docs/feat_products.jpg)
 
+#### Feature Information
 
-#### Feature Video
-https://github.com/emmahewson/island-bees/assets/116887840/cb442525-da78-488d-bd22-a9ac8107e23d
+### Home Page
 
+![Home Page](media/docs/)
 
 #### Feature Information
+
+<details><summary>Hero & Intro Sections</summary>
+
+- A visually impactful, colourful image of gaming accessores to grab the user's attention and make the site's purpose clear on first arrival
+- A 'SHOP NOW' button with smooth hover effect which leads to the products page
+- Text legibility to create separation and hierarchy in the design with info about the company to help expand on the site's purpose and what users can expect to find there.
+
+**Value to User**
+
+Makes the site's purpose and brand identity clear upon first arrival. Encourages users to head to the products section and start shopping.
+
+</details>
+
+<details><summary>Shop By Category</summary>
+
+- A section with 4 buttons, 1 for each category, allowing users to navigate directly to the products page showing only products in that category.
+- The buttons have friendly icons to represent each category as well as text to make them accessible.
+- The buttons have a smooth hover effect where the text and background colours swap.
+
+**Value to User**
+
+This is useful to users as they might have a very specific product in mind e.g. a gaming monitor, and they can easily navigate to the 'Laptops and Monitors' category and find what they need. Allows purchases to be made quickly and easily with intuitive user journeys through the site and a number of different ways to navigate to the products section.
+
+</details>
+
+- - -
 
 <details><summary>Products</summary>
 
@@ -519,7 +546,7 @@ A functioning checkout is a key part of an e-commerce site. This allows users to
     9. The user sees a success message containing their order number and information about email confirmation
     10. The site sends the user a confirmation email to the email address provided
     11. An order is created in the database.
-    
+
 </details>
 
 <details><summary>Checkout Success Page</summary>
