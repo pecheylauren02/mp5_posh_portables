@@ -233,6 +233,107 @@ I created the designs below, making sure that all pages would work just as well 
 
 ## Features
 
+### Shopping Bag
+
+![Shopping Bag](media/docs/)
+
+#### Feature Information
+
+<details><summary>Shopping Cart</summary>
+
+- The shopping bag is an important part of purchasing process for a user. It allows them to store products as they navigate the site, then purchase them all at once when they are finished shopping.
+- The items in the bag can be removed or the quantities amended on the shopping bag page.
+- Users can add additional items to the bag. If the product is already in the bag its quantity will be adjusted.
+- The shopping bag is stored in the session data, that means that it is kept until the user signs out or the session cookies reset.
+- Users do not have to be signed in to store items in their bag or make purchases.
+- The bag contains information about the total cost of all the items as well as the delivery charge and grand total. It also tells the user how much more they need to spend to get free delivery.
+- The shopping bag information appears in a number of places on the site
+    - On the shopping bag page
+    - In the nav bar bag icon (includes the bag total)
+    - In the success message toast - which includes a bag summary and link to the bag page.
+
+**Value to User**
+
+The bag is a vital tool for an e-commerce site. It allows users to gather multiple products to purchase at once, storing them in the session cookie so that they can browse the site without losing their shopping information. It provides a smooth user experience and encourages users to buy more items.
+
+</details>
+
+
+<details><summary>Summary Message</summary>
+
+- When adding, removing or updating an item in their bag users are presented with a success message which includes a shopping bag summary.
+- This summary only appears when taking these actions - if the success message contains other information the summary is hidden e.g. signing in, editing a review, editing a product.
+- This bag summary message toast appears on any page where a user had updated their bag from.
+- It includes:
+    - The number of items in the bag
+    - Image / name / quantity for each item in the bag
+    - The total excluding delivery
+        - I made the decision to exclude delivery so that how close they were to the free delivery threshold was clear to users
+    - If the total is less than the free delivery threshold users are told how much more they need to spend for free delivery.
+    - A link button (button styled using 'purchasing' action blue [See Whole Site Features](#whole-site)) with a lock icon to show that the checkout is secure.
+        - The content and link are set dynamically depending on what page the user is on:
+            - If the user is not on the bag page the button takes them to the bag page
+            - If the user is on the bag page already the button takes them to the checkout page 
+        
+
+**Value to User**
+
+The bag summary gives users instant feedback on what is in their bag every time they adjust its contents. It allows them to keep track of their purchases and totals, creating a positive user experience and clear information. By providing a link directly to the checkout users who are in a hurry can quickly complete their shopping, rather than having to navigate to the bag page first.
+
+</details>
+
+<details><summary>Nav Shopping Bag</summary>
+
+- The nav bar contains a shopping bag icon with updates dynamically based on the contents of a user's shopping bag
+- The bag icon appears within a grey hexagon to continue the brand styling & site theme
+- The styling of the bag changes based on whether the bag is empty or not
+    - The bag icon turns white when there are contents or yellow (the same colour as the nav behind) if the bag is empty to appear empty
+    - The total is bold if the bag has contents, or regular weight if it doesn't.
+- The icon is a clickable link to the bag page with a colour change hover effect
+
+**Value to User**
+
+This provides users with a constant point of information about the contents of their shopping bag. In a similar way to the bag summary it provides immediate feedback about how much they are spending and whether their actions of adding products to the bag have been successful. This creates a great user experience and smooth shopping journey.
+
+
+</details>
+
+<details><summary>Bag Page</summary>
+
+- The bag page expands on the summary and nav icon to provide users with all the information they need about their shopping bag and purchases.
+- It contains
+    - A table with a summary of all items, each item is a row containing the following info:
+        - Image
+        - Product name
+        - Price
+        - Editable quantity
+            - Number input to manually input values (min 1 / max 99)
+            - +/- buttons to increment/decrement the value
+                - These buttons are handled using JavaScript & are disabled/enabled and dynamically change styling based on the min/max value in the input
+            - update link to update the bag after changing the quantity
+            - remove link to remove the item from the bag
+        - Subtotal (quantity x price)
+    - Bag total (total without delivery)
+    - Delivery cost
+    - Grand total (Bag total + delivery)
+    - If the bag total is less than the free delivery threshold users see a message telling them how much more they need to spend to get free delivery
+    - Checkout button (button styled using 'purchasing' action blue [See Whole Site Features](#whole-site)) with a lock icon to show that the checkout is secure.
+    - Keep Shopping button to return users to products page (button styled using secondary action grey [See Whole Site Features](#whole-site))
+- Delivery is calculated as follows:
+    - Some items are not subject to delivery charges e.g. courses [See products](#products)
+    - The delivery charge is 10% of the total amount spent on items that are subject to delivery
+    - If a user has spent over £100 (including on products that are not subject to delivery) then delivery is free.
+- If the bag is empty users see a message telling them that the bag has no contents with a link back to products to encourage them to shop.
+
+
+**Value to User**
+
+The bag page provides users with a comprehensive breakdown of the items they have chosen so far. From here they have controls to remove & update items in their bag and can see what their total cost will be with breakdown values for delivery. They can also see if they are close to the free delivery threshold which may encourage them to buy more. It gives users a great user experience with a clear responsive layout and user friendly interface.
+
+</details>
+
+- - -
+
 ### Checkout
 
 ![Checkout Page](media/docs/)
