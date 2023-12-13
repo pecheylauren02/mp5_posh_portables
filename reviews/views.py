@@ -6,12 +6,12 @@ from django.http import HttpResponse
 
 from django.contrib.auth.models import User
 from .models import Reviews
-from .forms import CustomReviewForm
+from .forms import ReviewForm
 from products.models import Product
 
 
 @login_required()
-def create_review(request, product_id):
+def create_reviews(request, product_id):
     """
     Renders the form for logged in only users 
     to write a review for a product.
@@ -60,7 +60,7 @@ def create_review(request, product_id):
         form = ReviewForm()
 
     # Sets the page template
-    template = 'reviews/create_review.html'
+    template = 'reviews/create_reviews.html'
 
     # Sets current product & form content
     context = {

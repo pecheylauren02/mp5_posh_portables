@@ -2,7 +2,7 @@ from django import forms
 from .models import Reviews
 
 
-class CustomReviewForm(forms.ModelForm):
+class ReviewForm(forms.ModelForm):
     """
     Form for user to make reviews (including Add and Edit)
     """

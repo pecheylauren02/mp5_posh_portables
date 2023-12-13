@@ -2,9 +2,9 @@ from django.contrib import admin
 from .models import Reviews
 
 
-class CustomReviewAdmin(admin.ModelAdmin):
+class ReviewAdmin(admin.ModelAdmin):
     """
-    Custom Review Model Admin
+    Review Model Admin
     """
 
     list_display = (
@@ -21,5 +21,5 @@ class CustomReviewAdmin(admin.ModelAdmin):
         'title', 'content', 'rating', 'user', 'product')
 
 
-admin.site.register(Reviews, CustomReviewAdmin)
+admin.site.register(Reviews, ReviewAdmin)
 

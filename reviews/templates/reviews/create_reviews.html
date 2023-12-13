@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_title %}- Add a review{% endblock %}
+
+{% block extra_meta %}
+    <meta name="description" content="Add your review for {{product.name}} using our simple form">
+{% endblock %}
+
+{% block content %}
+<form method="post" class="text-center" action="#">
+    {% csrf_token %}
+
+    <h2>Product Information:</h2>
+    <p><strong>Product Name:</strong> {{ product.id }}</p>
+    <p><strong>Product Category:</strong> {{ product.category }}</p>
+    <p><strong>Price:</strong> {{ product.price }}</p>
+
+    <h2>User Information:</h2>
+    <label for="id_name">Name:</label>
+    <input type="text" name="name" id="id_name" required>
+    
+    <label for="id_email">Email:</label>
+    <input type="email" name="email" id="id_email" required>
+
+    <h2>Product Rating:</h2>
+    <label for="id_quality">Quality:</label>
+    <input type="number" name="quality" id="id_quality" min="1" max="5" required>
+
+    <label for="id_durability">Durability:</label>
+    <input type="number" name="durability" id="id_durability" min="1" max="5" required>
+
+    <!-- Repeat the above for Design, Performance, and Value for Money -->
+
+    <h2>Review:</h2>
+    <textarea name="review" rows="4" cols="50" required></textarea>
+
+    <h2>Pros:</h2>
+    <textarea name="pros" rows="2" cols="50"></textarea>
+
+    <h2>Cons:</h2>
+    <textarea name="cons" rows="2" cols="50"></textarea>
+
+    <h2>Recommendation:</h2>
+    <label><input type="radio" name="recommend" value="yes" required> Yes</label>
+    <label><input type="radio" name="recommend" value="no" required> No</label>
+
+    <h2>Additional Comments:</h2>
+    <textarea name="additional_comments" rows="4" cols="50"></textarea>
+
+    <input type="submit" value="Submit Review">
+</form>
+
+
+{% endblock %}
