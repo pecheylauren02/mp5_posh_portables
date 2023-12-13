@@ -134,18 +134,18 @@
     {% if messages %}
     <div class="message-container">
         {% for message in messages %}
-                {% with message.level as level %}
-                    {% if level == 40 %}
-                        {% include 'includes/toasts/toast_error.html' %}
-                    {% elif level == 30 %}
-                        {% include 'includes/toasts/toast_warning.html' %}
-                    {% elif level == 25 %}
-                        {% include 'includes/toasts/toast_success.html' %}
-                    {% else %}
-                        {% include 'includes/toasts/toast_info.html' %}
-                    {% endif %}
-                {% endwith %}
-            {% endfor %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
+        {% endfor %}
 
     </div>
     {% endif %}
@@ -154,6 +154,43 @@
     {% endblock %}
 
     {% block content %}
+    {% endblock %}
+
+    {% block footer %}
+    <!-- Footer Content -->
+    <footer class="bg-dark text-center text-white">
+        <div class="container p-4 pb-0 mt-4">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1"
+                    href="https://www.facebook.com/profile.php?id=61554694944684" target="_blank" role="button"><i
+                        class="fab fa-facebook-f"></i> Follow us on Facebook</a>
+    
+                <!-- Social media icons -->
+                <div class="social-icons">
+                    <!-- Google -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://google.com/" target="_blank"
+                        role="button"><i class="fab fa-google"></i></a>
+                    <!-- Instagram -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" target="_blank"
+                        role="button"><i class="fab fa-instagram"></i></a>
+                    <!-- Linkedin -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/" target="_blank"
+                        role="button"><i class="fab fa-linkedin-in"></i></a>
+                    <!-- Github -->
+                    <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/" target="_blank"
+                        role="button"><i class="fab fa-github"></i></a>
+                </div>
+            </section>
+        </div>    
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2023 Copyright:
+            <a class="text-white" href="#">Lauren Pechey</a>
+        </div>
+    </footer>
+    
     {% endblock %}
 
     {% block postloadjs %}
