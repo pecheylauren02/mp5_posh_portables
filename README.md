@@ -69,7 +69,7 @@ I then created a list of all the features I would like to add to the site in ord
 | Responsive Design                                                       | 1          | 5          |
 | Navigation - all page links                                             | 1          | 5          |
 | Navigation - search facility                                            | 3          | 3          |
-| Navigation - Shopping bag & current total                               | 3          | 4          |
+| Navigation - Shopping cart & current total                              | 3          | 4          |
 | Footer - company info                                                   | 1          | 3          |
 | Footer - social links                                                   | 1          | 3          |
 | Home Page - branding & explanatory text                                 | 1          | 4          |
@@ -77,14 +77,14 @@ I then created a list of all the features I would like to add to the site in ord
 | Products - Product cards with summary info                              | 2          | 5          |
 | Products - Sorting/searching/filtering                                  | 5          | 4          |
 | Products - Detail Page with more info                                   | 2          | 5          |
-| Products - Detail Page add to bag & quantity select                     | 4          | 5          |
+| Products - Detail Page add to cart & quantity select                    | 4          | 5          |
 | Products - CRUD functionality for admins                                | 3          | 5          |
 | User Reviews of products                                                | 3          | 3          |
 | User Reviews - update product average ratings                           | 5          | 3          |
 | User Reviews - CRUD functionality (user only)                           | 3          | 3          |
 | User Reviews - Admin approval system                                    | 4          | 2          |
-| Shopping Cart - Users can store items in a bag for purchase             | 4          | 5          |
-| Checkout - Page with bag summary and delivery info                      | 4          | 5          |
+| Shopping Cart - Users can store items in a cart for purchase            | 4          | 5          |
+| Checkout - Page with shopping cart summary and delivery info            | 4          | 5          |
 | Checkout - Secure payment system                                        | 5          | 5          |
 | Checkout - Page to show order summary on successful checkout            | 3          | 3          |
 | User accounts - all standard login/out/register functionality           | 4          | 5          |
@@ -231,6 +231,87 @@ I created the designs below, making sure that all pages would work just as well 
 <img src="media/docs/design_wireframes_home.png">
 </details>
 
+## Features
+
+### Checkout
+
+![Checkout Page](media/docs/)
+
+#### Feature Information
+
+<details><summary>Checkout Page</summary>
+
+- The checkout page is where users can check everything in their shopping cart, set their delivery information, and finalise their purchase and payment information to finally make their purchase.
+- It contains:
+    - A summary of the cart contents and totals, similar to the shopping cart page but without the option to adjust the contents.
+    - A form to add delivery information
+        - All fields are required apart from street_address2 & phone
+    - If a user is logged in:
+        - The form will be pre-populated with their profile information if previously provided
+        - They can elect to update their profile information based on the form using a simple checkbox
+        - The order will be saved in their profile and associated with their User object
+    - If a user is not logged in they are directed to register/sign in if they wish to save their information
+    - A secure payment form using Stripe as a simple, single input for card number, expiry and CVC.
+        - The form comes built in with Stripe's comprehensive security and validation functionality
+        - Site admins cannot access this information, it is sent to Stripe securely and the site is only notified if the payment has been successful or not.
+        - Error messages below card input field
+        - More information in "Checkout Process" below.
+    - A Place Order button (button styled using 'purchasing' action blue [See Whole Site Features](#whole-site)) with a lock icon to show that the checkout is secure.
+    - A Back to Bag button which takes users back to their shopping cart to amend the contents
+    - A warning message that the user's card will be charged with the shopping cart total.
+- The site uses webhooks to manage the functionality, listening for activity from Stripe to make sure that certain actions happen at the right times, that orders are created correctly in the database for a successful payment or not created if a payment fails. This ensures the site functions correctly, that users orders are fulfilled correctly and that payments work.
+
+**Value to User**
+
+A functioning checkout is a key part of an e-commerce site. This allows users to make purchases using secure payments, this is a vital aspect of the site for users who value security and want to protect their data. The use of webhooks and Stripe allows the site to function correctly, to make sure that orders are being stored correctly so that they can be fulfilled and tracked correctly by the company. The correct functioning of the company and the website relies on this working properly and it is of vital importance to both shoppers and site admins.
+
+</details>
+
+
+<details><summary>Checkout Process</summary>
+
+- The checkout process is as follows:
+    1. The user fills in their details and delivery information
+    2. If any required fields are left blank attempted submission has front end validation that stops the form submitted and points out the field which has a problem
+    3. The user fills in their card information
+    4. If there is an error in the card details the user is notified in a message under the Stripe input either in realtime using JavaScript.
+    5. The user clicks 'Place Order'
+    6. The form is disabled and a loading animation appears
+    7. If there is an error at this stage with the form or payment information the user is returned to the form to amend the error with an error message to tell them what the problem is.
+    8. Once the order has gone through successfully the user is directed to the Checkout Success page (see below)
+    9. The user sees a success message containing their order number and information about email confirmation
+    10. The site sends the user a confirmation email to the email address provided
+    11. An order is created in the database.
+
+
+</details>
+
+
+<details><summary>Checkout Success Page</summary>
+
+- Once a successful purchase has been made the user is directed to the checkout success page.
+- This page contains:
+    - Order information:
+        - Order number
+        - Order date
+        - Delivery Details
+    - Order summary:
+        - Product name
+        - Quantity purchased
+        - Total
+        - Delivery charge
+        - Grand total
+    - Back to Shop button (button styled using 'purchasing' action blue [See Whole Site Features](#whole-site)) whilst this is not strictly a purchasing action it is the button colour that the user has been following to make their purchases, styling it blue subtly encourages them back to the store to continue that path to browse more products.
+
+
+**Value to User**
+
+This page gives the user a clear indication that their purchase has been successful, and summarises what they have bought and how much they have spent. It gives them a sense of security and that everything has functioned correctly, which is a vital part of the user experience for e-commerce sites. It also allows users to see what the next step is and to know that an email confirmation is on the way.
+
+</details>
+
+
+- - -
 
 ## Technologies Used
 
@@ -249,7 +330,7 @@ I created the designs below, making sure that all pages would work just as well 
   - Countryfield on address forms
   - Review rating select interactive styling
   - Scroll to Top button
-  - Remove & Update products from bag
+  - Remove & Update products from shopping cart
 - [Python: ](<https://en.wikipedia.org/wiki/Python_(programming_language)>) Used to build the core of the backend of the project within the Django framework
 
 
