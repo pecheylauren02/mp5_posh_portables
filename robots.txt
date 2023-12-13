@@ -1,4 +1,7 @@
 User-agent: *
 Disallow: /accounts/
+Disallow: /profile/
 Disallow: /shopping_cart/
+Disallow: /checkout/
+Disallow: /admin/
 Sitemap: https://posh-portables-6801c9648247.herokuapp.com/sitemap.xml
