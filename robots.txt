@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /shopping_cart/
+Sitemap: https://posh-portables-6801c9648247.herokuapp.com/sitemap.xml
