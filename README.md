@@ -210,3 +210,106 @@ The User model is created by Django allauth and connects to a separate Email Add
 
 
 </details>
+
+#### Wireframes (see below)
+
+Whilst traditionally wireframes are included in the Skeleton section I have included mine in the Surface section below. I have developed a way of working where I flesh out the full design of the site in [Figma](https://www.figma.com/), including making all colour, typography and layout decisions at this stage, to make sure that during development I am free to focus on the nuts and bolts of how to build the site, rather than getting distracted by design decisions at that stage. It has been successful for me in the past and so I have chosen to develop the site in this way again. 
+
+---
+
+### Surface
+
+#### Wireframes
+
+At this point I was able to bring together all the work I had done in creating the flow diagram (which included a lot of page content and structure decisions), my user stories, my scope chart and my database schema to create full visual designs for my site. This was more than just making colour and font choices however. Every design decision creates questions about what goes where, what colour should it be, does it even need to be there or would it be better somewhere else. I was able to ask informed questions at each stage to make sure the design reflected the user stories and site aims. E.g. What does a user need to see when they arrive on a page? What is the most important thing on a page and how can the design emphasise that? etc.
+
+I created the designs below, making sure that all pages would work just as well on mobile and tablet as on desktop devices.
+
+**View the Wireframes/Site Designs in the Dropdowns Below**
+
+<details><summary>HOME</summary>
+<img src="media/docs/design_wireframes_home.png">
+</details>
+
+
+## Technologies Used
+
+### Languages
+
+- [HTML:](https://en.wikipedia.org/wiki/HTML5) Used to build the main structure of the site
+- [CSS:](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) Used to style the website (Combination of bespoke styling and Bootstrap)
+- [JavaScript:](https://en.wikipedia.org/wiki/JavaScript) Used for front end interactive features
+  - Bag / Product Quantity Input
+  - Stripe Payment Handling
+  - Message is_open toggle functionality
+  - Review is_authorised toggle functionality
+  - Manage page scroll on refresh
+  - Product form image field text
+  - Product sorting page reload
+  - Countryfield on address forms
+  - Review rating select interactive styling
+  - Scroll to Top button
+  - Remove & Update products from bag
+- [Python: ](<https://en.wikipedia.org/wiki/Python_(programming_language)>) Used to build the core of the backend of the project within the Django framework
+
+
+### Frontend Frameworks / Libraries
+
+- [Bootstrap:](https://getbootstrap.com/) Used throughout the site for the styling, layout & responsiveness
+- [Font Awesome:](https://fontawesome.com/) Used to add icons to the site to help with UX and to add more character
+- [JQuery:](https://jquery.com/) JavaScript library for making JavaScript quicker and easier to write
+
+
+### Backend Modules / Packages & Frameworks
+
+- [Django:](https://www.djangoproject.com/) High Level Python-based Web Framework.
+- [AllAuth:](https://django-allauth.readthedocs.io/en/latest/) Integrated Django authentication & sign in.
+- [Django Countries:](https://pypi.org/project/django-countries/) Django application that provides country choices for forms
+- [Django Widget Tweaks:](https://pypi.org/project/django-widget-tweaks/) Django form field advanced styling & customisation
+- [Django Storages:](https://django-storages.readthedocs.io/en/latest/) Collection of custom storage backends for Django
+- [Freezegun:](https://pypi.org/project/freezegun/) Library to aid automated testing by giving control over the datetime module
+- [Gunicorn:](https://gunicorn.org/) A Python WSGI HTTP Server for UNIX
+- [Pillow:](https://pypi.org/project/Pillow/) Python imaging Library for extended image handling capabilities
+- [Psycopg2:](https://www.psycopg.org/) Postgres adaptor to allow smooth communication between the backend and the database
+- [s3transfer:](https://pypi.org/project/s3transfer/) Python library for managing Amazon AWS S3 Transfers
+- [Boto3](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) & [Botocore:](https://github.com/boto/botocore) Used to create, configure & manage AWS services using Python
+- [Stripe:](https://stripe.com/gb) Stripe package part of the Stripe ecosystem to manage secure online payments
+- [dj-database-url:](https://pypi.org/project/dj-database-url/) Allows you to use DATABASE_URL env variable in settings.py
+- [Coverage:](https://coverage.readthedocs.io/en/7.3.1/) Tool for measuring code coverage of Python Programs
+- [oauthlib](https://pypi.org/project/oauthlib/) & [requests-oauthlib:](https://pypi.org/project/requests-oauthlib/) Handles authentication using the OAuth request signin logic
+- [python3-openid:](https://pypi.org/project/python3-openid/) Set of python packages to support the use of teh OpenID decentralised identity system
+- [sqlparse:](https://pypi.org/project/sqlparse/) SQL parser for Python
+- [urllib3:](https://pypi.org/project/urllib3/) HTTP client for Python
+
+
+### Databases 
+- [SQLITE:](https://docs.djangoproject.com/en/4.1/ref/databases/#sqlite-notes) Used as the built in Django database for development
+- [Elephant SQL:](https://www.elephantsql.com/) Postgres-based database host. Used to host the database for the live production app.
+
+### Other Tools
+
+- [Git:](https://git-scm.com/) Used for version control via Code Anywhere by using the terminal to Git and Push to GitHub
+- [GitHub:](https://github.com/) Used to store the project code
+- [Gitpod:](https://www.gitpod.io/) Used to create, edit & preview the project's code
+- [Heroku:](https://dashboard.heroku.com/apps) Used to deploy the live site
+- [Amazon Web Services:](https://aws.amazon.com/) Used to host the static files and images for the live production site.
+- [Google Chrome Dev Tools:](https://www.google.com/intl/en_uk/chrome/) Used to test and debug the production and live apps
+
+
+### External Sites / Resources / Software
+
+- [Figma:](https://www.figma.com/) Used to develop the wireframes in to a full site design including colours, fonts, proportions etc
+- [Google Fonts:](https://fonts.google.com/) Used to select & import the fonts to the project (Oxygen & Source Sans 3)
+- [Lucidchart](https://www.lucidchart.com/pages/) To create the flow diagram of the website
+- [DrawSQL](https://drawsql.app/) Used to visually design the database schema
+- [ChatGPT:](https://chat.openai.com/auth/login) Used to generate copy to populate site (not used for any code)
+- [Adobe Illustrator:](https://www.adobe.com/uk/products/illustrator.html) Used to create the site logo
+- [Adobe Photoshop:](https://www.adobe.com/uk/products/photoshop.html) Used to crop, adjust and resize the photos to optimise them for the site
+- [Bulk Photo Resize:](https://bulkresizephotos.com/en) Used to resize & convert images 
+- [Tiny PNG:](https://tinypng.com/) Used to further optimise the images for the site and reduce file size
+- [ezGIF:](https://ezgif.com/) Creating GIFs for the README
+- [tableconvert.com:](https://tableconvert.com/csv-to-markdown) Converting CSV files to Markdown tables for README
+- [Favicon.io:](https://favicon.io/favicon-converter/) Used to create and add the favicon to the browser tab
+- [Google Chrome Dev Tools:](https://developers.google.com/web/tools/chrome-devtools) Used to inspect page elements, debug issues with the site & test responsiveness on different mockup devices
+- [Techsini:](http://techsini.com/multi-mockup/index.php) Website mockup image generator for images in this README.
+- [Temp Mail:](https://temp-mail.org/en/) Temporary email generator for testing account verification & order confirmation
