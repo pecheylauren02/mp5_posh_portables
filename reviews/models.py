@@ -1,11 +1,16 @@
 from django.db import models
+from django.core.validators import (
+    MaxValueValidator, MinValueValidator
+)
+from django.contrib.auth.models import User
+from products.models import Product
 
 
 class Reviews(models.Model):
     """
     A model that handles user reviews
     """
-    product = model.ForeignKey(
+    product = models.ForeignKey(
             Product, on_delete=models.CASCADE, 
             null=True, blank=True, 
             related_name="reviews")
