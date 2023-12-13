@@ -164,9 +164,7 @@ The User model is created by Django allauth and connects to a separate Email Add
 | **name**            | Char           | max_length=50                    | FALSE    | FALSE     | n/a         | n/a           | TRUE         | n/a              |
 | **description**     | Text           | n/a                              | FALSE    | FALSE     | n/a         | n/a           | TRUE         | n/a              |
 | **price**           | Decimal        | "max_digits=6, decimal_places=2" | FALSE    | FALSE     | n/a         | n/a           | TRUE         | n/a              |
-| **is_featured**     | Boolean        | n/a                              | FALSE    | FALSE     | FALSE       | n/a           | TRUE         | n/a              |
 | **delivery_charge** | Boolean        | n/a                              | FALSE    | FALSE     | TRUE        | n/a           | TRUE         | n/a              |
-| **discontinued**    | Boolean        | n/a                              | FALSE    | FALSE     | FALSE       | n/a           | TRUE         | n/a              |
 | **image**           | Image          | n/a                              | TRUE     | TRUE      | n/a         | n/a           | TRUE         | n/a              |
 | **rating**          | Integer        | "Min=0, Max=5"                   | FALSE    | FALSE     | n/a         | n/a           | TRUE         | n/a              |
 
@@ -233,6 +231,149 @@ I created the designs below, making sure that all pages would work just as well 
 
 ## Features
 
+### Products
+
+![Products Page](media/docs/feat_products.jpg)
+
+
+#### Feature Video
+https://github.com/emmahewson/island-bees/assets/116887840/cb442525-da78-488d-bd22-a9ac8107e23d
+
+
+#### Feature Information
+
+<details><summary>Products</summary>
+
+- Products appear across the site. They have a number of fields which provide information about the product and give the site admins functionality for site management.
+    - Product Image - an image to show users what they are buying. Admins can add an image of the product, or if no image is uploaded or an image fails to load a placeholder image will appear with site branding. This improves the site's design and the sense of professionalism and trustworthiness of the site which builds user confidence.
+    - Product name - tells the user what they are buying
+    - Product description - gives more information about the product to users - allows them to see if its right for them.
+    - Product category - each product is linked to a category, this allows users to easily find the products they are looking for and helps them narrow down their search as well as encouraging users to look at other products they may not have planned on buying originally.
+    - Price - Tells the user how much the product will cost them
+    - Rating - Average rating of all approved reviews of the product. If no ratings them the product has a score of 0 to make it clear that it doesn't have a low rating, just that it hasn't been rated yet. The rating is represented by stars across the site, giving a quick, clear indication of what other users have thought of the product. Users are also able to order results by rating to help them find the most popular products.
+
+**Value to User**
+
+Products are the heart of the site functionality and purpose - the ability to buy/sell goods. The variety of fields add functionality to products, information for users and site management tools to admins.
+
+</details>
+
+<details><summary>Product Cards</summary>
+
+- Products are represented in summary cards on both the products and home pages.
+- Cards are clickable and link to the product details page
+- Cards feature a clickable category link which takes users to the products page with the results filtered by that category.
+- Cards feature a strong image or a no-image replacement (see 'products' dropdown above)
+- Cards feature the product name so users can quickly understand what a product is
+- Cards feature the product rating which can also be used to sort cards
+- Cards feature the product price so users can know if the cost is suitable for them.
+- Cards stack on smaller screens and are clear and easy to read on any device.
+
+**Value to User**
+
+These summary cards allow users to quickly browse products and find basic information about them. The ability to sort, search and filter products goes hand in hand with the product cards as users can see multiple products at once.
+
+</details>
+
+<details><summary>Products Page</summary>
+
+- The products page is the main product browsing area. This is where a user is able to see product cards, filter them by category or search term, sort them by price, rating, name or category as well as clicking through to view more information about them.
+- Aside from the featured products section on the home page all user interaction with product cards takes place on the products page. If a user clicks on a category they are taken here and see filtered results.
+- Users are given information about the number of products they are viewing, which is useful to know how many options they have to look through.
+- Users are told if there are any category or search terms being used to filter the results, these are clearly marked at the top which improves user experience. Whenever a filter is active a link appears to show all products, making navigation easy.
+
+**Value to User**
+
+A well-designed, user-friendly place for users to search, filter and compare products. The first step in the purchasing journey. Allows users to easily find what they need. Helps site owners to increase sales by showing shoppers other products that they might be encouraged to buy.
+
+</details>
+
+<details><summary>Product Details Page</summary>
+
+
+- This is the 2nd step in a buyer's purchasing journey. Once they have selected a product from the product cards they can click through to here to find more information about the product.
+- The page includes all the information about the product. It also includes a clickable category link which takes them back to the products page with products filtered by that category. This allows easy navigation, filtering and improves user experience.
+
+- In addition to the information which the user will have already seen on the product cards they can also see additional information to help them decide whether to purchase it:
+    - Product description text
+    - Number of product reviews (with a clickable link to the reviews section below)
+    - Product reviews
+        - All reviews of the product that have been approved by an admin are visible here with their full text and rating. This allows users to get a balanced view of the product.
+        - The reviews contain the review title, contents, username, date & rating.
+        - If a review is a user's own they will see EDIT/DELETE buttons for it. Superusers will see DELETE buttons only.
+        - For more information about reviews see [Features - Reviews](#reviews)
+
+- The page also allows users to add the product to their shopping bag, with the option to add multiples of the product.
+    - The quantity input box allows users to either type in an number (from 1-99) or use the +/- buttons to increment the quantity. These buttons are controlled by JavaScript and dynamically enable/disable when the number is at the min/max. This creates a positive user experience.
+    - Once a quantity has been selected users can add the product to the bag using the 'add to bag' button which is styled blue for purchasing actions. [See Whole Site Features](#whole-site)
+
+- Users can also return to the products page using the 'keep shopping' button which is styled in secondary action grey. [See Whole Site Features](#whole-site)
+
+- Users can also add a review of a product from this page using the 'add review' button. This allows users to provide feedback on products and help share information with other users. This button is styled in the non-purchasing yellow colour [See Whole Site Features](#whole-site)
+- Admins of the site will also see 'EDIT' and 'DELETE' links which allow CRUD functionality for products. (More information below.)
+
+
+**Value to User**
+
+This is the page which helps users decide if they are going to buy the product, as well as the ability to add it to their bag. This is an essential part of the purchasing journey with lots of useful information for a shopper. The reviews help users to decide if the product is for them as well as giving users the opportunity to provide feedback. This is also the the access point for EDIT/DELETE functionality for a product for admins.
+
+</details>
+
+<details><summary>Add Product</summary>
+
+- The add product page is accessible via the Site Management Page [see below](#site-management). This is restricted to site admins only. Admins can use this form to add a new product to the site and set all its information.
+- The form has built in validation to make sure that all required information is provided.
+- The category field is pre-populated by the categories listed in the database
+- The text fields (name & description) have maximum limits to avoid overly long information being added which could have a negative impact on the site design.
+- The price is restricted to being numbers only and has a fixed 2 decimal place to avoid errors.
+
+- Admins can upload an image of the product.
+    - There is a button with bespoke styling to open the upload window
+    - Admins can see information about best practice for photos
+    - Once an image has been selected admins see a message telling them that the image has been chosen - providing clear and positive feedback.
+
+- The form then has an 'add product' button using the site admin blue styling, or a cancel button in secondary grey. [See Whole Site Features](#whole-site).
+
+- Once submitted users are directed to the product details page for that product so they can see their newly added product immediately appearing on the site. The only exception for this is if the product has been set to discontinued, in which case they are sent to the products page and an info message appears. However in the form there is text to explain that discontinued are accessible in the admin panel.
+
+
+**Value to User**
+
+This gives admins the ability to create a new product and set all its information in a simple to use form with bespoke site styling. It is an essential part of the site management for admins.
+
+</details>
+
+<details><summary>Edit Product</summary>
+
+- The edit product page includes all of the same functionality and value as the 'add product' form (see above)
+- In addition, in the image field, it includes a thumbnail of the current image (if one exists) and the ability to remove it or replace it.
+- Once submitted users are directed back to the product details page for that product so they can see their changes immediately reflected on the page. The only exception for this is if the product has been set to discontinued, in which case they are sent to the products page and an info message appears. However in the form there is text to explain that discontinued are accessible in the admin panel.
+
+**Value to User**
+
+This gives admins the ability to create edit or update a product and set all its information in a simple to use form with bespoke site styling. It is an essential part of the site management for admins.
+
+</details>
+
+<details><summary>Delete Product</summary>
+
+- Admins have the ability to remove a product from the site in one of 2 ways
+    - By deleting the product
+        - This is only possible if the product has never been ordered. Once it has been ordered deleting it causes errors in the order history as it is associated with an OrderLineItem object. It would change the total of historic orders which would mean the business' records were incorrect. It can also cause errors in the functionality of the site.
+    - By setting the product to 'discontinued'
+        - This keeps the product in the database but removes it from appearing on the site. This avoids the issues listed above.
+
+- When an admin clicks on 'delete' they are presented with a modal which is dynamically populated based on whether a product has associated OrderLineItem objects. If it is possible to delete it (ie no associated OrderLineItem objects) then they have the option to delete, if it isn't they can mark it as discontinued.
+- Admins are also able to mark an object as discontinued by using the edit product form.
+
+**Value to User**
+
+This gives admins the ability to control their product catalogue and which products are available for sale. It means shoppers will only see products which are currently for sale.
+
+</details>
+
+- - -
+
 ### Shopping Bag
 
 ![Shopping Bag](media/docs/)
@@ -285,10 +426,6 @@ The bag summary gives users instant feedback on what is in their bag every time 
 <details><summary>Nav Shopping Bag</summary>
 
 - The nav bar contains a shopping bag icon with updates dynamically based on the contents of a user's shopping bag
-- The bag icon appears within a grey hexagon to continue the brand styling & site theme
-- The styling of the bag changes based on whether the bag is empty or not
-    - The bag icon turns white when there are contents or yellow (the same colour as the nav behind) if the bag is empty to appear empty
-    - The total is bold if the bag has contents, or regular weight if it doesn't.
 - The icon is a clickable link to the bag page with a colour change hover effect
 
 **Value to User**
@@ -320,9 +457,8 @@ This provides users with a constant point of information about the contents of t
     - Checkout button (button styled using 'purchasing' action blue [See Whole Site Features](#whole-site)) with a lock icon to show that the checkout is secure.
     - Keep Shopping button to return users to products page (button styled using secondary action grey [See Whole Site Features](#whole-site))
 - Delivery is calculated as follows:
-    - Some items are not subject to delivery charges e.g. courses [See products](#products)
     - The delivery charge is 10% of the total amount spent on items that are subject to delivery
-    - If a user has spent over £100 (including on products that are not subject to delivery) then delivery is free.
+    - If a user has spent over $100 (including on products that are not subject to delivery) then delivery is free.
 - If the bag is empty users see a message telling them that the bag has no contents with a link back to products to encourage them to shop.
 
 
@@ -383,10 +519,8 @@ A functioning checkout is a key part of an e-commerce site. This allows users to
     9. The user sees a success message containing their order number and information about email confirmation
     10. The site sends the user a confirmation email to the email address provided
     11. An order is created in the database.
-
-
+    
 </details>
-
 
 <details><summary>Checkout Success Page</summary>
 
