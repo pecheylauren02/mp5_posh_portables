@@ -859,16 +859,13 @@ I also think some sort of stock control would be useful for an e-commerce site, 
 - [Techsini:](http://techsini.com/multi-mockup/index.php) Website mockup image generator for images in this README.
 - [Temp Mail:](https://temp-mail.org/en/) Temporary email generator for testing account verification & order confirmation
 
-
 - - -
 [Go to Top](#posh-portables---a-gaming-accessories-e-commerce-site)
 - - -
 
-
 ### Testing & Bugs
 
 The site has been thoroughly tested using both automated and manual testing as well as validation for code, performance & accessibility full test results and details of bugs and their fixes can be found in the [TESTING document](TESTING.md)
-
 
 - - -
 [Go to Top](#posh-portables---a-gaming-accessories-e-commerce-site)
