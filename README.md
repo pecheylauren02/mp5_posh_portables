@@ -58,7 +58,44 @@ Websites visited for research:
 
 #### User Stories
 
-HERE
+Based on my research and the project aims I created a set of user stories that would inform all the choices made in designing and developing the site.
+
+1. As a general user:
+  - 1.1: I want to understand the purpose of the site immediately upon entering
+  - 1.2: I want to be able to find what I need immediately and for the navigation to be easy to follow & intuitive
+  - 1.3: I want to be able to use all features on the site on any device and for it to be fully responsive
+  - 1.4: I want to be able to find answers to common questions
+  - 1.5: I want to be able to contact the company with any questions or queries
+  - 1.6: I want to be able to find the company on social media to find out more
+  - 1.7: I want to be able to return to the main site without having to use the browser buttons if I end up on a non-existent page
+  - 1.8: I want to get feedback when interacting with the site to know if my actions have been successful
+
+2. As a shopper:
+  - 2.1: I want to be able to browse products easily, with options to filter & search to find what I need
+  - 2.2: I want to be able to find out information about products
+  - 2.3: I want to see ratings & reviews of a product to know more about the quality and whether it's right for me
+  - 2.4: I want to be able to shop for multiple items at once, from across the site
+  - 2.5: I want to be able to add multiples of a single product to my bag at once
+  - 2.6: I want to be able to edit my shopping bag if I change my mind
+  - 2.7: I want to know what I will be charged for delivery
+  - 2.8: I want my payment and order to be fully secure and trustworthy
+  - 2.9: I want to be able to set up an account to save my order history
+
+3. As a user with an account:
+  - 3.1: I want my account to be secure & easy to set up
+  - 3.2: I want to see my order history
+  - 3.3: I want to be able to update & save my personal information
+  - 3.4: I want to leave reviews of products I have purchased for the benefit of other customers
+  - 3.5: I want to be able to edit my reviews
+  - 3.6: I don't want admins or other customers to be able to change my reviews
+
+4. As an admin of the site:
+  - 4.1: I want to be able to add & edit products
+  - 4.2: I want to be able to remove products from sale
+  - 4.3: I want to view & filter customer messages and manage whether they need further action
+  - 4.4: I want to approve customer reviews before they go live & delete any with inappropriate content only
+  - 4.5: I want to be able to update the site FAQs
+  - 4.6: I want all the admin controls to be quick and easy to find and use
 
 ### Scope
 
@@ -1101,28 +1138,28 @@ I have found many useful sources in building this project, as this has been my f
 
 #### Images
 
-HOME COVER AND 404 PAGE:
-[Home Cover and 404 Page image](https://www.pexels.com/photo/white-and-black-xbox-one-controller-3945655/)
+##### HOME COVER AND 404 PAGE:
+- [Home Cover and 404 Page image](https://www.pexels.com/photo/white-and-black-xbox-one-controller-3945655/)
 
-AMAZON PRODUCTS:
-[10001](https://m.media-amazon.com/images/I/71OyrTkxpGL._AC_SL1500_.jpg)
-[10002](https://m.media-amazon.com/images/I/711+0tgn+6L._AC_SY300_SX300_.jpg)
-[10003](https://m.media-amazon.com/images/I/81vnNsRDo6L._AC_SL1500_.jpg)
-[10004](https://m.media-amazon.com/images/I/71eXjkfeO8L._AC_SL1500_.jpg)
-[10005](https://m.media-amazon.com/images/I/91KW9iWwXxL._AC_SL1500_.jpg)
-[10006](https://m.media-amazon.com/images/I/71P1MZ8ztDL._AC_SL1500_.jpg)
-[10007](https://m.media-amazon.com/images/I/71hdoqCHwiL._AC_SL1500_.jpg)
-[20001](https://m.media-amazon.com/images/I/71UuyaUmkhL._AC_SL1500_.jpg)
-[20002](https://m.media-amazon.com/images/I/71w-eYgrfnL._AC_SL1500_.jpg)
-[20003](https://m.media-amazon.com/images/I/51wEJVJjuLL._AC_SL1000_.jpg)
-[20004](https://m.media-amazon.com/images/I/71uGQWi6DzL._AC_SL1500_.jpg)
-[20005](https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_SL1000_.jpg)
-[20006](https://m.media-amazon.com/images/I/71EMsWRD1oL._AC_SL1500_.jpg)
-[30001](https://m.media-amazon.com/images/I/81yd9W+0doL._AC_SL1500_.jpg)
-[30002](https://m.media-amazon.com/images/I/618zZ7u3sUL._AC_SL1500_.jpg)
-[30003](https://m.media-amazon.com/images/I/61nghmq8GPL._AC_SL1500_.jpg)
-[30004](https://m.media-amazon.com/images/I/71HQVSBbTLL._AC_SL1500_.jpg)
-[30005](https://m.media-amazon.com/images/I/61ZaLWoqtcL._AC_SL1280_.jpg)
+##### AMAZON PRODUCTS:
+- [10001](https://m.media-amazon.com/images/I/71OyrTkxpGL._AC_SL1500_.jpg)
+- [10002](https://m.media-amazon.com/images/I/711+0tgn+6L._AC_SY300_SX300_.jpg)
+- [10003](https://m.media-amazon.com/images/I/81vnNsRDo6L._AC_SL1500_.jpg)
+- [10004](https://m.media-amazon.com/images/I/71eXjkfeO8L._AC_SL1500_.jpg)
+- [10005](https://m.media-amazon.com/images/I/91KW9iWwXxL._AC_SL1500_.jpg)
+- [10006](https://m.media-amazon.com/images/I/71P1MZ8ztDL._AC_SL1500_.jpg)
+- [10007](https://m.media-amazon.com/images/I/71hdoqCHwiL._AC_SL1500_.jpg)
+- [20001](https://m.media-amazon.com/images/I/71UuyaUmkhL._AC_SL1500_.jpg)
+- [20002](https://m.media-amazon.com/images/I/71w-eYgrfnL._AC_SL1500_.jpg)
+- [20003](https://m.media-amazon.com/images/I/51wEJVJjuLL._AC_SL1000_.jpg)
+- [20004](https://m.media-amazon.com/images/I/71uGQWi6DzL._AC_SL1500_.jpg)
+- [20005](https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_SL1000_.jpg)
+- [20006](https://m.media-amazon.com/images/I/71EMsWRD1oL._AC_SL1500_.jpg)
+- [30001](https://m.media-amazon.com/images/I/81yd9W+0doL._AC_SL1500_.jpg)
+- [30002](https://m.media-amazon.com/images/I/618zZ7u3sUL._AC_SL1500_.jpg)
+- [30003](https://m.media-amazon.com/images/I/61nghmq8GPL._AC_SL1500_.jpg)
+- [30004](https://m.media-amazon.com/images/I/71HQVSBbTLL._AC_SL1500_.jpg)
+- [30005](https://m.media-amazon.com/images/I/61ZaLWoqtcL._AC_SL1280_.jpg)
 
 - - -
 
