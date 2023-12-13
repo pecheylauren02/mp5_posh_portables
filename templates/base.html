@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <link rel="icon" type="image/png" href="{% static 'favicon/favicon.png' %}">
-
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     {% endblock %}
 
     {% block extra_css %}
@@ -166,7 +166,7 @@
                 <a class="btn btn-outline-light btn-floating m-1"
                     href="https://www.facebook.com/profile.php?id=61554694944684" target="_blank" role="button"><i
                         class="fab fa-facebook-f"></i> Follow us on Facebook</a>
-    
+
                 <!-- Social media icons -->
                 <div class="social-icons">
                     <!-- Google -->
@@ -182,20 +182,86 @@
                     <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/" target="_blank"
                         role="button"><i class="fab fa-github"></i></a>
                 </div>
-            </section>
-        </div>    
-        <!-- Copyright -->
+                <!-- Mailchimp signup form -->
+                <div id="mc_embed_shell">
+                    <div id="mc_embed_signup" class="border border-rounded mx-auto mt-4 w-100">
+                        <form
+                            action="https://herokuapp.us21.list-manage.com/subscribe/post?u=a5fb8a5bcee6aa877096abd73&amp;id=febbe5a235&amp;f_id=008ee8e6f0"
+                            method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
+                            class="validate" target="_blank">
+                            <div id="mc_embed_signup_scroll">
+                                <h2>Subscribe</h2>
+                                <div class="indicates-required"><span class="asterisk">*</span> indicates
+                                    required
+                                </div>
+                                <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span
+                                            class="asterisk">*</span></label><input type="email" name="EMAIL"
+                                        class="required email" id="mce-EMAIL" required="" value=""><span
+                                        id="mce-EMAIL-HELPERTEXT" class="helper_text"></span></div>
+                                <div id="mce-responses" class="clear foot">
+                                    <div class="response" id="mce-error-response" style="display: none;"></div>
+                                    <div class="response" id="mce-success-response" style="display: none;">
+                                    </div>
+                                </div>
+                                <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                    <!-- Real people should not fill this in and expect good things - do not remove this or risk form bot signups -->
+                                    <input type="text" name="b_a5fb8a5bcee6aa877096abd73_febbe5a235" tabindex="-1"
+                                        value="">
+                                </div>
+                                <div class="optionalParent">
+                                    <div class="clear foot">
+                                        <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button"
+                                            value="Subscribe">
+                                        <p style="margin: 0px auto;"><a href="http://eepurl.com/iF4_YU"
+                                                title="Mailchimp - email marketing made easy and fun"><span
+                                                    style="display: inline-block; background-color: transparent; border-radius: 4px;"><img
+                                                        class="refferal_badge"
+                                                        src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
+                                                        alt="Intuit Mailchimp"
+                                                        style="width: 220px; height: 40px; display: flex; padding: 2px 0px; justify-content: center; align-items: center;"></span></a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        </div>
+        </section>
+              <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
             © 2023 Copyright:
             <a class="text-white" href="#">Lauren Pechey</a>
         </div>
     </footer>
-    
+
     {% endblock %}
 
     {% block postloadjs %}
+    <!-- Toasts scripts -->
     <script type="text/javascript">
         $('.toast').toast('show');
+    </script>
+    <!-- Mailchimp scripts -->
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script type="text/javascript">
+        (function ($) {
+            window.fnames = new Array();
+            window.ftypes = new Array();
+            fnames[0] = 'EMAIL';
+            ftypes[0] = 'email';
+            fnames[1] = 'FNAME';
+            ftypes[1] = 'text';
+            fnames[2] = 'LNAME';
+            ftypes[2] = 'text';
+            fnames[3] = 'ADDRESS';
+            ftypes[3] = 'address';
+            fnames[4] = 'PHONE';
+            ftypes[4] = 'phone';
+            fnames[5] = 'BIRTHDAY';
+            ftypes[5] = 'birthday';
+        }(jQuery));
+        var $mcj = jQuery.noConflict(true);
     </script>
     {% endblock %}
 
