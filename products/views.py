@@ -147,3 +147,4 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Your Product has been deleted!')
     return redirect(reverse('products'))
+
