@@ -65,3 +65,54 @@
 </div>
 
 {% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const stars = document.querySelectorAll('.star-rating i');
+        const ratingInput = document.getElementById('rating');
+
+        stars.forEach(star => {
+            star.addEventListener('mouseover', function () {
+                highlightStars(parseInt(this.dataset.rating));
+            });
+
+            star.addEventListener('mouseout', function () {
+                highlightStars(parseInt(ratingInput.value));
+            });
+
+            star.addEventListener('click', function () {
+                const ratingValue = parseInt(this.dataset.rating);
+                ratingInput.value = ratingValue;
+                highlightStars(ratingValue);
+
+                // Add bounce or grow effect
+                star.classList.add('selected');
+                setTimeout(() => {
+                    star.classList.remove('selected');
+                }, 500);
+            });
+        });
+
+        function highlightStars(rating) {
+            stars.forEach(star => {
+                if (parseInt(star.dataset.rating) <= rating) {
+                    star.style.color = 'gold'; // Change to desired color when highlighted
+                } else {
+                    star.style.color = 'black'; // Change to default color when not highlighted
+                }
+            });
+        }
+    });
+</script>
+
+<style>
+    .selected {
+        transform: scale(1.2); /* Adjust the scale factor as needed for the desired growth effect */
+        transition: transform 0.5s ease; /* Adjust the transition duration and timing function as needed */
+    }
+</style>
+
+{% endblock %}
