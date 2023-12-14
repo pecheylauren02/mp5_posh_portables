@@ -1,55 +1,67 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block extra_title %}- Add a review{% endblock %}
-
-{% block extra_meta %}
-    <meta name="description" content="Add your review for {{product.name}} using our simple form">
-{% endblock %}
-
 {% block content %}
-<form method="post" class="text-center" action="#">
-    {% csrf_token %}
 
-    <h2>Product Information:</h2>
-    <p><strong>Product Name:</strong> {{ product.id }}</p>
-    <p><strong>Product Category:</strong> {{ product.category }}</p>
-    <p><strong>Price:</strong> {{ product.price }}</p>
+<div class="container mt-4">
+    <!-- <div class="row mt-4 text-center">
+        <div class="col-md-8 mx-auto">
+            <h2 class="mb-4">Product Review - {{ product_name }}</h2>
 
-    <h2>User Information:</h2>
-    <label for="id_name">Name:</label>
-    <input type="text" name="name" id="id_name" required>
-    
-    <label for="id_email">Email:</label>
-    <input type="email" name="email" id="id_email" required>
+            <form method="post" class="needs-validation" novalidate>
+                {% csrf_token %}
 
-    <h2>Product Rating:</h2>
-    <label for="id_quality">Quality:</label>
-    <input type="number" name="quality" id="id_quality" min="1" max="5" required>
+                <div class="form-group">
+                    <label for="comment">Your Review:</label>
+                    <textarea class="form-control" id="comment" name="comment" rows="5" required></textarea>
+                    <div class="invalid-feedback">
+                        Please provide your review.
+                    </div>
+                </div>
 
-    <label for="id_durability">Durability:</label>
-    <input type="number" name="durability" id="id_durability" min="1" max="5" required>
+                <button type="submit" class="btn btn-info">Submit Review</button>
+            </form>
+        </div>
+    </div> -->
+    <div class="row mt-4 text-center">
+        <div class="col-md-8 mx-auto">
+            <h1 class="mb-4">Product Review for <strong>{{ product_name }}</strong></h1>
+            <p class="lead">Thank you for reviewing our products! We take your feedback seriously!</strong></p>
+            <!-- Product Image -->
+            {% if product.image %}
+            <img class="d-none d-sm-block w-75 mx-auto border border-dark" src="{{ product.image.url }}" alt="{{ product.name }}"
+                onerror="this.onerror=null;this.src='{{ MEDIA_URL }}no_image.jpg'">
+            {% else %}
+            <img class="d-none d-sm-block w-75 mx-auto border border-dark" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ product.name }}">
+            {% endif %}
 
-    <!-- Repeat the above for Design, Performance, and Value for Money -->
+            <form method="post" class="needs-validation" novalidate>
+                {% csrf_token %}
 
-    <h2>Review:</h2>
-    <textarea name="review" rows="4" cols="50" required></textarea>
+                <div class="form-group">
+                    <label for="comment">Write Your Review below:</label>
+                    <textarea class="form-control w-100 p-2 border border-dark rounded" id="comment" name="comment" rows="5" required></textarea>
+                    <div class="invalid-feedback">
+                        Please provide your review.
+                    </div>
+                </div>
 
-    <h2>Pros:</h2>
-    <textarea name="pros" rows="2" cols="50"></textarea>
+                <div class="form-group">
+                    <label for="rating">Rating:</label>
+                    <div class="star-rating">
+                        <i class="fas fa-star fa-2x" data-rating="1"></i>
+                        <i class="fas fa-star fa-2x" data-rating="2"></i>
+                        <i class="fas fa-star fa-2x" data-rating="3"></i>
+                        <i class="fas fa-star fa-2x" data-rating="4"></i>
+                        <i class="fas fa-star fa-2x" data-rating="5"></i>
+                        <input type="hidden" name="rating" id="rating" value="0">
+                    </div>
+                </div>
 
-    <h2>Cons:</h2>
-    <textarea name="cons" rows="2" cols="50"></textarea>
-
-    <h2>Recommendation:</h2>
-    <label><input type="radio" name="recommend" value="yes" required> Yes</label>
-    <label><input type="radio" name="recommend" value="no" required> No</label>
-
-    <h2>Additional Comments:</h2>
-    <textarea name="additional_comments" rows="4" cols="50"></textarea>
-
-    <input type="submit" value="Submit Review">
-</form>
-
+                <button type="submit" class="btn btn-lg btn-black">Submit Review</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
