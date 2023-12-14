@@ -3,31 +3,11 @@
 
 {% block content %}
 
-<div class="container mt-4">
-    <img class="d-none d-sm-block w-75 mx-auto border border-dark" src="{{ product.image.url }}" alt="{{ product.name }}"
-                onerror="this.onerror=null;this.src='{{ MEDIA_URL }}no_image.jpg'">
-    <!-- <div class="row mt-4 text-center">
-        <div class="col-md-8 mx-auto">
-            <h2 class="mb-4">Product Review - {{ product_name }}</h2>
-
-            <form method="post" class="needs-validation" novalidate>
-                {% csrf_token %}
-
-                <div class="form-group">
-                    <label for="comment">Your Review:</label>
-                    <textarea class="form-control" id="comment" name="comment" rows="5" required></textarea>
-                    <div class="invalid-feedback">
-                        Please provide your review.
-                    </div>
-                </div>
-
-                <button type="submit" class="btn btn-info">Submit Review</button>
-            </form>
-        </div>
-    </div> -->
+<div class="container header-container">
     <div class="row mt-4 text-center">
+        <!-- Product Image -->
         <div class="col-md-8 mx-auto">
-            <h1 class="mb-4 display-6">Product Review for <strong>{{ product.name }}</strong></h1>
+            <h1 class="mb-4"><strong>Product Review for {{ product.name }}</strong></h1>
             <p class="lead">Thank you for reviewing our products! We take your feedback seriously!</strong></p>
             <!-- Product Image -->
             {% if product.image %}
