@@ -71,3 +71,106 @@ def create_reviews(request, product_id):
     }
 
     return render(request, template, context)
+
+
+@login_required()
+def update_review(request, review_id):
+    """
+    Renders form to update the review.
+    Logged in Users Only (redirects to log in).
+    Updates review on database.
+    """
+
+    review = get_object_or_404(Reviews, pk=review_id)
+    product = Product.objects.filter(reviews=review)[0]
+
+    # Checks user is author of review
+    # redirects to product detail if not
+    if request.user != review.user:
+        messages.error(request, 'You can only update your own reviews.')
+        return redirect(reverse('product_detail', args=[product.id]))
+
+    # Handles Form Submission
+    if request.method == "POST":
+        form = ReviewForm(request.POST, request.FILES, instance=review)
+
+        if form.is_valid():
+            review = form.save()
+            review.is_approved = False
+            review.save()
+
+            # Gets URL to redirect user back to previous page
+            redirect_url = request.POST.get('redirect_url', reverse('product_detail', args=[product.id]))
+
+            # Updates product rating on product object
+            if product.reviews.filter(is_approved=True).count() > 0:
+                product.rating = round(
+                    product.reviews.filter(
+                        is_approved=True).aggregate(
+                            Avg('rating'))['rating__avg'])
+            else:
+                product.rating = 0
+            product.save()
+
+            # request.session['show_bag_summary'] = False
+            messages.success(
+                request,
+                "Your review has been updated. " +
+                "It will appear on the site once it has been approved. " +
+                "You can see your review on your profile page until then."
+            )
+            return redirect(redirect_url)
+        else:
+            messages.error(request, "Form invalid, please try again.")
+
+    # Handles View Rendering
+    else:
+        form = ReviewForm(instance=review)
+        messages.info(request, f'You are editing... "{review.title}"')
+
+    # Sets page template
+    template = 'reviews/update_reviews.html'
+
+    # Sets current product & form content
+    context = {
+        'form': form,
+        'review': review,
+        'product': product,
+    }
+
+    return render(request, template, context)
+
+
+@login_required()
+def remove_review(request, review_id):
+    """
+    Removes a review from the database.
+    Only the author of the review can remove it.
+    """
+
+    # Get the review object
+    review = get_object_or_404(Reviews, pk=review_id)
+    product = Product.objects.filter(reviews=review).first()
+
+    # Check if the logged-in user is the author of the review
+    if request.user != review.user:
+        messages.error(request, 'You can only remove your own reviews.')
+        return redirect(reverse('product_detail', args=[product.id]))
+
+    # Remove the review from the database
+    review.delete()
+
+    # Update product rating on product object
+    if product.reviews.filter(is_approved=True).count() > 0:
+        product.rating = round(
+            product.reviews.filter(
+                is_approved=True).aggregate(
+                    Avg('rating'))['rating__avg'])
+    else:
+        product.rating = 0
+    product.save()
+
+    messages.success(request, "Your review has been removed.")
+
+    # Redirect back to the product detail page
+    return redirect(reverse('product_detail', args=[product.id]))

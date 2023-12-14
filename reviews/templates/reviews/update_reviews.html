@@ -7,7 +7,7 @@
     <div class="row mt-4 text-center">
         <!-- Product Image -->
         <div class="col-md-8 mx-auto">
-            <h3><strong>Create Your Review for:</strong></h3>
+            <h3><strong>Update Your review for:</strong></h3>
             <h4><strong><em class="lead">{{ product.name }}</em></strong></h4>
             <!-- Product Image -->
             {% if product.image %}
@@ -24,7 +24,7 @@
                 <div class="form-group">
                     <label for="title">Title:</label>
                     <input type="text" class="form-control w-100 p-2 border border-dark rounded" id="title" name="title"
-                        required>
+                        value="{{ review.title }}" required>
                     <div class="invalid-feedback">
                         Please provide a title for your review.
                     </div>
@@ -33,7 +33,7 @@
                 <div class="form-group">
                     <label for="content">Write Your Review below:</label>
                     <textarea class="form-control w-100 p-2 border border-dark rounded" id="content" name="content"
-                        rows="5" required></textarea>
+                        rows="5" required>{{ review.content }}</textarea>
                     <div class="invalid-feedback">
                         Please provide your review.
                     </div>
@@ -47,67 +47,14 @@
                         <i class="fas fa-star fa-2x" data-rating="3"></i>
                         <i class="fas fa-star fa-2x" data-rating="4"></i>
                         <i class="fas fa-star fa-2x" data-rating="5"></i>
-                        <input type="hidden" name="rating" id="rating" value="0">
+                        <input type="hidden" name="rating" id="rating" value="{{ review.rating }}">
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-lg btn-black">Submit Review</button>
+                <button type="submit" class="btn btn-lg btn-black">Update Review</button>
             </form>
         </div>
     </div>
 </div>
-
-{% endblock %}
-
-{% block postloadjs %}
-{{ block.super }}
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const stars = document.querySelectorAll('.star-rating i');
-        const ratingInput = document.getElementById('rating');
-
-        stars.forEach(star => {
-            star.addEventListener('mouseover', function () {
-                highlightStars(parseInt(this.dataset.rating));
-            });
-
-            star.addEventListener('mouseout', function () {
-                highlightStars(parseInt(ratingInput.value));
-            });
-
-            star.addEventListener('click', function () {
-                const ratingValue = parseInt(this.dataset.rating);
-                ratingInput.value = ratingValue;
-                highlightStars(ratingValue);
-
-                // Add bounce or grow effect
-                star.classList.add('selected');
-                setTimeout(() => {
-                    star.classList.remove('selected');
-                }, 500);
-            });
-        });
-
-        function highlightStars(rating) {
-            stars.forEach(star => {
-                if (parseInt(star.dataset.rating) <= rating) {
-                    star.style.color = 'gold'; // Change to desired color when highlighted
-                } else {
-                    star.style.color = 'black'; // Change to default color when not highlighted
-                }
-            });
-        }
-    });
-</script>
-
-<style>
-    .selected {
-        transform: scale(1.2);
-        /* Adjust the scale factor as needed for the desired growth effect */
-        transition: transform 0.5s ease;
-        /* Adjust the transition duration and timing function as needed */
-    }
-</style>
 
 {% endblock %}
