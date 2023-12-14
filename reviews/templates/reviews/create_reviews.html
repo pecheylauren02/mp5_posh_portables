@@ -7,8 +7,8 @@
     <div class="row mt-4 text-center">
         <!-- Product Image -->
         <div class="col-md-8 mx-auto">
-            <h1 class="mb-4"><strong>Product Review for {{ product.name }}</strong></h1>
-            <p class="lead">Thank you for reviewing our products! We take your feedback seriously!</strong></p>
+            <h3><strong>Product Review for:</strong></h3>
+            <h4><strong><em class="lead">{{ product.name }}</em></strong></h4>
             <!-- Product Image -->
             {% if product.image %}
             <img class="d-none d-sm-block w-75 mx-auto border border-dark" src="{{ product.image.url }}" alt="{{ product.name }}"
@@ -16,7 +16,7 @@
             {% else %}
             <img class="d-none d-sm-block w-75 mx-auto border border-dark" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ product.name }}">
             {% endif %}
-
+            <p class="lead">We value your feedback!</strong></p>
             <form method="post" class="needs-validation" novalidate>
                 {% csrf_token %}
 
