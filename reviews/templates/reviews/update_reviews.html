@@ -58,3 +58,57 @@
 </div>
 
 {% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+    const stars = document.querySelectorAll('.star-rating i');
+    const ratingInput = document.getElementById('rating');
+    
+    let userRating = parseInt(ratingInput.value);
+
+    stars.forEach(star => {
+        star.addEventListener('mouseover', function () {
+            highlightStars(parseInt(this.dataset.rating));
+        });
+
+        star.addEventListener('mouseout', function () {
+            highlightStars(userRating);
+        });
+
+        star.addEventListener('click', function () {
+            const ratingValue = parseInt(this.dataset.rating);
+            userRating = ratingValue; // Update userRating
+            ratingInput.value = userRating;
+            highlightStars(userRating);
+
+            // Add bounce or grow effect
+            star.classList.add('selected');
+            setTimeout(() => {
+                star.classList.remove('selected');
+            }, 500);
+        });
+    });
+
+    // Set initial color based on pre-filled rating
+    highlightStars(userRating);
+
+    function highlightStars(rating) {
+        stars.forEach(star => {
+            if (parseInt(star.dataset.rating) <= rating) {
+                star.style.color = 'gold'; // Change to desired color when highlighted
+            } else {
+                star.style.color = 'black'; // Change to default color when not highlighted
+            }
+        });
+    }
+});
+
+
+</script>
+
+{% endblock %}
+
