@@ -11,18 +11,29 @@
             <h4><strong><em class="lead">{{ product.name }}</em></strong></h4>
             <!-- Product Image -->
             {% if product.image %}
-            <img class="d-none d-sm-block w-75 mx-auto border border-dark" src="{{ product.image.url }}" alt="{{ product.name }}"
-                onerror="this.onerror=null;this.src='{{ MEDIA_URL }}no_image.jpg'">
+            <img class="d-none d-sm-block w-75 mx-auto border border-dark" src="{{ product.image.url }}"
+                alt="{{ product.name }}" onerror="this.onerror=null;this.src='{{ MEDIA_URL }}no_image.jpg'">
             {% else %}
-            <img class="d-none d-sm-block w-75 mx-auto border border-dark" src="{{ MEDIA_URL }}no_image.jpg" alt="{{ product.name }}">
+            <img class="d-none d-sm-block w-75 mx-auto border border-dark" src="{{ MEDIA_URL }}no_image.jpg"
+                alt="{{ product.name }}">
             {% endif %}
             <p class="lead">We value your feedback!</strong></p>
             <form method="post" class="needs-validation" novalidate>
                 {% csrf_token %}
 
                 <div class="form-group">
-                    <label for="comment">Write Your Review below:</label>
-                    <textarea class="form-control w-100 p-2 border border-dark rounded" id="comment" name="comment" rows="5" required></textarea>
+                    <label for="title">Title:</label>
+                    <input type="text" class="form-control w-100 p-2 border border-dark rounded" id="title" name="title"
+                        required>
+                    <div class="invalid-feedback">
+                        Please provide a title for your review.
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="content">Write Your Review below:</label>
+                    <textarea class="form-control w-100 p-2 border border-dark rounded" id="content" name="content"
+                        rows="5" required></textarea>
                     <div class="invalid-feedback">
                         Please provide your review.
                     </div>
@@ -92,8 +103,10 @@
 
 <style>
     .selected {
-        transform: scale(1.2); /* Adjust the scale factor as needed for the desired growth effect */
-        transition: transform 0.5s ease; /* Adjust the transition duration and timing function as needed */
+        transform: scale(1.2);
+        /* Adjust the scale factor as needed for the desired growth effect */
+        transition: transform 0.5s ease;
+        /* Adjust the transition duration and timing function as needed */
     }
 </style>
 
