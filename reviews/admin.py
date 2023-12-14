@@ -7,9 +7,6 @@ class ReviewAdmin(admin.ModelAdmin):
     Review Model Admin
     """
 
-    class Meta: 
-        verbose_name_plural = 'Categories'
-
     list_display = (
         'product',
         'user',
