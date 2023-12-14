@@ -54,6 +54,7 @@ def create_reviews(request, product_id):
 
             return redirect(reverse('product_detail', args=[product.id]))
         else:
+            print(form.errors)
             messages.error(request, "Uh Oh! Looks like your form is invalid, please try again.")
 
     # Handles the View Rendering
