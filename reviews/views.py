@@ -32,6 +32,7 @@ def create_reviews(request, product_id):
             review = form.save(commit=False)
             review.product = product
             review.user = author
+            review.is_approved = False
             review.save()
 
             # Updates the product rating on the product object

@@ -7,6 +7,9 @@ class ReviewAdmin(admin.ModelAdmin):
     Review Model Admin
     """
 
+    class Meta: 
+        verbose_name_plural = 'Categories'
+
     list_display = (
         'product',
         'user',
@@ -19,6 +22,16 @@ class ReviewAdmin(admin.ModelAdmin):
     list_editable = ('is_approved',)
     readonly_fields = (
         'title', 'content', 'rating', 'user', 'product')
+
+    actions = ['approve_reviews', 'disapprove_reviews']
+
+    def approve_reviews(self, request, queryset):
+        queryset.update(is_approved=True)
+        self.message_user(request, f'Selected reviews have been approved.')
+
+    def disapprove_reviews(self, request, queryset):
+        queryset.update(is_approved=False)
+        self.message_user(request, f'Selected reviews have been disapproved.')
 
 
 admin.site.register(Reviews, ReviewAdmin)
