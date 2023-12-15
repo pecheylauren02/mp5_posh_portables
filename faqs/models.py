@@ -2,7 +2,10 @@ from django.db import models
 
 
 class Faq(models.Model):
-    """ FAQ Model """
+    """ 
+    FAQ Model
+    For Frequently Asked Questions
+    """
 
     question = models.CharField(
         max_length=100,
