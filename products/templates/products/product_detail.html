@@ -12,6 +12,9 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container-fluid">
+    <hr>
+    <h2 class="logo-font mb-4 text-center">Product Details</h2>
+    <hr>
     <div class="row">
         <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
             <div class="image-container my-5">
@@ -107,30 +110,41 @@
     <hr>
 </div>
 
-<div class="container">
+<div class="container mx-auto">
     <div class="row justify-content-center">
-        <div class="col-12 col-md-8 text-center">
+        <div class="col-12 col-md-8 text-start">
             <div class="product-reviews mt-5">
-                <h2>Product Reviews</h2>
-                <button class="btn bg-black logo-font mb-3" id="seeReviewsBtn" style="color: #fff;">Read Reviews</button>
-                <div id="reviewsContainer" style="display: none">
+                <hr>
+                <h2 class="logo-font mb-4 text-center">Product Reviews</h2>
+                <hr>
+                <div class="text-center">
+                    <button class="btn bg-black logo-font mb-3" id="seeReviewsBtnProd" style="color: #fff;">Read
+                        Reviews</button>
+                </div>
+                <div id="reviewsContainerProd" style="display: none">
                     {% if reviews %}
-                        <ul class="list-unstyled border border-dark p-3 rounded">
-                            {% for review in reviews %}
-                            <li class="mb-3">
-                                <strong>{{ review.title }}</strong> by <em>{{ review.user.username }}</em>
+                    <ul class="list-unstyled border border-dark p-3 rounded">
+                        {% for review in reviews %}
+                        <li class="mb-3">
+                            <hr>
+                            <strong class="logo-font">Author: </strong> <em>{{ review.user.username }}</em>
+                        </li>
+                        <li class="row">
+                            <!-- Rating -->
+                            <div class="col-md-4">
+                                <strong class="logo-font">Rating: </strong>
                                 <br>
-                            </li>
-                            <li>
-                                Rating: {{ review.rating }}
+                                {{ review.rating }}
+                            </div>
+                            <!-- Comments -->
+                            <div class="col-md-8">
+                                <strong class="logo-font">Comments: </strong>
                                 <br>
-                            </li>
-                            <li>
                                 {{ review.content }}
-                                <br>
-                            </li>
-                            {% endfor %}
-                        </ul>
+                            </div>
+                        </li>
+                        {% endfor %}
+                    </ul>
                 </div>
                 {% else %}
                 <p>No reviews for this product yet.</p>
@@ -148,16 +162,16 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const seeReviewsBtn = document.getElementById('seeReviewsBtn');
-        const reviewsContainer = document.getElementById('reviewsContainer');
+        const seeReviewsBtnProd = document.getElementById('seeReviewsBtnProd');
+        const reviewsContainerProd = document.getElementById('reviewsContainerProd');
 
-        seeReviewsBtn.addEventListener('click', function () {
-            if (reviewsContainer.style.display === 'none') {
-                reviewsContainer.style.display = 'block';
-                seeReviewsBtn.textContent = 'Hide Reviews';
+        seeReviewsBtnProd.addEventListener('click', function () {
+            if (reviewsContainerProd.style.display === 'none') {
+                reviewsContainerProd.style.display = 'block';
+                seeReviewsBtnProd.textContent = 'Hide Reviews';
             } else {
-                reviewsContainer.style.display = 'none';
-                seeReviewsBtn.textContent = 'Read Reviews';
+                reviewsContainerProd.style.display = 'none';
+                seeReviewsBtnProd.textContent = 'Read Reviews';
             }
         });
     });
