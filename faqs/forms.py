@@ -19,3 +19,10 @@ class FaqForm(forms.ModelForm):
             'question': 'Question',
             'answer': 'Answer'
         }
+
+        # Sets autofocus on first input
+        self.fields['question'].widget.attrs['autofocus'] = True
+
+        # Sets aria-labels on inputs
+        self.fields['question'].widget.attrs['aria-label'] = 'FAQ Question'
+        self.fields['answer'].widget.attrs['aria-label'] = 'FAQ Answer'
