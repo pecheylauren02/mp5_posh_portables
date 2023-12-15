@@ -6,6 +6,7 @@ from django.db.models.functions import Lower
 
 from .models import Product, Category
 from .forms import ProductForm
+from reviews.models import Reviews
 
 
 def all_products(request):
@@ -68,9 +69,11 @@ def product_detail(request, product_id):
     """
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = Reviews.objects.filter(product=product, is_approved=True)
 
     context = {
         'product': product,
+        'reviews': reviews,
     }
 
     return render(request, 'products/product_detail.html', context)

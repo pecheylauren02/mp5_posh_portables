@@ -98,15 +98,69 @@
                                     value="Add to Cart">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
+
                         </div>
                 </form>
             </div>
         </div>
     </div>
+    <hr>
 </div>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 text-center">
+            <div class="product-reviews mt-5">
+                <h2>Product Reviews</h2>
+                <button class="btn bg-black logo-font mb-3" id="seeReviewsBtn" style="color: #fff;">Read Reviews</button>
+                <div id="reviewsContainer" style="display: none">
+                    {% if reviews %}
+                        <ul class="list-unstyled border border-dark p-3 rounded">
+                            {% for review in reviews %}
+                            <li class="mb-3">
+                                <strong>{{ review.title }}</strong> by <em>{{ review.user.username }}</em>
+                                <br>
+                            </li>
+                            <li>
+                                Rating: {{ review.rating }}
+                                <br>
+                            </li>
+                            <li>
+                                {{ review.content }}
+                                <br>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                </div>
+                {% else %}
+                <p>No reviews for this product yet.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
 {% include 'products/includes/quantity_input_script.html' %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const seeReviewsBtn = document.getElementById('seeReviewsBtn');
+        const reviewsContainer = document.getElementById('reviewsContainer');
+
+        seeReviewsBtn.addEventListener('click', function () {
+            if (reviewsContainer.style.display === 'none') {
+                reviewsContainer.style.display = 'block';
+                seeReviewsBtn.textContent = 'Hide Reviews';
+            } else {
+                reviewsContainer.style.display = 'none';
+                seeReviewsBtn.textContent = 'Read Reviews';
+            }
+        });
+    });
+</script>
+
 {% endblock %}
