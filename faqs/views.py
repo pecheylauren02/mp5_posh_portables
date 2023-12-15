@@ -109,3 +109,24 @@ def update_faq(request, faq_id):
     }
 
     return render(request, template, context)
+
+
+@login_required
+def remove_faq(request, faq_id):
+    """ 
+    Allows admin to remove a FAQ 
+    """
+
+    # Checks user is superuser
+    # redirects to FAQS if not
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Sorry, only store owners can delete FAQS.')
+        return redirect(reverse('faqs'))
+
+    faq = get_object_or_404(Faq, pk=faq_id)
+    faq.delete()
+    message = 'FAQ deleted!'
+
+    messages.success(request, message)
+    return redirect(reverse('faqs'))
