@@ -80,14 +80,13 @@
                     <hr>
                     <h2 class="logo-font mb-4">My Product Reviews</h2>
                     <hr>
-                    <button class="btn bg-black logo-font mb-3" id="seeReviewsBtn" style="color: #fff;">Read
-                        Reviews</button>
+                    <button class="btn bg-black logo-font mb-3" id="seeReviewsBtn" style="color: #fff;">Read My Reviews</button>
                     <div id="reviewsContainer" style="display: none">
                         <ul class="list-unstyled border border-dark p-3 rounded">
                             {% for review in user_reviews %}
                             <li class="mb-3">
                                 <hr>
-                                <strong>{{ review.title }}</strong> by <em>{{ review.user.username }}</em>
+                                <strong class="logo-font">{{ review.product.name }}</strong> by <em>{{ review.user.username }}</em>
                             </li>
                             <li>
                                 {% if review.product.image %}
@@ -99,16 +98,19 @@
                                 {% endif %}
                                 <hr>
                             </li>
-                            <li>
-                                Your rating:
-                                <br>
-                                {{ review.rating }}
-                            </li>
-                            <li>
-                                Your Review:
-                                <br>
-                                {{ review.content }}
-                                <hr>
+                            <li class="row">
+                                <!-- Rating -->
+                                <div class="col-md-4">
+                                    <strong class="logo-font">Your rating:</strong>
+                                    <br>
+                                    {{ review.rating }}
+                                </div>
+                                <!-- Comments -->
+                                <div class="col-md-8">
+                                    <strong class="logo-font">Your comments:</strong>
+                                    <br>
+                                    {{ review.content }}
+                                </div>
                             </li>
                             {% endfor %}
                         </ul>
