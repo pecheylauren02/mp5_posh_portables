@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import UserProfile
+from reviews.models import Reviews
 from .forms import UserProfileForm
 
 from checkout.models import Order
@@ -25,10 +26,14 @@ def profile(request):
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
 
+    # Get user reviews
+    user_reviews = Reviews.objects.filter(user=request.user, is_approved=True)
+
     template = 'profiles/profile.html'
     context = {
         'form': form,
         'orders': orders,
+        'user_reviews': user_reviews,
         'on_profile_page': True
     }
 

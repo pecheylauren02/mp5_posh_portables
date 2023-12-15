@@ -48,7 +48,8 @@
                         {% for order in orders %}
                         <tr>
                             <td>
-                                <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}" aria-label="Order number link" rel="noopener noreferrer">
+                                <a href="{% url 'order_history' order.order_number %}" title="{{ order.order_number }}"
+                                    aria-label="Order number link" rel="noopener noreferrer">
                                     {{ order.order_number|truncatechars:6 }}
                                 </a>
                             </td>
@@ -68,7 +69,53 @@
                     </tbody>
                 </table>
             </div>
-            
+
+        </div>
+    </div>
+
+    <div class="container mx-auto">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 text-start">
+                <div class="product-reviews mt-5">
+                    <hr>
+                    <h2 class="logo-font mb-4">My Product Reviews</h2>
+                    <hr>
+                    <button class="btn bg-black logo-font mb-3" id="seeReviewsBtn" style="color: #fff;">Read
+                        Reviews</button>
+                    <div id="reviewsContainer" style="display: none">
+                        <ul class="list-unstyled border border-dark p-3 rounded">
+                            {% for review in user_reviews %}
+                            <li class="mb-3">
+                                <hr>
+                                <strong>{{ review.title }}</strong> by <em>{{ review.user.username }}</em>
+                            </li>
+                            <li>
+                                {% if review.product.image %}
+                                <img src="{{ review.product.image.url }}" alt="{{ review.product.name }}"
+                                    class="img-fluid">
+                                {% else %}
+                                <!-- Handle the case where the product has no image -->
+                                <p>No image available</p>
+                                {% endif %}
+                                <hr>
+                            </li>
+                            <li>
+                                Your rating:
+                                <br>
+                                {{ review.rating }}
+                            </li>
+                            <li>
+                                Your Review:
+                                <br>
+                                {{ review.content }}
+                                <hr>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
     {% endblock %}
@@ -76,4 +123,21 @@
     {% block postloadjs %}
     {{ block.super }}
     <script type="text/javascript" src="{% static 'profiles/js/countryfield.js' %}"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const seeReviewsBtn = document.getElementById('seeReviewsBtn');
+            const reviewsContainer = document.getElementById('reviewsContainer');
+
+            seeReviewsBtn.addEventListener('click', function () {
+                if (reviewsContainer.style.display === 'none') {
+                    reviewsContainer.style.display = 'block';
+                    seeReviewsBtn.textContent = 'Hide Reviews';
+                } else {
+                    reviewsContainer.style.display = 'none';
+                    seeReviewsBtn.textContent = 'Read Reviews';
+                }
+            });
+        });
+    </script>
+
     {% endblock %}
