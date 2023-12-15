@@ -36,9 +36,22 @@ def create_faq(request):
         if form.is_valid():
             form.save()
 
-            request.session['show_bag_summary'] = False
             messages.success(request, "New FAQ added.")
             return redirect(reverse('faqs'))
         else:
             messages.error(request, "Oops. Your form invalid," + " "
                            "please check that you have filled it in correctly.")
+
+    # Handles View Rendering
+    else:
+        form = FaqForm()
+
+    # Sets page template
+    template = 'faqs/create_faq.html'
+
+    # Sets current faq & form content
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
