@@ -51,11 +51,61 @@ def create_faq(request):
         form = FaqForm()
 
     # Sets page template
-    template = 'faqs/add_faq.html'
+    template = 'faqs/create_faq.html'
 
     # Sets current faq & form content
     context = {
         'form': form,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def update_faq(request, faq_id):
+    """ 
+    View allows admin and superusers
+    To edit and update their FAQs
+    """
+
+    # Checks user is superuser
+    # redirects to FAQS if not
+    if not request.user.is_superuser:
+        messages.error(
+            request, 'Sorry, only administrators can update FAQS.')
+        return redirect(reverse('faqs'))
+
+    # Get faq from DB
+    faq = get_object_or_404(Faq, pk=faq_id)
+
+    # Handle Form Submission
+    if request.method == 'POST':
+        form = FaqForm(request.POST, request.FILES, instance=faq)
+
+        if form.is_valid():
+            form.save()
+
+            messages.success(request, 'Successfully updated FAQ!')
+
+            # Redirects to 'faqs'
+            return redirect(reverse('faqs'))
+
+        else:
+            messages.error(
+                request, 'Failed to update FAQ. Please check the form.')
+
+    # Handles View Rendering
+    else:
+        form = FaqForm(instance=faq)
+        messages.info(request, f'You are editing {faq.question}')
+
+    # Sets page template
+    template = 'faqs/update_faq.html'
+
+    # Sets current faq & form content
+    context = {
+        'form': form,
+        'faq': faq,
     }
 
     return render(request, template, context)

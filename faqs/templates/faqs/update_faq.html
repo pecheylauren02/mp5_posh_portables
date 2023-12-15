@@ -7,11 +7,11 @@
         <div class="row pb-5">
             <!-- Title Section -->
             <div class="col-12 col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">
-                <h1 class="font-title weight-bold section-title-lrg mb-2">ADD FAQ</h1>
+                <h1 class="mb-2">Update FAQ</h1>
                 <hr>
 
                 <!-- Faq Form -->
-                <form method="POST" action="{% url 'create_faq' %}" class="form mt-4 form-as-p" id="faq-form">
+                <form method="POST" action="{% url 'update_faq' %}" class="form mt-4 form-as-p" id="faq-form">
                     {% csrf_token %}
                     {{ form.as_p }}
                     

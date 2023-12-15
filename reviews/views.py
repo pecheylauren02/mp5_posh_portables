@@ -112,7 +112,6 @@ def update_review(request, review_id):
                 product.rating = 0
             product.save()
 
-            # request.session['show_bag_summary'] = False
             messages.success(
                 request,
                 "Your review has been updated. " +
