@@ -26,3 +26,20 @@ class FaqForm(forms.ModelForm):
         # Sets aria-labels on inputs
         self.fields['question'].widget.attrs['aria-label'] = 'FAQ Question'
         self.fields['answer'].widget.attrs['aria-label'] = 'FAQ Answer'
+
+        for field in self.fields:
+            # Sets placeholders on fields with * for required fields
+            if self.fields[field].required:
+                placeholder = f'{placeholders[field]} *'
+            else:
+                placeholder = placeholders[field]
+
+            # Sets placeholders on inputs
+            self.fields[field].widget.attrs['placeholder'] = placeholder
+
+            # Adds stylings classes to inputs
+            self.fields[field].widget.attrs['class'] = (
+                'mb-3 px-2 py-2')
+
+            # Removes input labels
+            self.fields[field].label = False
