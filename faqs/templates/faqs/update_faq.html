@@ -11,7 +11,7 @@
                 <hr>
 
                 <!-- Faq Form -->
-                <form method="POST" action="{% url 'update_faq' %}" class="form mt-4 form-as-p" id="faq-form">
+                <form method="POST" action="{% url 'update_faq' faq.id %}" class="form mt-4 form-as-p" id="faq-form">
                     {% csrf_token %}
                     {{ form.as_p }}
                     
@@ -25,7 +25,7 @@
                     
                         <!-- Submit Button -->
                         <button type="submit" class="logo-font shop-now-button btn btn-lg bg-black">
-                            Create FAQ
+                            Update FAQ
                         </button>
 
                     </div>
@@ -34,3 +34,6 @@
         </div>
     </div>
 {% endblock %}
+
+
+
