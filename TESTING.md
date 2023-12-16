@@ -96,7 +96,7 @@ I ran the JavaScript code through [JSHint](https://jshint.com/). For full result
 
 I ran the app.py code through [https://pep8ci.herokuapp.com/](https://pep8ci.herokuapp.com/) to check the Syntax. GitPod also has a built in Python Linter which was used throughout the development process (see below). All code passed the validation tests. For full results see the dropdowns below.
 
-<details><summary>Python Results Table</summary>
+<details><summary>Python Results Table</summary></details>
 
 #### Additional Linting Using Flake8 in GitPod
 
@@ -267,3 +267,36 @@ The manual testing was done on the following browsers
 * Google Chrome
 * Mozilla Firefox
 * Apple Safari
+
+### **Feature Testing Results**
+
+
+<details><summary>All Pages</summary>
+
+| **Testing**                           | **Expected Outcome**                                                                                                         | **Test Performed**                                                                                                              | **Pass / Fail** |
+|---------------------------------------|------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------|-----------------|
+| **Site width**                        | Max width 1400px with grey background                                                                                        | Expand window & use dev tools to check size                                                                                                               | PASS            |
+| **Favicon**                           | Appears in browser tab                                                                                                       | Check favicon appears in multiple browsers                                                                                                        | PASS            |
+| **Navbar - contents**                 | Contains logo and nav links. All links lead to correct pages.                                                                | Check nav contents. Click on all links.                                                                                                                   | PASS            |
+| **Navbar - accounts dropdown**        | Account dropdown is clickable and displays nav links                                                                         | Click on dropdown menu & dropdown links                                                                                                           | PASS            |
+| **Navbar - products dropdown**        | Products dropdown displays correct working links                                                                             | Click on products dropdown menu & dropdown links - check products are filtered correctly                                                            | PASS            |
+| **Navbar - sticky**                   | Stays at the top of the browser page                                                                                         | Scroll to bottom of page                                                                                                                     | PASS            |
+| **Navbar - logo**                     | Clickable and links to homepage                                                                                              | Click on logo                                                                                                                     | PASS            |
+| **Navbar - hover**                    | Hover effect with transition                                                                                                 | Hover over nav links                                                                                                                    | PASS            |
+| **Navbar - responsive**               | On smaller devices nav links change to a burger menu which displays all links and submenus. Logo changes on smaller screens. | Use dev tools to simulate smaller screen & check on mobile devices. Click on burger menu & all links                                               | PASS            |
+| **Navbar - logged out**               | "Visible links on Accounts Dropdown: Register, Sign In"                                                                      | Sign out of site & check nav bar                                                                                                                      | PASS            |
+| **Navbar - logged in (non-admin)**    | "Visible links on Accounts Dropdown: My Profile, Sign Out"                                                                   | Sign in to site as non-admin & check nav bar                                                                                                            | PASS            |
+| **Navbar - logged in (admin)**        | "Visible links on Accounts Dropdown: Site Management, My Profile, Sign Out"                                                  | Sign in to site as admin & check nav bar                                                                                                                  | PASS            |
+| **Navbar - cart (empty)**             | Bag icon is yellow with £0 showing if bag is empty                                                                           | Check nav bar with empty bag                                                                                                                      | PASS            |
+| **Navbar - bag (contents)**           | Bag icon is white with correct total showing                                                                                 | Add products to bag and check nav bar                                                                                                                  | PASS            |
+| **Navbar - search box (no contents)** | Search term submits and links to products page. Message appears (no search term)                                             | Click on search icon with no contents in search box                                                                                                   | PASS            |
+| **Navbar - search box (contents)**    | Search term submits and links to products page with correct results. Search term appears on page.                            | Add search term to search box and click on search icon. Check results and page contents.                                                               | PASS            |
+| **Navbar - search box dropdown**      | On Medium & smaller screens clicking the search icon triggers the dropdown search bar.                                       | "Using dev tools simulate a medium or small screen, click on search icon. Add contents to search bar and click search."                              | PASS            |
+| **Delivery Banner**                   | Delivery banner shows correct text and amount                                                                                | Check banner contents                                                                                                                 | PASS            |
+| **Footer - contents**                 | "Contains Social links, more info links, about us text, disclaimer & personal links"                                         | Check footer                                                                                                                   | PASS            |
+| **Footer - responsive**               | Contents stack on smaller devices & margins adjust                                                                           | Use dev tools to simulate different screen sizes & check on smaller devices                                                                        | PASS            |
+| **Footer - Hover on links**           | Hover effect with transition                                                                                                 | Hover over links                                                                                                                    | PASS            |
+| **Footer - social**                   | Open correct pages in separate tab                                                                                           | Click on links                                                                                                                    | PASS            |
+| **Footer - More Info links**          | Link to correct pages                                                                                                        | Click on links                                                                                                                    | PASS            |
+
+</details>

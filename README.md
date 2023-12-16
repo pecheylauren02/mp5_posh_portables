@@ -61,7 +61,7 @@ Websites visited for research:
 Based on my research and the project aims I created a set of user stories that would inform all the choices made in designing and developing the site. For more details information on the Tasks involved in creating these user stories, please refer to my [GitHub Project Board](https://github.com/users/pecheylauren02/projects/5).
 
 <details><summary>User Stories</summary>
-<img src="media/docs/user_stories.png">
+<img src="media/docs/user_stories_summary.png">
 </details>
 
 ### Scope
