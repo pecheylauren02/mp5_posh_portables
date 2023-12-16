@@ -106,5 +106,163 @@ I used the inbuilt linting in GitPod (Flake8) to check my code and keep it as cl
 - **checkout/webhooks.py - local variable e is assigned to but never used** - have investigated this and it appears to be an industry standard way of assigning this particular error checking. I also passed this same code through the [CI Python Linter](https://pep8ci.herokuapp.com/) and it didn't raise an issue so I am disregarding this.
 - remaining linting errors are in files that are automatically created by Django such as migration files & vscode/arctictern.py
 
----
+- - -
+[Go to Top](#posh-portables---e-commerce-site---testing)
+- - -
 
+### Performance
+
+I ran the site through Google Chrome Dev Tools' Lighthouse to check on its performance scores. All pages passed the validation tests. For full results see the dropdowns below.
+
+<details><summary>Performance Results Table</summary>
+
+
+| **Feature**                             | **Expected Outcome**                          | **Test Performed**                | **Change / Final Result**               | **Pass / Fail** |
+|-----------------------------------------|-----------------------------------------------|-----------------------------------|-----------------------------------------|-----------------|
+| **HOME**                                | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | Tinified Hero image • All scores 90+    | PASS            |
+| **PRODUCTS**                            | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | All scores 90+                          | PASS            |
+| **PRODUCT DETAILS**                     | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | All scores 90+                          | PASS            |
+| **CREATE PRODUCT**                      | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | All scores 90+                          | PASS            |
+| **UPDATE PRODUCT**                      | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | All scores 90+                          | PASS            |
+| **CREATE REVIEW**                       | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | All scores 90+                          | PASS            |
+| **UPDATE REVIEW**                       | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | All scores 90+                          | PASS            |
+| **SHOPPING CART**                       | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | All scores 90+                          | PASS            |
+| **CHECKOUT**                            | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | All scores 90+                          | PASS            |
+| **CHECKOUT SUCCESS**                    | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | All scores 90+                          | PASS            |
+| **PROFILE**                             | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | All scores 90+                          | PASS            |
+| **FAQS**                                | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | All scores 90+                          | PASS            |
+| **CREATE FAQ**                          | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | All scores 90+                          | PASS            |
+| **UPDATE FAQ**                          | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | All scores 90+                          | PASS            |
+| **SIGN IN (login)**                     | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | Added meta description • All scores 90+ | PASS            |
+| **REGISTER (signup)**                   | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | Added meta description • All scores 90+ | PASS            |
+| **MANAGE EMAIL (email)**                | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | Added meta description • All scores 90+ | PASS            |
+| **CHANGE PASSWORD (password/change)**   | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | Added meta description • All scores 90+ | PASS            |
+| **FORGOT PASSWORD (password/reset)**    | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | Added meta description • All scores 90+ | PASS            |
+| **SIGN OUT (logout)**                   | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | Added meta description • All scores 90+ | PASS            |
+| **VERFICATION SENT (confirm-email)**    | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | Added meta description • All scores 90+ | PASS            |
+| **CONFIRM EMAIL (confirm-email/(key))** | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | Added meta description • All scores 90+ | PASS            |
+
+
+</details>
+
+
+<details><summary>Performance Results Images</summary>
+
+<details><summary>HOME</summary>
+<img src="m">
+</details>
+
+<details><summary>PRODUCTS</summary>
+<img src="g">
+</details>
+
+<details><summary>PRODUCT DETAILS</summary>
+<img src="">
+</details>
+
+<details><summary>CREATE PRODUCT</summary>
+<img src="">
+</details>
+
+<details><summary>UPDATE PRODUCT</summary>
+<img src="">
+</details>
+
+<details><summary>CREATE REVIEW</summary>
+<img src="">
+</details>
+
+<details><summary>UPDATE REVIEW</summary>
+<img src="">
+</details>
+
+<details><summary>SHOPPING CART</summary>
+<img src="">
+</details>
+
+<details><summary>CHECKOUT</summary>
+<img src="media/docs/docs_val_perf_9.jpg">
+</details>
+
+<details><summary>CHECKOUT SUCCESS</summary>
+<img src="">
+</details>
+
+<details><summary>PROFILE</summary>
+<img src="">
+</details>
+
+<details><summary>FAQS</summary>
+<img src="">
+</details>
+
+<details><summary>CREATE FAQ</summary>
+<img src="media/docs/docs_val_perf_13.jpg">
+</details>
+
+<details><summary>UPDATE FAQ</summary>
+<img src="media/docs/docs_val_perf_14.jpg">
+</details>
+
+<details><summary>SIGN IN (AllAuth Name - login)</summary>
+<img src="media/docs/docs_val_perf_17.jpg">
+</details>
+
+<details><summary>REGISTER (AllAuth Name - signup)</summary>
+<img src="media/docs/docs_val_perf_18.jpg">
+</details>
+
+<details><summary>MANAGE EMAIL (AllAuth name - email)</summary>
+<img src="media/docs/docs_val_perf_19.jpg">
+</details>
+
+<details><summary>CHANGE PASSWORD (AllAuth name - password/change)</summary>
+<img src="media/docs/docs_val_perf_20.jpg">
+</details>
+
+<details><summary>FORGOT PASSWORD (AllAuth name - password/reset)</summary>
+<img src="media/docs/docs_val_perf_21.jpg">
+</details>
+
+<details><summary>SIGN OUT (AllAuth name - logout)</summary>
+<img src="media/docs/docs_val_perf_22.jpg">
+</details>
+
+<details><summary>VERFICATION SENT (AllAuth name - confirm-email)</summary>
+<img src="media/docs/docs_val_perf_23.jpg">
+</details>
+
+<details><summary>CONFIRM EMAIL (AllAuth name - confirm-email/(key))</summary>
+<img src="media/docs/docs_val_perf_2.jpg">
+</details>
+
+</details>
+
+#### Issues resolved during performance validation:
+
+- Console Error about one of the Favicon icons being missing returning a 404, the site appeared to be looking in the wrong location for the file. I fixed this by explicitly naming all the icons in the `<head>` element and removing the web manifest.
+
+- - -
+[Go to Top](#posh-portables---e-commerce-site---testing)
+- - -
+
+## Feature Testing
+
+The whole site and all its features were tested manually thoroughly throughout the development process and at the end of development. This testing covered content, style, interactive feature functionality as well as making sure all backend processes worked as expected including testing of all CRUD functionality and routing. This was in addition to the automated testing described [above](#automated-testing-using-test-driven-development). The results of the final full manual test are below.
+
+### **Responsiveness / Devices**
+
+The manual testing was done on the following devices
+* Apple Macbook Pro 16inch
+* LG Ultrafine Display 27inch External Monitor
+* Apple iMac 5K 27-inch
+* Apple iPhone SE 2020
+* Apple iPhone SE 2022
+* Google Chrome Developer Tools - simulator for all different device options as well as using the adjustable sizing options
+
+### **Browser Compatibility**
+
+The manual testing was done on the following browsers
+* Google Chrome
+* Mozilla Firefox
+* Apple Safari
