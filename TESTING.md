@@ -481,3 +481,38 @@ The manual testing was done on the following browsers
 | **404 Page**      | Test custom 404 page is loaded when navigating to a non-existent page | Navigate to URL that doesn’t exist on site.                                                                                                                                                                | PASS            |
 
 </details>
+
+## User Stories Testing
+
+The site was built from the outset with user stories at its core. The site was tested against each of the user stories, running through the steps a user would take to achieve their goal. The results can be found below.
+
+## Bugs & Fixes
+
+I encountered the following significant or interesting bugs during development. All of these were fixed and I am unaware of any remaining bugs on the site.
+
+#### Bug 1 - Products page wouldn't load after deployment
+
+**Issue:** After initial deployment my products page wouldn't load and returned a 400 error.
+
+**Fix:** I turned debug back on in the deployed site and discovered that it couldn't load the sort_box.js file and was throwing up a suspicious operation error and blocking the page. I fixed this error with the help of this [Slackoverflow Post](https://stackoverflow.com/questions/43529912/suspicious-operation-attempted-access-to-denied-while-loading-static-files) by removing the leading '/' on the script tag in the template.
+
+#### Bug 2 - Checkout creating duplicate orders
+
+**Issue:** Whilst initially working correctly I found that my checkout began to create duplicates when placing an order - one in the view and another in the webhook.
+
+**Fix:** After extensive research and testing using print statements I discovered that the problem was at the point where the webhook searches for the order in the database and if it didn't find it, creates the order. The problem stemmed from the form fields which were not required and so could be empty - phone number and street address 2. I fixed the problem by removing these fields from the search parameters in the webhook query.
+
+#### Bug 3 - Broken Image Links show icon rather than backup no-image
+
+**Issue:** Broken image links showing when image is missing, rather than the 'no-image' backup which provides a better user experience. This also meant that if there was an error getting the product image the product cards were hard to click on to link to the product detail page as the image is the link element.
+
+**Fix:** I added an 'onerror' to the image tags to show the no-image if there was an error displaying the image.
+
+#### Bug 4 - Toast showing shopping cart summary after user actions not related to shopping cart
+
+**Issue:** This was more of a user experience issue than a bug. I had followed the Boutique Ado walkthrough for the Toasts & user feedback messages and whilst the little shopping bag summary was a great touch it was showing after every successful user action apart from on the profile page where there was code to stop this happening. I needed to find a more comprehensive way to hide the summary when users added reviews, FAQs, filled in the Contact Us form etc.
+
+**Fix:** I removed it by firstly adding an additional conditional statement to the toast_success template to check whether the referring page url contained the word 'accounts' to stop the bag showing when any toasts.success were called by the built-in allauth code. Then in addition, I added a session variable called show_bag_summary to true or false each time I called messages.success and an additional conditional value in the template tag to check this value.
+
+
+
