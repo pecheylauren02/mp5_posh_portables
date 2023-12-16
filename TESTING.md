@@ -471,3 +471,13 @@ The manual testing was done on the following browsers
 | **Delete FAQ Modal**                  | Clicking on ‘delete’ deletes FAQ from site & displays success message                                                    | "Click on delete FAQ, click on delete button, check message, check FAQ is no longer on page & database."  | PASS            |
 
 </details>
+
+<details><summary>Error Pages</summary>
+
+| **Testing**       | **Expected Outcome**                                                  | **Test Performed**                                                                                                                                                                                         | **Pass / Fail** |
+|-------------------|-----------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
+| **Page Contents** | All page contents appear and are fully responsive                     | Check page contents on different devices and in Chrome Dev Tools                                                                                                                                           | PASS            |
+| **Page Links**    | All page links lead to correct location                               | Click on all links & check page contents                                                                                                                                                                   | PASS            |
+| **404 Page**      | Test custom 404 page is loaded when navigating to a non-existent page | Navigate to URL that doesn’t exist on site.                                                                                                                                                                | PASS            |
+
+</details>
