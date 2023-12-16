@@ -470,5 +470,4 @@ The manual testing was done on the following browsers
 | **Delete FAQ Modal**                  | Clicking on ‘close’  or cross icon closes the modal and doesn’t delete FAQ                                               | "Click on delete FAQ, click on close button, check FAQ is still on page, repeat with cross icon."         | PASS            |
 | **Delete FAQ Modal**                  | Clicking on ‘delete’ deletes FAQ from site & displays success message                                                    | "Click on delete FAQ, click on delete button, check message, check FAQ is no longer on page & database."  | PASS            |
 
-
 </details>
