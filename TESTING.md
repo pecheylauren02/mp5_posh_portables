@@ -300,8 +300,6 @@ The manual testing was done on the following browsers
 
 </details>
 
-</details>
-
 <details><summary>Home</summary>
 
 | **Testing**                       | **Expected Outcome**                                                   | **Test Performed**                                                                                      | **Pass / Fail** |
@@ -312,8 +310,6 @@ The manual testing was done on the following browsers
 | **Hover effects**                 | Buttons and links have hover effect with smooth transition             | Hover over buttons & links                                                                              | PASS            |
 | **Authentication Tests**          | Page is visible to all users                                           | "Navigate to page as an unauthenticated, authenticatied & superuser"                                    | PASS            |
 | **Featured Products**             | Only featured products appear                                          | "Go to admin panel, change ‘is_featured’ boolean value on a product, check if product appears on page." | PASS            |
-
-
 
 </details>
 
@@ -330,6 +326,8 @@ The manual testing was done on the following browsers
 | **Sorting**                                | Sort box sets the correct sort and direction of the product cards      | Select all sorting options and check product cards                            | PASS            |
 | **Product Cards**                          | Clicking on card image links to correct product page                   | Click on product card                                                         | PASS            |
 | **Product Cards**                          | Product cards contain correct information for products                 | Check card contents against products in database                              | PASS            |
+
+</details>
 
 <details><summary>Product Details</summary>
 
@@ -387,5 +385,28 @@ The manual testing was done on the following browsers
 | **Delete Product Modal - protected product**              | Clicking on delete for a product that appears on an previous order brings up modal with option to ‘remove’ product | Attempt to delete a product which appears as a line item on an order. Check modal contents                                                                                                    | PASS            |
 | **Delete Product Modal - protected product**              | Clicking ‘remove’ sets the ‘discontinued’ field to True & removes product from site                                | Attempt to delete a product which appears as a line item on an order. Click on remove & check product has gone from site. Check product exists on database with correct ‘discontinued’ value. | PASS            |
 | **Products General - Missing Image**                      | Product without an image displays no-image alternative                                                             | Log in as a superused. Add a new product without an image. Check product on all relevant pages.                                                                                               | PASS            |
+
+</details>
+
+<details><summary>Bag</summary>
+
+| **Testing**                    | **Expected Outcome**                                                                                              | **Test Performed**                                                                          | **Pass / Fail** |
+|--------------------------------|-------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|-----------------|
+| **Page Contents**              | All page contents appear and are fully responsive                                                                 | Check page contents on different devices and in Chrome Dev Tools                            | PASS            |
+| **Page Links**                 | All page links lead to correct location                                                                           | Click on all links & check page contents                                                    | PASS            |
+| **Hover effects**              | Buttons and links have hover effect with smooth transition                                                        | Hover over buttons & links                                                                  | PASS            |
+| **Authentication Tests (bag)** | Page is visible to all users                                                                                      | "Navigate to page as an unauthenticated, authenticatied & superuser"                        | PASS            |
+| **Bag summary message**        | "Appears when adding, removing or updating a product in the bag. Totals match bag contents and exclude delivery." | "Add, remove & update an item in the bag, check message contents."                          | PASS            |
+| **Bag summary message**        | “Spend £— more” message appears when total is under free delivery threshold in summary.                           | "Add items under £100, check message contents."                                             | PASS            |
+| **Bag Contents**               | Match items added to bag                                                                                          | "Add items to bag, navigate to bag page & check contents"                                   | PASS            |
+| **Product Image Link**         | Clicking on product image leads to the product detail page.                                                       | "Add product to bag, navigate to bag page, click on image."                                 | PASS            |
+| **Quantity Input**             | Quantity Buttons increment/decrement quantity for correct product. Quantity can be typed in.                      | Click on quantity buttons. Type in to quantity box. Click on ‘update’.                      | PASS            |
+| **Quantity Input**             | Buttons are disabled when lower/upper limit is reached                                                            | Input 1 as quantity & check decrement button. Input 99 as quantity & check increment button | PASS            |
+| **Remove Item**                | Removes item from bag & updates bag totals.                                                                       | Click on ‘remove’ for a product. Check bag contents & totals.                               | PASS            |
+| **Bag totals**                 | Bag total matches bag contents. Grand total = bag total + Delivery Charge.                                        | Add contents to bag & check totals add up.                                                  | PASS            |
+| **Delivery Charge**            | Is 10% of total for qualifying products                                                                           | Add items to bag which qualify for delivery charge. Check totals.                           | PASS            |
+| **Delivery Charge**            | Items which are subject to delivery charge aren’t included in delivery calculations                               | "Add item to bag with no delivery charge, check delivery total."                            | PASS            |
+| **Free delivery threshold**    | “Spend £— more” message appears when total is under free delivery threshold on bag page.                          | "Add items under £100 and navigate to the bag page, check message & contents."              | PASS            |
+| **Checkout Link**              | Checkout button links to checkout page and order summary matches bag contents.                                    | "Add items to bag, navigate to bag page, click on ‘checkout’"                               | PASS            |
 
 </details>
