@@ -486,6 +486,15 @@ The manual testing was done on the following browsers
 
 The site was built from the outset with user stories at its core. The site was tested against each of the user stories, running through the steps a user would take to achieve their goal. The results can be found below.
 
+<details><summary>User Stories Testing Table</summary>
+
+<img src="media/docs/user_stories_testing.png">
+</details>
+
+- - -
+[Go to Top](#posh-portables---e-commerce-site---testing)
+- - -
+
 ## Bugs & Fixes
 
 I encountered the following significant or interesting bugs during development. All of these were fixed and I am unaware of any remaining bugs on the site.
@@ -514,5 +523,8 @@ I encountered the following significant or interesting bugs during development. 
 
 **Fix:** I removed it by firstly adding an additional conditional statement to the toast_success template to check whether the referring page url contained the word 'accounts' to stop the bag showing when any toasts.success were called by the built-in allauth code. Then in addition, I added a session variable called show_bag_summary to true or false each time I called messages.success and an additional conditional value in the template tag to check this value.
 
+- - -
+[Go to Top](#posh-portables---e-commerce-site---testing)
+- - -
 
 
