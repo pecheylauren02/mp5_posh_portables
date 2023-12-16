@@ -254,8 +254,9 @@ The whole site and all its features were tested manually thoroughly throughout t
 
 The manual testing was done on the following devices
 * Apple Macbook Pro 16inch
-* LG Ultrafine Display 27inch External Monitor
-* Apple iMac 5K 27-inch
+* Samsung Galaxy S10
+* Apple Mac Pro 13-Inch 
+* OnePlus Nord 2023
 * Apple iPhone SE 2020
 * Apple iPhone SE 2022
 * Google Chrome Developer Tools - simulator for all different device options as well as using the adjustable sizing options
