@@ -58,44 +58,11 @@ Websites visited for research:
 
 #### User Stories
 
-Based on my research and the project aims I created a set of user stories that would inform all the choices made in designing and developing the site.
+Based on my research and the project aims I created a set of user stories that would inform all the choices made in designing and developing the site. For more details information on the Tasks involved in creating these user stories, please refer to my [GitHub Project Board](https://github.com/users/pecheylauren02/projects/5).
 
-1. As a general user:
-  - 1.1: I want to understand the purpose of the site immediately upon entering
-  - 1.2: I want to be able to find what I need immediately and for the navigation to be easy to follow & intuitive
-  - 1.3: I want to be able to use all features on the site on any device and for it to be fully responsive
-  - 1.4: I want to be able to find answers to common questions
-  - 1.5: I want to be able to contact the company with any questions or queries
-  - 1.6: I want to be able to find the company on social media to find out more
-  - 1.7: I want to be able to return to the main site without having to use the browser buttons if I end up on a non-existent page
-  - 1.8: I want to get feedback when interacting with the site to know if my actions have been successful
-
-2. As a shopper:
-  - 2.1: I want to be able to browse products easily, with options to filter & search to find what I need
-  - 2.2: I want to be able to find out information about products
-  - 2.3: I want to see ratings & reviews of a product to know more about the quality and whether it's right for me
-  - 2.4: I want to be able to shop for multiple items at once, from across the site
-  - 2.5: I want to be able to add multiples of a single product to my bag at once
-  - 2.6: I want to be able to edit my shopping bag if I change my mind
-  - 2.7: I want to know what I will be charged for delivery
-  - 2.8: I want my payment and order to be fully secure and trustworthy
-  - 2.9: I want to be able to set up an account to save my order history
-
-3. As a user with an account:
-  - 3.1: I want my account to be secure & easy to set up
-  - 3.2: I want to see my order history
-  - 3.3: I want to be able to update & save my personal information
-  - 3.4: I want to leave reviews of products I have purchased for the benefit of other customers
-  - 3.5: I want to be able to edit my reviews
-  - 3.6: I don't want admins or other customers to be able to change my reviews
-
-4. As an admin of the site:
-  - 4.1: I want to be able to add & edit products
-  - 4.2: I want to be able to remove products from sale
-  - 4.3: I want to view & filter customer messages and manage whether they need further action
-  - 4.4: I want to approve customer reviews before they go live & delete any with inappropriate content only
-  - 4.5: I want to be able to update the site FAQs
-  - 4.6: I want all the admin controls to be quick and easy to find and use
+<details><summary>User Stories</summary>
+<img src="media/docs/user_stories.png">
+</details>
 
 ### Scope
 
@@ -131,13 +98,6 @@ I then created a list of all the features I would like to add to the site in ord
 | Profile - Users can save & update their personal info for future orders | 4          | 4          |
 | Frequently Asked Questions Page - company info                          | 1          | 4          |
 | FAQs - CRUD functionality for admins                                    | 3          | 2          |
-| Contact Us Page                                                         | 1          | 4          |
-| Contact Us - Creates message in DB                                      | 3          | 2          |
-| Contact Us - Admins can toggle status open/closed                       | 4          | 2          |
-| Blog - Company insights & stories                                       | 3          | 1          |
-| Site Management - useful links to admin jobs                            | 2          | 4          |
-| Site Management - Customer Messages                                     | 3          | 2          |
-| Site Management - Reviews for approval                                  | 3          | 2          |
 
 ---
 
@@ -161,7 +121,7 @@ An important stage in the planning was building a database schema, as well as pl
 
 Below is a breakdown of all the models included in the final app. The site uses a relational database model using Postgres (SQLite & Elephant SQL). The app uses a number of models adapted from the Boutique Ado walkthrough (User, Email, UserProfile, Category, Product) as well as 3 original models (Faq, Review, Message).
 
-<details><summary>User / Email Models (Created by Django allauth)</summary>
+<details><summary>User/Email Models (Created by Django allauth)</summary>
 
 The User model is created by Django allauth and connects to a separate Email Address Model. I have created relationships to these models throughout the project but as I have not created them myself I have not included a breakdown of the fields. More information about Django allauth can be found [here](https://docs.allauth.org/en/latest/index.html).
 
@@ -243,6 +203,29 @@ The User model is created by Django allauth and connects to a separate Email Add
 | **quantity**       | Integer        | n/a                              | FALSE    | FALSE     | 0           | n/a           | TRUE         | n/a              |
 | **lineitem_total** | Decimal        | "max_digits=6, decimal_places=2" | FALSE    | FALSE     | n/a         | n/a           | FALSE        | n/a              |
 
+
+</details>
+
+<details><summary>Faq Model</summary>
+
+| **Field**    | **Field Type** | **Validation** | **null** | **blank** | **default** | **on_delete** | **editable** | **related_name** |
+|--------------|----------------|----------------|----------|-----------|-------------|---------------|--------------|------------------|
+| **question** | Char           | max_length=100 | FALSE    | FALSE     | n/a         | n/a           | TRUE         | n/a              |
+| **answer**   | Char           | n/a            | FALSE    | FALSE     | n/a         | n/a           | TRUE         | n/a              |
+
+</details>
+
+<details><summary>Review Model</summary>
+
+| **Field**       | **Field Type** | **Validation** | **null** | **blank** | **default** | **on_delete** | **editable** | **related_name** |
+|-----------------|----------------|----------------|----------|-----------|-------------|---------------|--------------|------------------|
+| **product**     | ForeignKey     | n/a            | TRUE     | TRUE      | n/a         | CASCADE       | n/a          | reviews          |
+| **user**        | ForeignKey     | n/a            | TRUE     | TRUE      | n/a         | SET_NULL      | n/a          | reviews          |
+| **created_on**  | Date           | n/a            | FALSE    | FALSE     | n/a         | n/a           | n/a          | n/a              |
+| **title**       | Char           | max_length=40  | FALSE    | FALSE     | n/a         | n/a           | n/a          | n/a              |
+| **content**     | Text           | max_length=500 | FALSE    | FALSE     | n/a         | n/a           | n/a          | n/a              |
+| **rating**      | Integer        | "Min=0, Max=5" | FALSE    | FALSE     | 0           | n/a           | n/a          | n/a              |
+| **is_approved** | Boolean        | n/a            | FALSE    | FALSE     | FALSE       | n/a           | n/a          | n/a              |
 
 </details>
 
