@@ -350,9 +350,9 @@ A well-designed, user-friendly place for users to search, filter and compare pro
         - If a review is a user's own they will see EDIT/DELETE buttons for it. Superusers will see DELETE buttons only.
         - For more information about reviews see [Features - Reviews](#reviews)
 
-- The page also allows users to add the product to their shopping bag, with the option to add multiples of the product.
+- The page also allows users to add the product to their shopping cart, with the option to add multiples of the product.
     - The quantity input box allows users to either type in an number (from 1-99) or use the +/- buttons to increment the quantity. These buttons are controlled by JavaScript and dynamically enable/disable when the number is at the min/max. This creates a positive user experience.
-    - Once a quantity has been selected users can add the product to the bag using the 'add to bag' button which is styled blue for purchasing actions. [See Whole Site Features](#whole-site)
+    - Once a quantity has been selected users can add the product to the shopping cart using the 'add to shopping cart' button which is styled blue for purchasing actions. [See Whole Site Features](#whole-site)
 
 - Users can also return to the products page using the 'keep shopping' button which is styled in secondary action grey. [See Whole Site Features](#whole-site)
 
@@ -362,7 +362,7 @@ A well-designed, user-friendly place for users to search, filter and compare pro
 
 **Value to User**
 
-This is the page which helps users decide if they are going to buy the product, as well as the ability to add it to their bag. This is an essential part of the purchasing journey with lots of useful information for a shopper. The reviews help users to decide if the product is for them as well as giving users the opportunity to provide feedback. This is also the the access point for EDIT/DELETE functionality for a product for admins.
+This is the page which helps users decide if they are going to buy the product, as well as the ability to add it to their shopping cart. This is an essential part of the purchasing journey with lots of useful information for a shopper. The reviews help users to decide if the product is for them as well as giving users the opportunity to provide feedback. This is also the the access point for EDIT/DELETE functionality for a product for admins.
 
 </details>
 
@@ -421,70 +421,70 @@ This gives admins the ability to control their product catalogue and which produ
 
 - - -
 
-### Shopping Bag
+### shopping cart
 
-![Shopping Bag](media/docs/)
+![shopping cart](media/docs/)
 
 #### Feature Information
 
 <details><summary>Shopping Cart</summary>
 
-- The shopping bag is an important part of purchasing process for a user. It allows them to store products as they navigate the site, then purchase them all at once when they are finished shopping.
-- The items in the bag can be removed or the quantities amended on the shopping bag page.
-- Users can add additional items to the bag. If the product is already in the bag its quantity will be adjusted.
-- The shopping bag is stored in the session data, that means that it is kept until the user signs out or the session cookies reset.
-- Users do not have to be signed in to store items in their bag or make purchases.
-- The bag contains information about the total cost of all the items as well as the delivery charge and grand total. It also tells the user how much more they need to spend to get free delivery.
-- The shopping bag information appears in a number of places on the site
-    - On the shopping bag page
-    - In the nav bar bag icon (includes the bag total)
-    - In the success message toast - which includes a bag summary and link to the bag page.
+- The shopping cart is an important part of purchasing process for a user. It allows them to store products as they navigate the site, then purchase them all at once when they are finished shopping.
+- The items in the shopping cart can be removed or the quantities amended on the shopping cart page.
+- Users can add additional items to the shopping cart. If the product is already in the shopping cart its quantity will be adjusted.
+- The shopping cart is stored in the session data, that means that it is kept until the user signs out or the session cookies reset.
+- Users do not have to be signed in to store items in their shopping cart or make purchases.
+- The shopping cart contains information about the total cost of all the items as well as the delivery charge and grand total. It also tells the user how much more they need to spend to get free delivery.
+- The shopping cart information appears in a number of places on the site
+    - On the shopping cart page
+    - In the nav bar shopping cart icon (includes the shopping cart total)
+    - In the success message toast - which includes a shopping cart summary and link to the shopping cart page.
 
 **Value to User**
 
-The bag is a vital tool for an e-commerce site. It allows users to gather multiple products to purchase at once, storing them in the session cookie so that they can browse the site without losing their shopping information. It provides a smooth user experience and encourages users to buy more items.
+The shopping cart is a vital tool for an e-commerce site. It allows users to gather multiple products to purchase at once, storing them in the session cookie so that they can browse the site without losing their shopping information. It provides a smooth user experience and encourages users to buy more items.
 
 </details>
 
 
 <details><summary>Summary Message</summary>
 
-- When adding, removing or updating an item in their bag users are presented with a success message which includes a shopping bag summary.
+- When adding, removing or updating an item in their shopping cart users are presented with a success message which includes a shopping cart summary.
 - This summary only appears when taking these actions - if the success message contains other information the summary is hidden e.g. signing in, editing a review, editing a product.
-- This bag summary message toast appears on any page where a user had updated their bag from.
+- This shopping cart summary message toast appears on any page where a user had updated their shopping cart from.
 - It includes:
-    - The number of items in the bag
-    - Image / name / quantity for each item in the bag
+    - The number of items in the shopping cart
+    - Image / name / quantity for each item in the shopping cart
     - The total excluding delivery
         - I made the decision to exclude delivery so that how close they were to the free delivery threshold was clear to users
     - If the total is less than the free delivery threshold users are told how much more they need to spend for free delivery.
     - A link button (button styled using 'purchasing' action blue [See Whole Site Features](#whole-site)) with a lock icon to show that the checkout is secure.
         - The content and link are set dynamically depending on what page the user is on:
-            - If the user is not on the bag page the button takes them to the bag page
-            - If the user is on the bag page already the button takes them to the checkout page 
+            - If the user is not on the shopping cart page the button takes them to the shopping cart page
+            - If the user is on the shopping cart page already the button takes them to the checkout page 
         
 
 **Value to User**
 
-The bag summary gives users instant feedback on what is in their bag every time they adjust its contents. It allows them to keep track of their purchases and totals, creating a positive user experience and clear information. By providing a link directly to the checkout users who are in a hurry can quickly complete their shopping, rather than having to navigate to the bag page first.
+The shopping cart summary gives users instant feedback on what is in their shopping cart every time they adjust its contents. It allows them to keep track of their purchases and totals, creating a positive user experience and clear information. By providing a link directly to the checkout users who are in a hurry can quickly complete their shopping, rather than having to navigate to the shopping cart page first.
 
 </details>
 
-<details><summary>Nav Shopping Bag</summary>
+<details><summary>Nav shopping cart</summary>
 
-- The nav bar contains a shopping bag icon with updates dynamically based on the contents of a user's shopping bag
-- The icon is a clickable link to the bag page with a colour change hover effect
+- The nav bar contains a shopping cart icon with updates dynamically based on the contents of a user's shopping cart
+- The icon is a clickable link to the shopping cart page with a colour change hover effect
 
 **Value to User**
 
-This provides users with a constant point of information about the contents of their shopping bag. In a similar way to the bag summary it provides immediate feedback about how much they are spending and whether their actions of adding products to the bag have been successful. This creates a great user experience and smooth shopping journey.
+This provides users with a constant point of information about the contents of their shopping cart. In a similar way to the shopping cart summary it provides immediate feedback about how much they are spending and whether their actions of adding products to the shopping cart have been successful. This creates a great user experience and smooth shopping journey.
 
 
 </details>
 
-<details><summary>Bag Page</summary>
+<details><summary>Shopping cart Page</summary>
 
-- The bag page expands on the summary and nav icon to provide users with all the information they need about their shopping bag and purchases.
+- The shopping cart page expands on the summary and nav icon to provide users with all the information they need about their shopping cart and purchases.
 - It contains
     - A table with a summary of all items, each item is a row containing the following info:
         - Image
@@ -494,24 +494,24 @@ This provides users with a constant point of information about the contents of t
             - Number input to manually input values (min 1 / max 99)
             - +/- buttons to increment/decrement the value
                 - These buttons are handled using JavaScript & are disabled/enabled and dynamically change styling based on the min/max value in the input
-            - update link to update the bag after changing the quantity
-            - remove link to remove the item from the bag
+            - update link to update the shopping cart after changing the quantity
+            - remove link to remove the item from the shopping cart
         - Subtotal (quantity x price)
-    - Bag total (total without delivery)
+    - shopping cart total (total without delivery)
     - Delivery cost
-    - Grand total (Bag total + delivery)
-    - If the bag total is less than the free delivery threshold users see a message telling them how much more they need to spend to get free delivery
+    - Grand total (shopping cart total + delivery)
+    - If the shopping cart total is less than the free delivery threshold users see a message telling them how much more they need to spend to get free delivery
     - Checkout button (button styled using 'purchasing' action blue [See Whole Site Features](#whole-site)) with a lock icon to show that the checkout is secure.
     - Keep Shopping button to return users to products page (button styled using secondary action grey [See Whole Site Features](#whole-site))
 - Delivery is calculated as follows:
     - The delivery charge is 10% of the total amount spent on items that are subject to delivery
     - If a user has spent over $100 (including on products that are not subject to delivery) then delivery is free.
-- If the bag is empty users see a message telling them that the bag has no contents with a link back to products to encourage them to shop.
+- If the shopping cart is empty users see a message telling them that the shopping cart has no contents with a link back to products to encourage them to shop.
 
 
 **Value to User**
 
-The bag page provides users with a comprehensive breakdown of the items they have chosen so far. From here they have controls to remove & update items in their bag and can see what their total cost will be with breakdown values for delivery. They can also see if they are close to the free delivery threshold which may encourage them to buy more. It gives users a great user experience with a clear responsive layout and user friendly interface.
+The shopping cart page provides users with a comprehensive breakdown of the items they have chosen so far. From here they have controls to remove & update items in their shopping cart and can see what their total cost will be with breakdown values for delivery. They can also see if they are close to the free delivery threshold which may encourage them to buy more. It gives users a great user experience with a clear responsive layout and user friendly interface.
 
 </details>
 
@@ -541,7 +541,7 @@ The bag page provides users with a comprehensive breakdown of the items they hav
         - Error messages below card input field
         - More information in "Checkout Process" below.
     - A Place Order button (button styled using 'purchasing' action blue [See Whole Site Features](#whole-site)) with a lock icon to show that the checkout is secure.
-    - A Back to Bag button which takes users back to their shopping cart to amend the contents
+    - A Back to shopping cart button which takes users back to their shopping cart to amend the contents
     - A warning message that the user's card will be charged with the shopping cart total.
 - The site uses webhooks to manage the functionality, listening for activity from Stripe to make sure that certain actions happen at the right times, that orders are created correctly in the database for a successful payment or not created if a payment fails. This ensures the site functions correctly, that users orders are fulfilled correctly and that payments work.
 
@@ -664,7 +664,7 @@ This allows users to access their account to use their default information for p
 - Accessible via the account menu to logged in users
 - Users are taken to a page to confirm they to sign out
 - Page is in the standard site bespoke styling with a button to confirm sign out
-- On sign out users and their bag contents are removed from the session and they are redirected to the home page
+- On sign out users and their shopping cart contents are removed from the session and they are redirected to the home page
 
 
 **Value to User**
@@ -767,7 +767,7 @@ I also think some sort of stock control would be useful for an e-commerce site, 
 - [HTML:](https://en.wikipedia.org/wiki/HTML5) Used to build the main structure of the site
 - [CSS:](https://en.wikipedia.org/wiki/Cascading_Style_Sheets) Used to style the website (Combination of bespoke styling and Bootstrap)
 - [JavaScript:](https://en.wikipedia.org/wiki/JavaScript) Used for front end interactive features
-  - Bag / Product Quantity Input
+  - shopping cart / Product Quantity Input
   - Stripe Payment Handling
   - Message is_open toggle functionality
   - Review is_authorised toggle functionality
