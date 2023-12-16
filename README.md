@@ -1150,10 +1150,12 @@ I have found many useful sources in building this project, as this has been my f
 
 #### Images
 
-##### HOME COVER AND 404 PAGE:
+##### Home Cover and 404 page:
 - [Home Cover and 404 Page image](https://www.pexels.com/photo/white-and-black-xbox-one-controller-3945655/)
 
-##### AMAZON PRODUCTS:
+##### Amazon Product Images:
+
+##### Laptops and Monitors
 - [10001](https://m.media-amazon.com/images/I/71OyrTkxpGL._AC_SL1500_.jpg)
 - [10002](https://m.media-amazon.com/images/I/711+0tgn+6L._AC_SY300_SX300_.jpg)
 - [10003](https://m.media-amazon.com/images/I/81vnNsRDo6L._AC_SL1500_.jpg)
@@ -1161,17 +1163,28 @@ I have found many useful sources in building this project, as this has been my f
 - [10005](https://m.media-amazon.com/images/I/91KW9iWwXxL._AC_SL1500_.jpg)
 - [10006](https://m.media-amazon.com/images/I/71P1MZ8ztDL._AC_SL1500_.jpg)
 - [10007](https://m.media-amazon.com/images/I/71hdoqCHwiL._AC_SL1500_.jpg)
+
+##### Speakers and Headgear
 - [20001](https://m.media-amazon.com/images/I/71UuyaUmkhL._AC_SL1500_.jpg)
 - [20002](https://m.media-amazon.com/images/I/71w-eYgrfnL._AC_SL1500_.jpg)
 - [20003](https://m.media-amazon.com/images/I/51wEJVJjuLL._AC_SL1000_.jpg)
 - [20004](https://m.media-amazon.com/images/I/71uGQWi6DzL._AC_SL1500_.jpg)
 - [20005](https://m.media-amazon.com/images/I/61CGHv6kmWL._AC_SL1000_.jpg)
 - [20006](https://m.media-amazon.com/images/I/71EMsWRD1oL._AC_SL1500_.jpg)
+
+##### Keyboards
 - [30001](https://m.media-amazon.com/images/I/81yd9W+0doL._AC_SL1500_.jpg)
 - [30002](https://m.media-amazon.com/images/I/618zZ7u3sUL._AC_SL1500_.jpg)
 - [30003](https://m.media-amazon.com/images/I/61nghmq8GPL._AC_SL1500_.jpg)
 - [30004](https://m.media-amazon.com/images/I/71HQVSBbTLL._AC_SL1500_.jpg)
 - [30005](https://m.media-amazon.com/images/I/61ZaLWoqtcL._AC_SL1280_.jpg)
+
+##### Package Deals and Specials
+- [40001](https://m.media-amazon.com/images/I/71S-pQNQyIL._AC_SL1500_.jpg)
+- [40002](https://m.media-amazon.com/images/I/71lXzd0i9AL._AC_SL1500_.jpg)
+- [40003](https://m.media-amazon.com/images/I/718sn7oOcfL._AC_SL1500_.jpg)
+- [40004](https://m.media-amazon.com/images/I/71PQ-veSExL._AC_SL1500_.jpg)
+- [40005](https://m.media-amazon.com/images/I/71r5g4eWy7L._AC_SL1500_.jpg)
 
 - - -
 
