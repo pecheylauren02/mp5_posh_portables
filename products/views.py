@@ -127,7 +127,7 @@ def edit_product(request, product_id):
                            Please ensure the form has been filled out correctly.')
     else:
         form = ProductForm(instance=product)
-        messages.info(request, f'You are editing {product.name}')
+        messages.info(request, f'You are editing -> {product.name}')
 
     template = 'products/edit_product.html'
     context = {

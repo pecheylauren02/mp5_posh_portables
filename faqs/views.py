@@ -97,7 +97,7 @@ def update_faq(request, faq_id):
     # Handles View Rendering
     else:
         form = FaqForm(instance=faq)
-        messages.info(request, f'You are editing {faq.question}')
+        messages.info(request, f'You are editing... {faq.question}')
 
     # Sets page template
     template = 'faqs/update_faq.html'
