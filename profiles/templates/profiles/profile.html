@@ -29,7 +29,7 @@
             <form class="mt-3" action="{% url 'profile' %}" method="POST" id="profile-update-form">
                 {% csrf_token %}
                 {{ form|crispy }}
-                <button class="btn btn-black rounded text-uppercase float-right">Update Information</button>
+                <button class="btn btn-green rounded text-uppercase float-right">Update Information</button>
             </form>
         </div>
         <div class="col-12 col-lg-6">
@@ -81,7 +81,7 @@
                     <h2 class="logo-font mb-4 text-center">My Product Reviews</h2>
                     <hr>
                     <div class="text-center">
-                    <button class="btn bg-black logo-font mb-3" id="seeReviewsBtn" style="color: #fff;">Read My Reviews</button>
+                    <button class="btn bg-green logo-font mb-3" id="seeReviewsBtn" style="color: #fff;">Read My Reviews</button>
                 </div>
                     <div id="reviewsContainer" style="display: none">
                         <ul class="list-unstyled border border-dark p-3 rounded">
