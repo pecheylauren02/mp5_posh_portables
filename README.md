@@ -1,6 +1,6 @@
 # Posh Portables - A Gaming Accessories E-Commerce Site
 
-![Mock-up]()
+![Mock-up](media/docs/amiresponsive.png)
 
 #### **By Lauren Pechey**
 [Click here to view the live web application](https://posh-portables-6801c9648247.herokuapp.com/)
