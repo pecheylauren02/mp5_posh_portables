@@ -249,6 +249,52 @@ I created the designs below, making sure that all pages would work just as well 
 <img src="media/docs/design_wireframes_home.png">
 </details>
 
+## Business Model and Web Marketing
+
+### Social Media Marketing
+
+As part of the e-commerce website requirements, I made a Facebook Business Page to advertise Posh Portables as a company. Posh Portables is not a real business, however the implementation of a Facebook Business Page aids in webmarketing of the brand which is really important for real business models. Webmarketing is an important process of marketing a business online, and using social media is often cost effective and efficient for brand exposure. 
+
+You can find a link to my Facebook Business Page [here](https://www.facebook.com/profile.php?id=61554694944684), however incase the page is taken down at the time of your viewing, please find screenshots below. 
+
+<details><summary>Facebook Business Page</summary>
+<img src="media/docs/facebook_1.png">
+<img src="media/docs/facebook_2.png">
+<img src="media/docs/facebook_3.png">
+</details>
+
+### Email Marketing
+
+This project also implemented an email marketing strategy through MailChimp, which is a free platform that allows websites to send emails to their customers, if their customers subscribe with their email address.
+
+I kept the form simple with only an email address section, so users would be more likely to subscribe, and this will allow Posh Portables to send their customers promotions, special packages and more.
+
+<details><summary>Facebook Business Page</summary>
+<img src="media/docs/facebook_1.png">
+</details>
+
+Perhaps for future business endeavours, it would be beneficial to use other more popular social media platforms, such as Instagram, TikTok or YouTube, as well as paid advertising to ensure Posh Portables shows up in search engines. 
+
+### Business to Customer Model
+
+This e-commerce site is considered a B2C (Business to Customer) model, because it would typically sell gaming accessories directly to customers. Advantages include:
+
+* Being cost effective and easy to set up
+* Reaching a wide audience over time
+* Direct opportunities to interact with customers
+
+### Search Engine Optimization
+
+More of the results of SEO can be seen in the TESTING.md document, however from a business perspective, SEO was considered an important part of promoting Posh Portables. Keywords were added to meta tags with relevant references to the business, such as "gaming accessories, Posh Portables, pc gaming monitors" etc. 
+
+Additionally, headings were placed in <strong> tags, which increases SEO on google search engines. 
+
+### Robots.txt and Site Maps
+
+The robots.txt file serves as a set of instructions for web crawlers, indicating which pages or sections of a website should or shouldn't be crawled or indexed. In the context of an e-commerce site, it's essential to have a well-optimized robots.txt file to ensure search engines focus on the most relevant and important pages. This can enhance the site's visibility in search engine results and contribute to better rankings for key product pages.
+
+On the other hand, the sitemap.xml file acts as a roadmap for search engine crawlers, providing a list of all the pages on the Posh Portables site that I wanted to be indexed. A comprehensive and up-to-date sitemap.xml file is crucial to ensure that search engines can easily discover and index all product pages, categories, and any other essential sections of the site.
+
 ## Features
 
 ### Products
