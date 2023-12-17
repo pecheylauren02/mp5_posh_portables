@@ -490,7 +490,7 @@ Makes the site's purpose and brand identity clear upon first arrival. Encourages
 
 **Value to User**
 
-This is useful to users as they might have a very specific product in mind e.g. a new bee hive, and they can easily navigate to the 'kit' category and find what they need. Allows purchases to be made quickly and easily with intuitive user journeys through the site and a number of different ways to navigate to the products section.
+This is useful to users as they might have a very specific product in mind e.g. a new keyboard, and they can easily navigate to the 'keyboards' category and find what they need. Allows purchases to be made quickly and easily with intuitive user journeys through the site and a number of different ways to navigate to the products section.
 
 </details>
 
@@ -1051,14 +1051,7 @@ Putting in a layer of approval prior to a review appearing on the site allows ad
 
 - - -
 
-
 ### Profile
-
-![Profile Page](media/docs/feat_profile.jpg)
-
-
-#### Feature Video
-https://github.com/emmahewson/island-bees/assets/116887840/fe7fc7b2-b029-4694-9e79-61f0883ace78
 
 #### Feature Information
 
@@ -1157,9 +1150,6 @@ Gives users ability to dig deeper in to the details of historic orders to see wh
 ### FAQs
 
 ![FAQs Page](media/docs/faq_admin.png)
-
-#### Feature Video
-https://github.com/emmahewson/island-bees/assets/116887840/fbf3d04c-d4e9-410a-9d7c-36dabf9cb3f6
 
 #### Feature Information
 
