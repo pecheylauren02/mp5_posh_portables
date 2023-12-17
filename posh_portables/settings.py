@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'profiles',
     'reviews',
     'faqs',
+    'wishlist',
 
     # Other apps
     'crispy_forms',
