@@ -370,6 +370,9 @@ Builds the brand & creates brand consistency, continues the site design in the u
 - Nav links have hover effects with smooth transitions. For the text-based links this is an underline which fades in. For icons it is a smooth colour transition.
 - The navbar sticks to the top of the screen to aid navigation on longer pages
 
+<img src="media/docs/dropdown.png">
+<img src="media/docs/search_products.png">
+
 **Value To User**
 
 Makes the site easy to navigate no matter where a user is on the site. Allows users to navigate on any device. Adds search and filter functionality allowing users to find the products they need very smoothly and intuitively. Provides feedback on cart contents so users can keep track of their shopping.
@@ -432,6 +435,8 @@ Buttons allow users to take actions on the site such as purchasing, adding revie
         - Disclaimer about site being for educational purposes
         - Mailchimp newsletter for users to subscribe
         - Site creator's name and social links (open in a separate tab)
+
+<img src="media/docs/footer_and_newsletter.png">
 
 **Value to User**
 
@@ -507,6 +512,8 @@ This is useful to users as they might have a very specific product in mind e.g. 
     - Price - Tells the user how much the product will cost them
     - Rating - Average rating of all approved reviews of the product. If no ratings them the product has a score of 0 to make it clear that it doesn't have a low rating, just that it hasn't been rated yet. The rating is represented by stars across the site, giving a quick, clear indication of what other users have thought of the product. Users are also able to order results by rating to help them find the most popular products.
 
+<img src="media/docs/product_category.png">
+
 **Value to User**
 
 Products are the heart of the site functionality and purpose - the ability to buy/sell goods. The variety of fields add functionality to products, information for users and site management tools to admins.
@@ -545,7 +552,6 @@ A well-designed, user-friendly place for users to search, filter and compare pro
 
 <details><summary>Product Details Page</summary>
 
-
 - This is the 2nd step in a buyer's purchasing journey. Once they have selected a product from the product cards they can click through to here to find more information about the product.
 - The page includes all the information about the product. It also includes a clickable category link which takes them back to the products page with products filtered by that category. This allows easy navigation, filtering and improves user experience.
 
@@ -567,6 +573,7 @@ A well-designed, user-friendly place for users to search, filter and compare pro
 - Users can also add a review of a product from this page using the 'add review' button. This allows users to provide feedback on products and help share information with other users. This button is styled in the non-purchasing colour [See Whole Site Features](#whole-site)
 - Admins of the site will also see 'EDIT' and 'DELETE' links which allow CRUD functionality for products. (More information below.)
 
+<img src="media/docs/product_detail.png">
 
 **Value to User**
 
@@ -814,6 +821,9 @@ This page gives the user a clear indication that their purchase has been success
 - AllAuth provides a series of templates for all the actions required to implement authentication. The site uses these with its own bespoke styling to make them feel part of the site.
 - All the form have been styled using the [widget-tweak](https://pypi.org/project/django-widget-tweaks/) package to add styling classes to inputs, labels and error messages from within the form templates
 
+<img src="media/docs/login.png">
+<img src="media/docs/signup.png">
+
 **Value to User**
 
 A strong authentication system is vital to an e-commerce site, allowing users to log in, register, manage their profile, see their order history and store their data for the next time they want to make a purchase. It improves user experience and make the process of visiting the site and making purchases quicker and smoother. The styling of the forms matches the rest of site making it feel like it belongs and building confidence and trust in the site.
@@ -926,6 +936,293 @@ This page allows users to change their current password if they are concerned ab
 **Value to User**
 
 The ability to reset a password is very important to users who have forgotten their password, it allows them to gain access to their account data including their order history and reviews which would otherwise be inaccessible to them. It is a vital part of site authentication.
+
+</details>
+
+- - -
+
+### Reviews
+
+![Reviews top](media/docs/product_review.png)
+![Reviews bottom](media/docs/product_review_two.png)
+
+#### Feature Information
+
+<details><summary>Product Reviews</summary>
+
+- The site includes product reviews so that users can find out what other users thought of products.
+- Reviews appear in 3 places:
+    - The product details page (reviews of that product only)
+    - The user profile page (user's own reviews)
+    - The site management page (unapproved reviews only - with a toggle to approve the review)
+
+- Review objects include the following field:
+    - Title (summary of review)
+    - Content (main review text)
+    - Rating (0-5)
+    - User (linked to User model)
+    - Product (linked to Product model)
+    - Created on date (automatically populated on creation)
+    - is_approved boolean field - set to false by default to allow admins to approve review before it appears on the site. This is reset to unapproved if the review is edited.
+
+- Reviews also contain EDIT/DELETE buttons which are only visible to certain users
+    - Logged in users can add, edit & delete their own reviews.
+    - Admins need to approve reviews before they appear on the site (to avoid inappropriate content)
+    - Admins cannot edit reviews (this would undermine trust in the site)
+    - Admins can delete reviews (but users are told that this is only for inappropriate content)
+
+- Product ratings are calculated based on review ratings:
+    - Once a review is approved the average of all review ratings is calculated and rounded to create the product rating.
+    - If a review is edited or deleted or 'un-approved' in the admin panel the product rating is re-calculated
+        - This means that the product rating always reflects the average of the product reviews that appear on the product details page.
+
+<img src="media/docs/review_rating.png">
+
+
+**Value to User**
+
+The Reviews model allows users to find out more information about a product, as well as the opinion of other users, to help them to decide whether to purchase a product. The ability to leave a review allows users to provide feedback and feel like their opinion matters. The ability to edit or delete a review is a way for users to adjust their opinion over time or change their mind. Editing being restricted to the review creator only creates trust in the company and makes people feel like their opinion is important. The ability to approve reviews for admins avoids inappropriate content on the site.
+
+</details>
+
+<details><summary>Add Review</summary>
+
+- The add review form is accessible from the product details page.
+- The form is an easy to use, user friendly page with bespoke branded styling.
+- The form has built in validation to make sure that all required fields are completed and contain valid content.
+- The form header has the name and image of the product to remind the user what they are reviewing.
+- The text fields (title & content) have max limits to avoid overly long reviews ruining the design of the site and to keep information easy to digest for users viewing reviews.
+- The rating select has a user-friendly clickable hexagon styling, which matches the styling of the ratings on the product pages. A user can click on a hexagon to set the rating, or change their mind and select another hexagon to revise their choice.
+- If no rating is selected it is set to 0
+- The rating selection is not appropriate for screen readers so to make the page accessible there is a hidden input which is visible to screen readers only where a user can input a numeric value.
+- The form has bespoke styled buttons to either submit the form using the non-purchasing themed yellow button or cancel using the button in secondary grey. [See Whole Site Features](#whole-site)
+- On submission the review is set to 'unapproved' with an explanatory message that an admin will need to approve it and information about where to find the review in the mean time (profile page). It also reassures users that reviews are only rejected for inappropriate content, not for bad reviews, which helps build trust.
+
+<img src="media/docs/create_review.png">
+
+**Value to User**
+
+The ability to add a review allows users to provide feedback and to feel that their opinion matters to the company. This builds trust in the company and the site. The form is easy to fill in and short, encouraging users to leave reviews.
+
+</details>
+
+<details><summary>Edit Review</summary>
+
+- The edit review form contains the same content and value as the add review form (see above).
+- The form is reach by clicking on the EDIT button on a review, though the EDIT button is only visible to the review creator.
+- This form is only accessible to the creator of the review and not to site admins.
+- The form is pre-populated with the existing review content
+- On submission the review is reset to 'unapproved' with an explanatory message that an admin will need to approve it and information about where to find the review in the mean time (profile page). It also reassures users that reviews are only rejected for inappropriate content, not for bad reviews, which helps build trust.
+
+**Value to User**
+
+The ability to edit a review is a useful tool for users who have changed their mind about their opinion of a product, perhaps it started well but didn't last, or improved with time. The fact that only the review creator can edit it builds trust in the site and the company. Setting the approval to 'unapproved' means if users add inappropriate content by editing a review that it doesn't appear on the site without admin approval.
+
+</details>
+
+
+<details><summary>Delete Review</summary>
+
+- Reviews can be deleted by the review creator or by site admins.
+- The functionality is available by clicking on the DELETE button on a review, though the DELETE button is only visible to the review creator and site admins.
+- Clicking on delete launches a modal which warns the user that the review will be deleted, this adds a layer of protection against accidental deletion. Users can then click on cancel/cross to cancel the action, or delete to confirm they want to delete the review.
+
+
+**Value to User**
+
+The ability to delete a review gives regular users control of their reviews, if they submit one by accident or change their mind about posting it. It gives admins the ability to remove reviews which contain inappropriate content. Of course it could also give them the ability to hide bad reviews, but with the correct ethical policies in place this can be avoided.
+
+</details>
+
+
+<details><summary>Review Approval</summary>
+
+- All reviews that are added or edited require admin approval prior to appearing on the site
+- This functionality is available on the site management page
+- All reviews that are unapproved appear and have a toggle switch to easily toggle them to approved, or delete them if they contain inappropriate content.
+- If a review is approved but needs to be 'unapproved' by an admin this can be done in the admin panel. This is unlikely to occur. I made the decision not to include this functionality in the site management page to avoid populating the page with hundreds of reviews. Having a quick approval toggle was the best user experience for the situation.
+
+
+**Value to User**
+
+Putting in a layer of approval prior to a review appearing on the site allows admins a level of control over what people are posting on their site, without giving them full review editing privileges. It should stop inappropriate content appearing whilst not undermining customer trust. It of course requires the admins to use it appropriately and ethically and not as a way to hide bad reviews.
+
+</details>
+
+- - -
+
+
+### Profile
+
+![Profile Page](media/docs/feat_profile.jpg)
+
+
+#### Feature Video
+https://github.com/emmahewson/island-bees/assets/116887840/fe7fc7b2-b029-4694-9e79-61f0883ace78
+
+#### Feature Information
+
+<details><summary>Profile</summary>
+
+- The User Profile gives users a way to store their information and site actions
+- In connects them to their personal information, their order history & their reviews
+- The profile page gives them access to viewing, updating and amending this information in a single location
+- The page is only visible to logged in users and users can only view their own information, not that of other users.
+- More details below
+
+**Value to User**
+
+The profile page gives users a single point to access all of their information. It allows them to update their info, see their order and view, edit & delete their reviews without having to search around the site for them. It provides a quick, efficient way to manage their data.
+
+</details>
+
+<details><summary>Profile Page - User Details Forms</summary>
+
+- The profile form contains the information about the user that they have saved on the site, either on this page or during checkout
+- It is pre-populated with any information they have previous stored
+- When a user is created they have no information other than email address, username and password
+- The form gives them a way to add extra information for use in future purchases
+- The first and last names connect to the User model
+- The default delivery info is stored in the UserProfile model
+- Model models are updated using a single update button located at the bottom of the form (button styled using 'non-purchasing' action yellow [See Whole Site Features](#whole-site))
+- None of the form inputs are required, users can choose to add their data each time they place an order, rather than store it on their profile
+- The form also contains links to 2 authentication pages which control other fields in their User model - both handled by allauth [see below](#authentication)
+    - Manage Email (allows them to change, add and remove their email addresses)
+    - Change Password (allows them to change their User password)
+- On submission the form updates their data and refreshes the page
+
+**Value to User**
+
+This form allows users to store their information to make future purchases quicker and easier without the need to enter their data every time. It also provides them convenient links to manage their email and password, providing easy navigation and good user experience.
+
+</details>
+
+
+<details><summary>Profile Page - Order History</summary>
+
+- The order history section of the profile page gives users a quick summary of all their historic orders to browse and click through to see more details
+- It contains:
+    - Order number
+    - Date
+    - Items purchased with quantity
+    - Total order cost
+- The list is contained in a fixed-height box to stop it getting too long and affecting the site design and contents lower down the page, the contents of the container are scrollable.
+
+**Value to User**
+
+This allows users to view their orders, to find out information about what they have previously purchased or to find out information about an order that has a problem or hasn't turned up so they can follow it up with the site.
+
+</details>
+
+<details><summary>Profile Page - User Reviews</summary>
+
+- The user reviews section shows all reviews created by the current user.
+- It also contains unapproved reviews, so offers a place for users to view, edit or delete reviews that they have recently submitted but have not yet been approved (these do not appear on the rest of the site until they have been approved.)
+- If a review is unapproved it has a 'Approval pending' label on it to make its status clear.
+- Reviews contain EDIT/DELETE links - as all reviews are the user's own they will all have these links.
+- The review contains product name & image (clickable link to the product details page), review title, date, content & rating
+- The review doesn't contain the username as they all belong to the same user (this is different to the reviews on the product details page which contain the username but not the product image/name.)
+- For more information about reviews see [Features - Reviews](#reviews)
+
+**Value to User**
+
+This section gives users a single point to view, edit & delete their reviews as well as seeing which reviews have not yet been approved. If these were not on the profile page a user would have to navigate to each product that they had reviewed to edit them which would provide a poor user experience.
+
+</details>
+
+<details><summary>Order History Info Page</summary>
+
+- When a user clicks on an order number on their profile page they arrive on the order history page, which uses the same template as the checkout success page, with dynamically amended text to reflect that this is a past order.
+- This page contains:
+    - Order information:
+        - Order number
+        - Order date
+        - Delivery Details
+    - Order summary:
+        - Product name
+        - Quantity purchased
+        - Total
+        - Delivery charge
+        - Grand total
+    - Back to Profile button - takes the user back to their profile and order history. (Button styled using 'purchasing' action blue [See Whole Site Features](#whole-site))
+
+**Value to User**
+
+Gives users ability to dig deeper in to the details of historic orders to see what they have previously purchased, to track their spending and to find out order details if any questions or problems arise. It is an important part of their purchasing journey after the purchase is complete.
+
+</details>
+
+- - -
+
+### FAQs
+
+![FAQs Page](media/docs/faq_admin.png)
+
+#### Feature Video
+https://github.com/emmahewson/island-bees/assets/116887840/fbf3d04c-d4e9-410a-9d7c-36dabf9cb3f6
+
+#### Feature Information
+
+<details><summary>FAQs Page</summary>
+
+- The FAQs (Frequently Asked Questions) Page provides users with answers to common questions that users might have about the site.
+- Each question is clickable to reveal the answer, this keeps the page short and manageable and provides a good user experience
+- The intro text also contains a link to the Contact page if users have a question that is not covered in the FAQs as well as text to explain how to reveal the answers.
+- Admins of the site will also see an 'Add FAQ' button to add additional FAQs and EDIT/DELETE options on each FAQ to amend or remove them.
+
+**Value to User**
+
+Provides a quick reference for common questions that users might have, giving them an instant answer. This provides them with good customer service and user experience. It also avoids the business having to answer the same question all the time which save them time and effort. The contact us link allows users who don't find their answer here to navigate easily and find what they need.
+
+</details>
+
+<details><summary>Add FAQ</summary>
+
+- The Add FAQ form is a simple to add FAQs to the site
+- It uses the branded form formatting seen across the site
+- It has 2 fields, question & answer, both of which are required
+- Attempting to submit the form with empty fields will indicate to the user that they must fill these in in order to submit
+- The question has a maximum limit to avoid them getting too long, which improves user experience and site layout
+- The answer has no limit, giving the site admin the ability to answer more complex, longer questions
+- Users are presented with 2 buttons (Buttons styled using standard site button colours [See Whole Site Features](#whole-site)):
+    - Cancel - to go back to the FAQs page 
+    - Add FAQ to submit the form and take user back to the FAQs page.
+- On submission the admin will see the FAQ appear on the FAQs page.
+
+<img src="media/docs/create_faq.png">
+<img src="media/docs/create_faq_form.png">
+
+**Value to User**
+
+Provides admins with a quick, easy way to add FAQs to the site which will appear on the FAQ page immediately with the site styling. This allows them to adjust their FAQs as they develop the site.
+
+</details>
+
+<details><summary>Edit FAQ</summary>
+
+- The Edit FAQ form has all the same functionality as the Add FAQ form (see above)
+- The form is pre-populated with the FAQ content
+- On submission the admin is returned to the FAQ page and sees the changes to the FAQ reflected on the page immediately.
+
+<img src="media/docs/update_faq_form.png">
+
+**Value to User**
+
+Provides admins with a quick, easy way to edit FAQs on the site. This allows them to adjust their FAQs as they develop the site.
+
+</details>
+
+<details><summary>Delete FAQ</summary>
+
+- Accessible from the FAQs page this allows admins to delete an FAQ if it is no longer relevant
+- Clicking on delete triggers a modal pop up confirming whether the user wants to delete, this avoids accidental deletion
+- Clicking cancel closes the modal and doesn't delete the FAQ
+- Clicking delete on the modal deletes the FAQ and returns the user to the FAQs page
+- The FAQ is immediately removed from the site and the database.
+
+**Value to User**
+
+Provides admins with a quick, easy way to remove FAQs from the site. This allows them to adjust their FAQs as they develop the site.
 
 </details>
 
