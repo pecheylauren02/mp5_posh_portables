@@ -2,17 +2,25 @@
 {% load static %}
 
 {% block content %}
-  <h2 class="header-container">Your Wishlist</h2>
-  {% if wishlist_items %}
-    <ul>
-      {% for item in wishlist_items %}
-        <li>
-          {{ item.product.name }}
+<div class="container-fluid header-container mx-auto w-100">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-8">
+      <hr>
+      <h1 class="text-center logo-font">Your Wishlist</h1>
+      <p>Here is your Wishlist. If you'd like to return to any of these products, you can click the product link.</p>
+      <hr>
+      {% if wishlist_items %}
+      <ul class="list-unstyled">
+        {% for item in wishlist_items %}
+        <li class="mb-3">
+          <i class="fas fa-heart fa-lg text-danger"></i>
+          <a href="{% url 'product_detail' item.product.id %}" class="text-dark">{{ item.product.name }}</a>
           <!-- Trigger modal button -->
-          <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#modal-{{ item.id }}">
-            Delete
-          </button>
-
+          <small>
+            <button class="btn btn-danger btn-sm ml-3" data-toggle="modal" data-target="#modal-{{ item.id }}">
+              Remove
+            </button>
+          </small>
           <!-- Confirm Delete Modal -->
           <div class="modal fade" id="modal-{{ item.id }}" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -34,9 +42,12 @@
             </div>
           </div>
         </li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p>Your wishlist is empty.</p>
-  {% endif %}
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>Your wishlist is empty.</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
 {% endblock %}

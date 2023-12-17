@@ -10,8 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Posh Portables, an e-commerce website that sells gaming accessories">
-    <meta name="keywords"
-        content="posh portables, posh portable gaming accessories, gaming accessories, pc gaming accessories, must have pc gaming accessories, 
+    <meta name="keywords" content="posh portables, posh portable gaming accessories, gaming accessories, pc gaming accessories, must have pc gaming accessories, 
         gaming laptops, gaming monitors, gaming headphones, gaming keyboards, gaming setup, gaming room accessories, 
         best laptops and accessories, computers for gaming">
     {% endblock %}
@@ -55,7 +54,8 @@
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link" aria-label="Home Page link" rel="noopener noreferrer">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link" aria-label="Home Page link"
+                    rel="noopener noreferrer">
                     <h1 class="logo-font text-black my-0"><i class="fas fa-gamepad"></i> <strong>Posh Portables</strong>
                     </h1>
                 </a>
@@ -88,19 +88,22 @@
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <a href="{% url 'add_product' %}" class="dropdown-item"
-                                aria-label="Manage my products link" rel="noopener noreferrer">Manage My Products</a>
+                            <a href="{% url 'add_product' %}" class="dropdown-item" aria-label="Manage my products link"
+                                rel="noopener noreferrer">Manage My Products</a>
                             {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item" aria-label="My Profile link" rel="noopener noreferrer">My
+                            <a href="{% url 'profile' %}" class="dropdown-item" aria-label="My Profile link"
+                                rel="noopener noreferrer">My
                                 Profile</a>
-                                <a href="{% url 'wishlist' %}" class="dropdown-item" aria-label="My Wishlist link" rel="noopener noreferrer">My
-                                    Wishlist</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item"
-                                aria-label="Logout link" rel="noopener noreferrer">Logout</a>
+                            <a href="{% url 'wishlist' %}" class="dropdown-item" aria-label="My Wishlist link"
+                                rel="noopener noreferrer">My
+                                Wishlist</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item" aria-label="Logout link"
+                                rel="noopener noreferrer">Logout</a>
                             {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item"
-                                aria-label="Register link" rel="noopener noreferrer">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="Login link" rel="noopener noreferrer">Login</a>
+                            <a href="{% url 'account_signup' %}" class="dropdown-item" aria-label="Register link"
+                                rel="noopener noreferrer">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item" aria-label="Login link"
+                                rel="noopener noreferrer">Login</a>
                             {% endif %}
                         </div>
                     </li>
@@ -176,8 +179,8 @@
             <section class="mb-4">
                 <!-- Facebook -->
                 <a class="btn btn-outline-light btn-floating m-1"
-                    href="https://www.facebook.com/profile.php?id=61554694944684" target="_blank" rel="noopener noreferrer"
-                    role="button" aria-label="Visit our Facebook page (opens in new tab)"><i
+                    href="https://www.facebook.com/profile.php?id=61554694944684" target="_blank"
+                    rel="noopener noreferrer" role="button" aria-label="Visit our Facebook page (opens in new tab)"><i
                         class="fab fa-facebook-f"></i> Follow us on Facebook</a>
 
                 <!-- Social media icons -->
@@ -188,12 +191,12 @@
                             class="fab fa-google"></i></a>
                     <!-- Instagram -->
                     <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/" target="_blank"
-                        rel="noopener noreferrer" role="button" aria-label="Visit our Instagram page (opens in new tab)"><i
-                            class="fab fa-instagram"></i></a>
+                        rel="noopener noreferrer" role="button"
+                        aria-label="Visit our Instagram page (opens in new tab)"><i class="fab fa-instagram"></i></a>
                     <!-- Linkedin -->
                     <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/" target="_blank"
-                        rel="noopener noreferrer" role="button" aria-label="Visit our LinkedIn page (opens in new tab)"><i
-                            class="fab fa-linkedin-in"></i></a>
+                        rel="noopener noreferrer" role="button"
+                        aria-label="Visit our LinkedIn page (opens in new tab)"><i class="fab fa-linkedin-in"></i></a>
                     <!-- Github -->
                     <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/" target="_blank"
                         rel="noopener noreferrer" role="button" aria-label="Visit our GitHub page (opens in new tab)"><i
