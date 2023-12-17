@@ -301,8 +301,7 @@ This section shows details of all features on the site including details of thei
 
 ### Whole Site
 
-![Mock-up](media/docs/mp4_mockup.jpg)
-
+![Mock-up]()
 
 <details><summary>Meta Tags</summary>
 
@@ -377,23 +376,100 @@ Makes the site easy to navigate no matter where a user is on the site. Allows us
 
 </details>
 
-### Products
+<details><summary>Delivery Banner</summary>
 
-![Products Page](media/docs/products.png)
+- Banner which is visible on all pages and extends the nav, telling users the free delivery threshold.
 
-#### Feature Information
+**Value to User**
+
+This encourages users to spend more to reach this amount, as well as informing them of the offer of free delivery, which helps to push up sales.
+
+</details>
+
+
+<details><summary>Back To Top Button</summary>
+
+- Fixed position button which scrolls the page back up to the top with a smooth scroll
+- The button only appears when the user has scrolled down the page slightly. This means it won't appear when a page is very short and doesn't require scrolling e.g. 404 page.
+- Uses JavaScript to implement functionality.
+- I had originally only included this on the products page but I decided it was really useful and included in on all pages.
+
+**Value to User**
+
+Allows users to move around the site easily, particularly on longer pages and smaller screens where contents are stacked and pages are longer. This aids navigation and avoids users getting lost or frustrated, improving user experience.
+
+</details>
+
+
+<details><summary>Buttons & Links</summary>
+
+- There are buttons and links across the site for a variety of purposes. They have consistent styling and specific colours have been used to manage the UI and lead users smoothly and intuitively through the site.
+    - Main action buttons
+        - Green is used for actions which relate to purchases
+    - CRUD buttons - used for edit / delete functionality
+        - These are styled differently to make it clear that they have a very different purpose, helping to avoid confusion and to enhance user experience
+        - Blue is used for positive actions e.g. 'EDIT'
+        - Red (warning / error) is used for riskier actions e.g. 'DELETE'
+        - Grey is used for cancel buttons
+
+- There are also text-based links around the site
+    - Nav & Footer links use an underline on hover styling
+    - The rest of the site uses a green colour with a colour transition hover to differentiate the text from the non-link text around it.
+
+**Value to User**
+
+Buttons allow users to take actions on the site such as purchasing, adding reviews, CRUD functionality. The consistency in design means that the site has an intuitive UI and users feel confident when taking actions. The colour system improves user experience and helps to avoid mistakes.
+
+</details>
+
+<details><summary>Footer</summary>
+
+
+- Visible on all pages of the site, separated in to 2 sections
+    - Upper footer
+        - Social links - include both the social icon & name with a hover effect. All external links open in a new tab.
+    - Lower Footer (Separated out as this is information is separate to the main site and relates to the reasons for it being created)
+        - Disclaimer about site being for educational purposes
+        - Mailchimp newsletter for users to subscribe
+        - Site creator's name and social links (open in a separate tab)
+
+**Value to User**
+
+Provides additional links to aid site navigation. Links in the footer are for secondary features such as FAQs & Contact and so are separated from the main site links to keep the navigation simple. Allows users to connect with the company on social media. Provides context to the purpose of the site with the company info. Explains that the site is fictional to add context and clarity for users.
+
+</details>
+
+<details><summary>Messages & User Feedback</summary>
+
+- Throughout the site I have used the Django messaging framework along with Bootstrap's Toast element to communicate with users as they take actions on the site. These appear as a popup message in the corner of the site which lets the user know if their action has been successful or not. It offers reassurance for the user, provides a good user experience and helps make the site seem robust and secure. The messages use conditional colours based on the type of message (success - green / error or warning - red / info - blue )
+
+- Examples of usage
+    - Adding an item to cart (success message and cart summary)
+    - Updating or changing cart contents (success message)
+    - Placing an order (info message including email details)
+    - Adding / Editing / Deleting a review, product, FAQ etc (success message)
+    - Attempting to visit a restricted page (Info message)
+    - Failed payment (error message)
+    - Successful log in/out (success message)
+    - Registration - email sent for verification (info message)
+
+**Value to User**
+
+Provides user feedback at all stages so that users know if their actions have been successful. Avoids confusion and provide a positive user experience. Creates confidence in the site for users when making purchases.
+
+</details>
 
 ### Home Page
 
-![Home Page](media/docs/)
+![Home Page](media/docs/home.png)
 
 #### Feature Information
 
 <details><summary>Hero & Intro Sections</summary>
 
-- A visually impactful, colourful image of gaming accessores to grab the user's attention and make the site's purpose clear on first arrival
+- A visually impactful, colourful image of bees on comb to grab the user's attention and make the site's purpose clear on first arrival
 - A 'SHOP NOW' button with smooth hover effect which leads to the products page
-- Text legibility to create separation and hierarchy in the design with info about the company to help expand on the site's purpose and what users can expect to find there.
+- Text on a light beige or green background to create separation and hierarchy in the design with info about the company to help expand on the site's purpose and what users can expect to find there.
 
 **Value to User**
 
@@ -409,11 +485,17 @@ Makes the site's purpose and brand identity clear upon first arrival. Encourages
 
 **Value to User**
 
-This is useful to users as they might have a very specific product in mind e.g. a gaming monitor, and they can easily navigate to the 'Laptops and Monitors' category and find what they need. Allows purchases to be made quickly and easily with intuitive user journeys through the site and a number of different ways to navigate to the products section.
+This is useful to users as they might have a very specific product in mind e.g. a new bee hive, and they can easily navigate to the 'kit' category and find what they need. Allows purchases to be made quickly and easily with intuitive user journeys through the site and a number of different ways to navigate to the products section.
 
 </details>
 
 - - -
+
+### Products
+
+![Products Page](media/docs/products.png)
+
+#### Feature Information
 
 <details><summary>Products</summary>
 
@@ -494,7 +576,7 @@ This is the page which helps users decide if they are going to buy the product, 
 
 <details><summary>Add Product</summary>
 
-- The add product page is accessible via the Site Management Page [see below](#site-management). This is restricted to site admins only. Admins can use this form to add a new product to the site and set all its information.
+- The add product page is accessible via the Django Admin. This is restricted to site admins only. Admins can use this form to add a new product to the site and set all its information.
 - The form has built in validation to make sure that all required information is provided.
 - The category field is pre-populated by the categories listed in the database
 - The text fields (name & description) have maximum limits to avoid overly long information being added which could have a negative impact on the site design.
@@ -547,7 +629,7 @@ This gives admins the ability to control their product catalogue and which produ
 
 - - -
 
-### shopping cart
+### Shopping cart
 
 ![shopping cart](media/docs/)
 
