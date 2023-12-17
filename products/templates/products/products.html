@@ -84,7 +84,17 @@
                         <div class="card-footer bg-white pt-0 border-0 text-left">
                             <div class="row">
                                 <div class="col">
-                                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
+                                    <div class="d-flex align-items-center">
+                                        <p class="lead mb-0 text-left font-weight-bold">
+                                            ${{ product.price }}
+                                        </p>
+                                        <form class="form ml-3" action="{% url 'add_to_wishlist' product.id %}" method="POST">
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn btn-outline-danger rounded-circle">
+                                                <i class="fas fa-heart"></i>
+                                            </button>
+                                        </form>
+                                    </div>
                                     {% if product.category %}
                                     <p class="small mt-1 mb-0">
                                         <a class="text-muted"

@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from .models import WishlistItem
+from django.contrib import messages
+from .models import WishlistItem, Product
 
 
 @login_required
@@ -10,12 +11,18 @@ def wishlist(request):
 
 @login_required
 def add_to_wishlist(request, product_id):
-    # Implement logic to add a product to the user's wishlist
-    # Ensure that the user is authenticated and handle duplicates if needed
+    """ Adds product to user's wishlist """
+    if request.method == 'POST':
+        product = get_object_or_404(Product, id=product_id)
+        WishlistItem.objects.create(user=request.user, product=product)
+        
+        messages.success(request, f'{product.name} added to your wishlist!')
+
     return redirect('wishlist')
     
 @login_required
 def remove_from_wishlist(request, item_id):
+    """ Deletes product from user's wishlist """
     # Implement logic to remove a product from the user's wishlist
     # Ensure that the user is authenticated
     return redirect('wishlist')
