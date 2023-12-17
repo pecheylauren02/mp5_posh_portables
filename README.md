@@ -301,7 +301,7 @@ This section shows details of all features on the site including details of thei
 
 ### Whole Site
 
-![Mock-up]()
+![Mock-up](media/docs/amiresponsive.png)
 
 <details><summary>Meta Tags</summary>
 
