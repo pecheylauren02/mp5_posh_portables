@@ -519,9 +519,9 @@ I encountered the following significant or interesting bugs during development. 
 
 #### Bug 4 - Toast showing shopping cart summary after user actions not related to shopping cart
 
-**Issue:** This was more of a user experience issue than a bug. I had followed the Boutique Ado walkthrough for the Toasts & user feedback messages and whilst the little shopping bag summary was a great touch it was showing after every successful user action apart from on the profile page where there was code to stop this happening. I needed to find a more comprehensive way to hide the summary when users added reviews, FAQs, filled in the Contact Us form etc.
+**Issue:** This was more of a user experience issue than a bug. I had followed the Boutique Ado walkthrough for the Toasts & user feedback messages and whilst the little shopping cart summary was a great touch it was showing after every successful user action apart from on the profile page where there was code to stop this happening. I needed to find a more comprehensive way to hide the summary when users added reviews, FAQs, filled in the Contact Us form etc.
 
-**Fix:** I removed it by firstly adding an additional conditional statement to the toast_success template to check whether the referring page url contained the word 'accounts' to stop the bag showing when any toasts.success were called by the built-in allauth code. Then in addition, I added a session variable called show_bag_summary to true or false each time I called messages.success and an additional conditional value in the template tag to check this value.
+**Fix:** I removed it by firstly adding an additional conditional statement to the toast_success template to check whether the referring page url contained the word 'accounts' to stop the cart showing when any toasts.success were called by the built-in allauth code. Then in addition, I added a session variable called show_cart_summary to true or false each time I called messages.success and an additional conditional value in the template tag to check this value.
 
 - - -
 [Go to Top](#posh-portables---e-commerce-site---testing)

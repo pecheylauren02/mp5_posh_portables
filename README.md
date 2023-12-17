@@ -297,9 +297,89 @@ On the other hand, the sitemap.xml file acts as a roadmap for search engine craw
 
 ## Features
 
+This section shows details of all features on the site including details of their value to the user.
+
+### Whole Site
+
+![Mock-up](media/docs/mp4_mockup.jpg)
+
+
+<details><summary>Meta Tags</summary>
+
+- All pages have title & description meta tags to improve their SEO performance
+
+**Value To User**
+
+Allows the site to be found easily by shoppers when searching online. Gives clarity to the site's purpose and content.
+
+</details>
+
+<details><summary>Layout</summary>
+
+- Site width is restricted to 1400px so that the contents display correctly on wider screens as well as limiting the width of the hero image on the home page to maintain the quality. The area around the site has been set to a grey that fits with the site branding.
+
+**Value To User**
+
+Makes the site look good & be easy to use and navigate no matter what device a user is on. Enhances user experience and creates a positive emotional response.
+
+</details>
+
+<details><summary>General Responsiveness</summary>
+
+- The site is fully responsive across all pages to help all features appear correctly and look their best on all devices. This includes:
+    - Changes to font size
+    - Changes to padding & margins
+    - Changes to the height of divs/sections
+    - Layout changes including stacking elements on smaller screens
+- Details of more specific changes can be found in the feature sections below.
+
+**Value To User**
+
+Makes the site look good & be easy to use and navigate no matter what device a user is on. Enhances user experience and creates a positive emotional response.
+
+</details>
+
+<details><summary>Favicon</summary>
+
+- The site has a Favicon using the brand's gaming icon.
+
+**Value To User**
+
+Builds the brand & creates brand consistency, continues the site design in the user's browser tab, makes the site feel professional the trustworthy.
+
+</details>
+
+<details><summary>Nav Bar</summary>
+
+- Fully responsive nav bar
+- Nav changes based on screen size, with completely bespoke layout & content for each
+- Large & XL screens:
+    - Clickable logo which takes the user back to the home page
+    - Search box (permanently visible) which allows users to search for products. Site searches based on product name & description.
+    - Account Menu - links to account based pages including authentication pages (sign in, sign out, register), profile page and site management. These links vary based on whether a user is logged in and whether they are an admin.
+    - Shopping cart current contents icon - this icon's styling dynamically changes based on whether the current user has contents in their cart. It also tells the user the current total of all products in their cart.
+    - Home page link
+    - Products dropdown - links to the products page with a number of options to view products by category or all products.
+- Medium screen & smaller:
+    - Dropdown burger icon with links to:
+        - Home Page
+        - Products dropdown - links to the products page with a number of options to view products by category or all products.
+    - Clickable logo which takes the user back to the home page (Medium Screens Only)
+    - Search icon which triggers a search bar dropdown which allows users to search for products. Site searches based on product name & description.
+    - Account Menu - links to account based pages including authentication pages (sign in, sign out, register), profile page and site management. These links vary based on whether a user is logged in and whether they are an admin.
+    - Shopping cart current contents icon - this icon's styling dynamically changes based on whether the current user has contents in their cart. It also tells the user the current total of all products in their cart.
+- Nav links have hover effects with smooth transitions. For the text-based links this is an underline which fades in. For icons it is a smooth colour transition.
+- The navbar sticks to the top of the screen to aid navigation on longer pages
+
+**Value To User**
+
+Makes the site easy to navigate no matter where a user is on the site. Allows users to navigate on any device. Adds search and filter functionality allowing users to find the products they need very smoothly and intuitively. Provides feedback on cart contents so users can keep track of their shopping.
+
+</details>
+
 ### Products
 
-![Products Page](media/docs/)
+![Products Page](media/docs/products.png)
 
 #### Feature Information
 
