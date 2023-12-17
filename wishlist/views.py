@@ -23,6 +23,14 @@ def add_to_wishlist(request, product_id):
 @login_required
 def remove_from_wishlist(request, item_id):
     """ Deletes product from user's wishlist """
-    # Implement logic to remove a product from the user's wishlist
     # Ensure that the user is authenticated
+    user = request.user
+
+    # Get the wishlist item or return a 404 response if not found
+    wishlist_item = get_object_or_404(WishlistItem, id=item_id, user=user)
+
+    # Delete the wishlist item
+    wishlist_item.delete()
+
+    # Redirect to the wishlist page
     return redirect('wishlist')
