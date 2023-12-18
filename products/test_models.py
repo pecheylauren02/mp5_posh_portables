@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .models import Category, Product
 
+
 class TestCategoryModel(TestCase):
     def setUp(self):
         # Create a Category
@@ -22,7 +23,8 @@ class TestCategoryModel(TestCase):
         """
         friendly_name = self.category.get_friendly_name()
         self.assertEqual(friendly_name, 'electronics')
-    
+
+
 class TestProductModel(TestCase):
     def setUp(self):
         # Create a Category
