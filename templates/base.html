@@ -85,7 +85,7 @@
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                        <div class="dropdown-menu border-0">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
                             <a href="{% url 'add_product' %}" class="dropdown-item" aria-label="Manage my products link"
@@ -260,12 +260,12 @@
 
     {% block postloadjs %}
     <!-- Toasts scripts -->
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
     </script>
     <!-- Mailchimp scripts -->
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-    <script type="text/javascript">
+    <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script>
         (function ($) {
             window.fnames = new Array();
             window.ftypes = new Array();

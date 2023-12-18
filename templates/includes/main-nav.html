@@ -9,10 +9,10 @@
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item" rel="noopener noreferrer" aria-labelledby="Sort By Price">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item " rel="noopener noreferrer" aria-labelledby="Sort By Rating">By Rating</a>
-                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item " rel="noopener noreferrer" aria-labelledby="Sort By Category">By Category</a>
+            <div class="dropdown-menu border-0">
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item" rel="noopener noreferrer">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item " rel="noopener noreferrer">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item " rel="noopener noreferrer">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
         </li>
@@ -21,11 +21,11 @@
             <a class="logo-font font-weight-bold nav-link text-black mr-5" href="{% url 'products' %}" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Gaming Accessories
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="{% url 'products' %}?category=laptops_and_monitors" class="dropdown-item" aria-labelledby="Link to Laptops and Monitors" rel="noopener noreferrer">Laptops & Monitors</a>
-                <a href="{% url 'products' %}?category=speakers_and_headgear" class="dropdown-item" aria-labelledby="Link to Speakers and Headgear" rel="noopener noreferrer">Speakers and Head Gear</a>
-                <a href="{% url 'products' %}?category=keyboards" class="dropdown-item" aria-labelledby="Link to Keyboards" rel="noopener noreferrer">Keyboards</a>
-                <a href="{% url 'products' %}?category=laptops_and_monitors,speakers_and_headgear,keyboards" class="dropdown-item" aria-labelledby="Link to Products" rel="noopener noreferrer">All Gaming Accessories</a>
+            <div class="dropdown-menu border-0">
+                <a href="{% url 'products' %}?category=laptops_and_monitors" class="dropdown-item" rel="noopener noreferrer">Laptops & Monitors</a>
+                <a href="{% url 'products' %}?category=speakers_and_headgear" class="dropdown-item" rel="noopener noreferrer">Speakers and Head Gear</a>
+                <a href="{% url 'products' %}?category=keyboards" class="dropdown-item" rel="noopener noreferrer">Keyboards</a>
+                <a href="{% url 'products' %}?category=laptops_and_monitors,speakers_and_headgear,keyboards" class="dropdown-item" rel="noopener noreferrer">All Gaming Accessories</a>
             </div>
         </li>
 
@@ -33,10 +33,10 @@
             <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="{% url 'products' %}?category=twenty_five_off" class="dropdown-item" aria-labelledby="Link to 25% off deals" rel="noopener noreferrer">25% off</a>
-                <a href="{% url 'products' %}?category=package_deals" class="dropdown-item" aria-labelledby="Link to Package Deals" rel="noopener noreferrer">Package Deals</a>
-                <a href="{% url 'products' %}?category=twenty_five_off,package_deals" class="dropdown-item" aria-labelledby="Link to All Specials" rel="noopener noreferrer">All Specials</a>
+            <div class="dropdown-menu border-0">
+                <a href="{% url 'products' %}?category=twenty_five_off" class="dropdown-item" aria-label="Link to 25% off deals" rel="noopener noreferrer">25% off</a>
+                <a href="{% url 'products' %}?category=package_deals" class="dropdown-item" aria-label="Link to Package Deals" rel="noopener noreferrer">Package Deals</a>
+                <a href="{% url 'products' %}?category=twenty_five_off,package_deals" class="dropdown-item" aria-label="Link to All Specials" rel="noopener noreferrer">All Specials</a>
             </div>
         </li>
     </ul>

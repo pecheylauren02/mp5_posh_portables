@@ -119,7 +119,7 @@ a.category-badge > span.badge:hover {
 }
 
 input[name='q']::placeholder {
-    color: 'aab7c4';
+    color: #aab7c4;
 }
 
 /* Toasts styling with Bootstrap */
