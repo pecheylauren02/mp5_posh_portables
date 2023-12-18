@@ -185,7 +185,6 @@ I ran the site through Google Chrome Dev Tools' Lighthouse to check on its perfo
 
 <details><summary>Performance Results Table</summary>
 
-
 | **Feature**                             | **Expected Outcome**                          | **Test Performed**                | **Change / Final Result**               | **Pass / Fail** |
 |-----------------------------------------|-----------------------------------------------|-----------------------------------|-----------------------------------------|-----------------|
 | **HOME**                                | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | Tinified Hero image • All scores 90+    | PASS            |
@@ -210,7 +209,6 @@ I ran the site through Google Chrome Dev Tools' Lighthouse to check on its perfo
 | **SIGN OUT (logout)**                   | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | Added meta description • All scores 90+ | PASS            |
 | **VERFICATION SENT (confirm-email)**    | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | Added meta description • All scores 90+ | PASS            |
 | **CONFIRM EMAIL (confirm-email/(key))** | All scores 90+ with no errors or major issues | Chrome Lighthouse Report for page | Added meta description • All scores 90+ | PASS            |
-
 
 </details>
 
