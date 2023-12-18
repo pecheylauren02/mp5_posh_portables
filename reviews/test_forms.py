@@ -41,3 +41,12 @@ class TestReviewForm(TestCase):
         self.assertFalse(form.is_valid())
         self.assertIn('rating', form.errors.keys())
         self.assertEqual(form.errors['rating'][0], 'Must be between 0-5')
+
+    def test_fields_are_explicit_in_form_metaclass(self):
+        """
+        Test that only the fields
+        'title', 'content' & 'rating'
+        are displayed on form
+        """
+        form = ReviewForm()
+        self.assertEqual(form.Meta.fields, ['title', 'content', 'rating'])
