@@ -7,6 +7,7 @@ from checkout.webhook_handler import Stripe_Webhook_Handler
 
 import stripe
 
+
 @require_POST
 @csrf_exempt
 def webhook(request):
@@ -14,7 +15,7 @@ def webhook(request):
     Listens for webhooks from Stripe
     """
 
-    # Setup 
+    # Setup
     webhook_secret = settings.STRIPE_WEBHOOK_SECRETKEY
     stripe.api.key = settings.STRIPE_SECRET_KEY
 
@@ -24,9 +25,7 @@ def webhook(request):
     event = None
 
     try:
-        event = stripe.Webhook.construct_event(
-        payload, sig_header, wh_secret
-        )
+        event = stripe.Webhook.construct_event(payload, sig_header, wh_secret)
     except ValueError as e:
         # Invalid payload
         return HttpResponse(status=400)
@@ -42,7 +41,8 @@ def webhook(request):
     # Map webhook events to relevant handler functions
     event_map = {
         'payment_intent.succeeded': handler.handle_payment_intent_succeeded,
-        'payment_intent.payment_failed': handler.handle_payment_intent_payment_failed,
+        'payment_intent.payment_failed':
+        handler.handle_payment_intent_payment_failed,
     }
 
     # Get the webhook type from Stripe
@@ -65,7 +65,8 @@ def webhook(request):
     # Map all of the webhook events to relevant handler functions
     event_map = {
         'payment_intent.succeeded': handler.handle_payment_intent_succeeded,
-        'payment_intent.payment_failed': handler.handle_payment_intent_payment_failed,
+        'payment_intent.payment_failed':
+        handler.handle_payment_intent_payment_failed,
     }
 
     # Get the webhook type from Stripe

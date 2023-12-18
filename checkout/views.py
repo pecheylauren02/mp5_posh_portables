@@ -11,8 +11,9 @@ from profiles.forms import UserProfileForm
 from profiles.models import UserProfile
 from shopping_cart.contexts import shopping_cart_contents
 
-import stripe 
+import stripe
 import json
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -20,7 +21,8 @@ def cache_checkout_data(request):
         pid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(pid, metadata={
-            'shopping_cart': json.dumps(request.session.get('shopping_cart', {})),
+            'shopping_cart': json.dumps(request.session.get(
+                                        'shopping_cart', {})),
             'save_info': request.POST.get('save_info'),
             'username': request.user,
         })
@@ -32,8 +34,8 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
-    """ 
-    Connects the form with Stripe to process all payments 
+    """
+    Connects the form with Stripe to process all payments
     """
 
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -73,22 +75,26 @@ def checkout(request):
                         order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your shopping cart wasn't found in our database. "
+                        "One of the products in your "
+                        "shopping cart wasn't found in our database. "
                         "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_shopping_cart'))
 
             request.session['save_info'] = 'save-info' in request.POST
-            return redirect(reverse('checkout_success', args=[order.order_number]))
-        else: 
+            return redirect(reverse('checkout_success',
+                            args=[order.order_number]))
+        else:
             messages.error(request, 'Oops! There was an error with your form. \
-                           Please check that you have put your information in correctly.')
+                           Please check that you have put your information \
+                           in correctly.')
     else:
 
         shopping_cart = request.session.get('shopping_cart', {})
         if not shopping_cart:
-            messages.error(request, "There's nothing in your shopping cart at the moment")
+            messages.error(request, "There's nothing in your shopping cart "
+                                    "at the moment")
             return redirect(reverse('products'))
 
         current_shopping_cart = shopping_cart_contents(request)
