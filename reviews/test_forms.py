@@ -20,3 +20,24 @@ class TestReviewForm(TestCase):
         self.assertFalse(form.is_valid())
         self.assertIn('content', form.errors.keys())
         self.assertEqual(form.errors['content'][0], 'This field is required.')
+
+    def test_review_rating_required(self):
+        """ Test the review rating is a required field """
+        form = ReviewForm({'rating': ''})
+        self.assertFalse(form.is_valid())
+        self.assertIn('rating', form.errors.keys())
+        self.assertEqual(form.errors['rating'][0], 'This field is required.')
+
+    def test_review_rating_min_value(self):
+        """ Test the review rating is >= 0 """
+        form = ReviewForm({'rating': '-2'})
+        self.assertFalse(form.is_valid())
+        self.assertIn('rating', form.errors.keys())
+        self.assertEqual(form.errors['rating'][0], 'Must be between 0-5')
+
+    def test_review_rating_max_value(self):
+        """ Test the review rating is <= 5 """
+        form = ReviewForm({'rating': '6'})
+        self.assertFalse(form.is_valid())
+        self.assertIn('rating', form.errors.keys())
+        self.assertEqual(form.errors['rating'][0], 'Must be between 0-5')
