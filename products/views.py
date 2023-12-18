@@ -10,8 +10,8 @@ from reviews.models import Reviews
 
 
 def all_products(request):
-    """ 
-    A view to show all products, including sorting and search queries 
+    """
+    A view to show all products, including sorting and search queries
     """
 
     products = Product.objects.all()
@@ -38,15 +38,16 @@ def all_products(request):
 
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
-            products = products.filter(category__name__in=categories) #double underscore used for queries
+            products = products.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
 
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request,
+                               "You didn't enter any search criteria!")
                 return redirect(reverse('products'))
-            
+
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
@@ -64,8 +65,8 @@ def all_products(request):
 
 @login_required
 def product_detail(request, product_id):
-    """ 
-    A view to show individual product details 
+    """
+    A view to show individual product details
     """
 
     product = get_object_or_404(Product, pk=product_id)
@@ -81,24 +82,26 @@ def product_detail(request, product_id):
 
 @login_required
 def add_product(request):
-    """ 
+    """
     A view that allows store owners to add products to the store
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can add products to the store.')
+        messages.error(request,
+                       'Sorry, only admin can add products to the store.')
         return redirect(reverse('home'))
 
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             product = form.save()
-            messages.success(request, 'You have successfully added your product!')
+            messages.success(request, 'Successfully added your product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure you have filled out the form correctly.')
+            messages.error(request, 'Failed to add product. '
+                           'Please fill out the form correctly.')
     else:
         form = ProductForm()
-    
+
     template = 'products/add_product.html'
     context = {
         'form': form,
@@ -109,22 +112,22 @@ def add_product(request):
 
 @login_required
 def edit_product(request, product_id):
-    """ 
-    For store owners to edit a product they have added to the store 
+    """
+    For store owners to edit a product they have added to the store
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can edit products in the store.')
+        messages.error(request, 'Sorry, only admin can edit products.')
         return redirect(reverse('home'))
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
         if form.is_valid():
             form.save()
-            messages.success(request, 'You have successfully updated your product!')
+            messages.success(request, 'Successfully updated your product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Oops! You have failed to update your product. \
-                           Please ensure the form has been filled out correctly.')
+            messages.error(request, 'Oops! Failed to update your product. \
+                           Please fill the form has out correctly.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing... {product.name}')
@@ -140,14 +143,13 @@ def edit_product(request, product_id):
 
 @login_required
 def delete_product(request, product_id):
-    """ 
+    """
     Store owner can delete a product from the store
     """
     if not request.user.is_superuser:
-        messages.error(request, 'Sorry, only store owners can delete products from the store.')
+        messages.error(request, 'Sorry, only admin can delete products.')
         return redirect(reverse('home'))
     product = get_object_or_404(Product, pk=product_id)
     product.delete()
     messages.success(request, 'Your Product has been deleted!')
     return redirect(reverse('products'))
-
