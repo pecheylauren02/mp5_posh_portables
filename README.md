@@ -1622,10 +1622,6 @@ I have found many useful sources in building this project, as this has been my f
 
 ### Content
 
-#### Text
-
-- [ChatGPT:](https://chat.openai.com/auth/login) Used to generate text for the products, reviews, messages & FAQs to quickly populate the site so my time could be better spent on building the site and my coding knowledge. **It was not used to generate any code for the project.**
-
 #### Images
 
 ##### Home Cover and 404 page:
