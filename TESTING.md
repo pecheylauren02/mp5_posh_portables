@@ -83,10 +83,24 @@ There were some warnings thrown up by the CSS Validator.
 
 ### JavaScript Linting
 
-I ran the JavaScript code through [JSHint](https://jshint.com/). For full results see the dropdown below.
+I ran the JavaScript code through [JSHint](https://jshint.com/). For full results see the dropdown below. Overall, most errors were minor, such as "missing semicolon" or showed warnings related to undefined variables which were named in other files. 
 
-<details><summary>JavaScript Results</summary>
-<img src="">
+<details><summary>JavaScript Results Table</summary>
+
+| **Feature** | **Expected Outcome** | **Test Performed** | **Result** | **Pass / Fail** |
+|---|---|---|---|---|
+| **quantity_input.js (bag)** | Page passes validation with no errors | Ran JavaScript through https://jshint.com/ | No Errors | PASS |
+| **stripe_elements.js** | Page passes validation with no errors | Ran JavaScript through https://jshint.com/ | Missing semi-colons. All fixed. Undeclared variable (Stripe - declared elsewhere) | PASS |
+| **message_toggle.js** | Page passes validation with no errors | Ran JavaScript through https://jshint.com/ | Missing semi-colons. All fixed. No errors remaining | PASS |
+| **review_toggle.js** | Page passes validation with no errors | Ran JavaScript through https://jshint.com/ | Missing semi-colons. All fixed. No errors remaining | PASS |
+| **quantity_input.js (products)** | Page passes validation with no errors | Ran JavaScript through https://jshint.com/ | No Errors | PASS |
+| **countryfield.js** | Page passes validation with no errors | Ran JavaScript through https://jshint.com/ | Unnecessary semi-colon. All fixed. No errors remaining | PASS |
+| **rating_select.js** | Page passes validation with no errors | Ran JavaScript through https://jshint.com/ | Missing semi-colons. All fixed. No errors remaining | PASS |
+| **scroll_top.js** | Page passes validation with no errors | Ran JavaScript through https://jshint.com/ | Missing semi-colons. All fixed. No errors remaining | PASS |
+
+<img src="media/docs/js_result_one.png">
+<img src="media/docs/js_result_two.png">
+
 </details>
 
 ### Python Linting
