@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 from reviews.models import Reviews
 
 
-@freeze_time("2022-08-15")
+@freeze_time("2023-12-18")
 class TestReviewModels(TestCase):
     """
     Reviews Model Tests
@@ -65,7 +65,7 @@ class TestReviewModels(TestCase):
 
     def test_review_created_on(self):
         """ Test the review content """
-        self.assertEqual(self.reviewTest.created_on, date(2022, 8, 15))
+        self.assertEqual(self.reviewTest.created_on, date(2023, 12, 18))
 
     def test_review_product_name(self):
         """ Test the review product """

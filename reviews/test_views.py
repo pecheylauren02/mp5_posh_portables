@@ -7,7 +7,7 @@ from products.models import Product, Category
 from reviews.models import Reviews
 
 
-@freeze_time("2022-08-15")
+@freeze_time("2023-12-18")
 class TestReviewsViews(TestCase):
     """
     Review Views Tests
@@ -42,7 +42,6 @@ class TestReviewsViews(TestCase):
             name="Gaming Keyboard",
             description="Test description for Gaming Keyboard",
             price=53.99,
-            is_featured=True,
             image='image-file'
         )
 
@@ -63,3 +62,25 @@ class TestReviewsViews(TestCase):
             rating=5,
             created_on=timezone.now(),
         )
+
+    def test_create_reviews_page_for_authorized_user(self):
+        """ Test create_review view for logged in user"""
+
+        logged_in = self.client.login(
+            username='user1', password='password1')
+        self.assertTrue(logged_in)
+
+        response = self.client.get('/reviews/create_reviews/1')
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'reviews/create_reviews.html')
+
+    def test_create_reviews_page_for_logged_out_user(self):
+        """
+        Checks create_review redirects to login
+        if user is not logged in
+        """
+
+        response = self.client.get('/reviews/create_reviews/1')
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(
+            response, '/accounts/login/?next=%2Freviews%2Fcreate_reviews%2F1')
