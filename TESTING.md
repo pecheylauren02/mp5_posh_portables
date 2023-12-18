@@ -56,12 +56,10 @@ I ran the code for all the pages through the [W3C HTML Validator](https://valida
 
 
 <details><summary>HTML Validation Results</summary>
-<img src="">
+<img src="media/docs/html_val.png">
 </details>
 
 #### Issues resolved during validation:
-
-- Django forms renders its form inputs as a table and there were multiple errors about stray `<tr>` tags in the code, which I couldn't access as the form was added by using just `{{form}}`. I got around this based on a [post](https://code-institute-room.slack.com/archives/C7HS3U3AP/p1548669436265400) I found on the CI Slack Channel suggesting rendering them as `<p>` elements instead using `{{form.as_p}}` and amending the styling as necessary.
 
 - Image selection in the custom_clearable_file_input on the product form was throwing an error as it had 2 ID attributes, one that I had set which was used in the JavaScript to display the filename and another that was added by the `{% include "django/forms/widgets/attrs.html" %}` tag. I solved this problem by changing the JavaScript to get an element using a class name rather than ID and removing the class.
 
@@ -69,10 +67,9 @@ I ran the code for all the pages through the [W3C HTML Validator](https://valida
 
 I ran the CSS code through the [W3C CSS Validator](LINK). All code passed the validation tests. Results below.
 
-
 <details><summary>CSS Validation Results</summary>
 
-<img src="">
+<img src="media/docs/css_val.png">
 
 </details>
 
