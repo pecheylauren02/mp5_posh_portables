@@ -123,3 +123,41 @@ class TestFaqsViews(TestCase):
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(
             response, '/accounts/login/?next=/faqs/remove/1/')
+
+    def test_remove_faq_page_for_unauthorised_user(self):
+        """ Test remove faq view for logged in user (not superuser) """
+
+        logged_in = self.client.login(
+            username='user1', password='password1')
+        self.assertTrue(logged_in)
+
+        response = self.client.get('/faqs/remove/1/')
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, '/faqs/')
+
+    def test_remove_valid_faq_page_for_superuser(self):
+        """
+        Test remove faq view for authorised user (superuser)
+        With a valid faq id
+        """
+
+        logged_in = self.client.login(
+            username='superuser1', password='super_password1')
+        self.assertTrue(logged_in)
+
+        response = self.client.get('/faqs/remove/1/')
+        self.assertEqual(response.status_code, 302)
+        self.assertRedirects(response, '/faqs/')
+
+    def test_remove_invalid_faq_page_for_superuser(self):
+        """
+        Test remove faq view for authorised user (superuser)
+        With an invalid faq id
+        """
+
+        logged_in = self.client.login(
+            username='superuser1', password='super_password1')
+        self.assertTrue(logged_in)
+
+        response = self.client.get('/faqs/remove/99/')
+        self.assertEqual(response.status_code, 404)
