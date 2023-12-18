@@ -4,9 +4,9 @@ from .forms import FaqForm
 
 class TestFaqForm(TestCase):
     """
-    The first two tests ensure that the question 
-    and answer fields are required, 
-    while the third one checks if all fields 
+    The first two tests ensure that the question
+    and answer fields are required,
+    while the third one checks if all fields
     are explicitly defined in the form's metaclass.
     """
 

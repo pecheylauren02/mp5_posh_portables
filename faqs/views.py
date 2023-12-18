@@ -63,7 +63,7 @@ def create_faq(request):
 
 @login_required
 def update_faq(request, faq_id):
-    """ 
+    """
     View allows admin and superusers
     To edit and update their FAQs
     """
@@ -113,8 +113,8 @@ def update_faq(request, faq_id):
 
 @login_required
 def remove_faq(request, faq_id):
-    """ 
-    Allows admin to remove a FAQ 
+    """
+    Allows admin to remove a FAQ
     """
 
     # Checks user is superuser

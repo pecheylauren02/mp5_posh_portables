@@ -2,8 +2,8 @@ from django.db import models
 
 
 class Faq(models.Model):
-    """ 
-    FAQ Model 
+    """
+    FAQ Model
     With Question and Answer fields
     """
 
