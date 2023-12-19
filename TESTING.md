@@ -111,7 +111,7 @@ I ran the JavaScript code through [JSHint](https://jshint.com/). For full result
 
 ### Python Linting
 
-I ran the app.py code through [https://pep8ci.herokuapp.com/](https://pep8ci.herokuapp.com/) to check the Syntax. GitPod also has a built in Python Linter which was used throughout the development process (see below). All code passed the validation tests. For full results see the dropdowns below.
+I ran the app.py code through [Code Institute's Python Lintor](https://pep8ci.herokuapp.com/) to check the Syntax. GitPod also has a built in Python Linter which was used throughout the development process (see below). All code passed the validation tests. For full results see the dropdowns below.
 
 <details><summary>Python Results Table</summary></details>
 <details><summary>Python Results Table</summary>
@@ -180,7 +180,14 @@ I used the inbuilt linting in GitPod (Flake8) to check my code and keep it as cl
 
 - **checkout/apps.py - checkout.signals is imported but unused** - signals is being passed in and used elsewhere so can be disregarded
 - **checkout/webhooks.py - local variable e is assigned to but never used** - have investigated this and it appears to be an industry standard way of assigning this particular error checking. I also passed this same code through the [CI Python Linter](https://pep8ci.herokuapp.com/) and it didn't raise an issue so I am disregarding this.
-- remaining linting errors are in files that are automatically created by Django such as migration files & vscode/arctictern.py
+- Remaining linting errors are in files that are automatically created by Django such as migration files & vscode/arctictern.py
+- IMPORTANT: Almost all spacing and long line errors were resolved, and the only exceptions involved lines of code that could not be broken, such as secret keys, or mathematical equations that would have disrupted that funtionality of the website.
+
+<details><summary>Flake8 Results and error screenshots</summary>
+<img src="media/test_docs/flake8.png">
+<img src="media/test_docs/variable_e_error.png">
+
+</details>
 
 - - -
 [Go to Top](#posh-portables---e-commerce-site---testing)

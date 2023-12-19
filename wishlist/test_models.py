@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from products.models import Product
 from .models import WishlistItem
 
+
 class TestWishlistItemModel(TestCase):
     def setUp(self):
         # Create a user
