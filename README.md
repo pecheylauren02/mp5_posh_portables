@@ -8,6 +8,7 @@
 This is the documentation for my e-commerce web application: Posh Portables. It has been built using Django, Python, JavaScript, BootStrap, CSS3 & HTML5 for educational purposes as part of Code Institute’s Diploma in FullStack Software Development.
 
 - - -
+
 ## Table of Contents
 
 - [Planning, Design & User Experience](#planning-design--user-experience)
@@ -38,17 +39,17 @@ This is the documentation for my e-commerce web application: Posh Portables. It 
 
 ## Planning, Design & User Experience
 
-I approached the planning & design of this project using the principles of User Experience and the 5 stages of strategy, scope, structure, skeleton & surface. This is a large, complex project and I wanted to make sure it remained on course, on time and the best it could be whilst meeting all of the criteria for the MVP (Most Viable Product). 
+I approached the planning & design of this project using the principles of User Experience, which include the 5 stages of strategy, scope, structure, skeleton & surface. This is a large, complex project so it was important to make sure it remained on course, on time and the the best it could be whilst meeting all of the criteria for the MVP (Most Viable Product). 
 
 ### Strategy
 
 #### Project Aims
 
-The initial aims of the project were to create an e-commerce website for an imaginary company called Posh Portables, a gaming company who stock a variety of gaming accessories, such as laptops, monitors and headgear. The website's main purpose is to allow customers to browse the company's products and make purchases, tell the customers about Posh Portables and information about their online shop and allow user interactions through reviews and messages.
+The initial aims of the project were to create an e-commerce website for an imaginary company called Posh Portables. Posh Portables is a fake gaming company that stocks a variety of gaming accessories, such as laptops, monitors and headgear. The website's main purpose is to allow customers to browse the company's products and make purchases, tell the customers information about Posh Portables' online shop, and allow user interactions through reviews and messages.
 
 #### Research
 
-I did some research into other similar websites as well as in the wider e-commerce world. I wanted to make sure that the Posh Portables' website conformed to the expectations that users have for an e-commerce site. This is extra important because it involves financial transactions and I wanted to create a feel of trustworthiness and professionalism in order to encourage users to make purchases. I also gathered design ideas for the look of this site including colour, layout and typography.
+I did some research into other similar websites as well as in the wider e-commerce world. This was to ensure that the Posh Portables website conformed to the expectations that users have for an e-commerce site. This is especially important because it involves financial transactions, therefore creating a sense of trustworthiness and professionalism is vital to ensure customer purchases. I also gathered design ideas for the look of this site including colour, layout and typography.
 
 Websites visited for research:
 - [Apple](https://www.apple.com/)
@@ -66,7 +67,7 @@ Based on my research and the project aims I created a set of user stories that w
 
 ### Scope
 
-I then created a list of all the features I would like to add to the site in order to meet all these user stories, as well as some extras that I'd like to include should time allow. I rated these in terms of difficulty and importance and this would help inform the decisions throughout the next stages of planning.
+As part of the scope, I created a list of all the features to add to the site in order to meet all of the above user stories, as well as some extras that include (should time allow). I rated these in terms of difficulty and importance and this would help inform the decisions throughout the next stages of planning.
 
 | Feature                                                                 | Difficulty | Importance |
 |-------------------------------------------------------------------------|------------|------------|
@@ -105,7 +106,7 @@ I then created a list of all the features I would like to add to the site in ord
 
 #### Flow Diagram
 
-I created a flow diagram using [Lucidchart](https://www.lucidchart.com/pages/) to map out the structure of the site. This was an important step in the user experience design process, working out the structure and skeleton of the site, to provide the best user experience whilst keeping the user stories at the heart of the decision-making process. It allowed me to think through the paths of users through the site and what would need to link to where based on the different user stories. It would also allow me to make sure the site functioned as expected and everything was easy to find. It was also a vital tool to manage the scope of the project during the design and development stages, a blueprint to keep everything on track.
+I created a flow diagram using [Lucidchart](https://www.lucidchart.com/pages/) to map out the structure of the site. This was an important step in the user experience design process, working out the structure and skeleton of the site, to provide the best user experience whilst keeping the user stories at the heart of the decision-making process. It allowed me to think through the paths of users through the site, as well as which buttons would link where based on the different user stories. It would also allow me to make sure the site functioned as expected and everything was easy to find. This was a vital tool to manage the scope of the project during the design and development stages.
 
 ![Lucid Flow Diagram](media/docs/flowchart.png)
 
@@ -113,13 +114,13 @@ I created a flow diagram using [Lucidchart](https://www.lucidchart.com/pages/) t
 
 #### Database Schema
 
-An important stage in the planning was building a database schema, as well as planning my data clearly from the beginning to make the development process as easy as possible. This database schema was informed by my work in the previous planes, the user stories, the scope chart and the flow diagram. I used [DrawSQL](https://drawsql.app/) to create a visual representation of the database, which I used throughout the development process to keep track of what my database looked like, updating it and amending it as the project grew and adapted. 
+An important stage in the planning was building a database schema, as well as planning the data clearly from the beginning to make the development process as easy as possible. This database schema was informed by the work in the previous planes, the user stories, the scope chart and the flow diagram. I used [Lucidchart](https://www.lucidchart.com/pages/) to create a visual representation of the database, which I used throughout the development process to keep track of what the database looked like.
 
 ![Posh Portables Database Schema](media/docs/schema.png)
 
 #### Models
 
-Below is a breakdown of all the models included in the final app. The site uses a relational database model using Postgres (SQLite & Elephant SQL). The app uses a number of models adapted from the Boutique Ado walkthrough (User, Email, UserProfile, Category, Product) as well as 3 original models (Faq, Review, Message).
+Below is a breakdown of all the models included in the final app. The site uses a relational database model using Postgres (SQLite3 & Elephant SQL). The app uses a number of models adapted from the Boutique Ado walkthrough (User, Email, UserProfile, Category, Product) as well as 3 original models (Faq, Reviews, Wishlist).
 
 <details><summary>User/Email Models (Created by Django allauth)</summary>
 
@@ -215,7 +216,7 @@ The User model is created by Django allauth and connects to a separate Email Add
 
 </details>
 
-<details><summary>Review Model</summary>
+<details><summary>Reviews Model</summary>
 
 | **Field**       | **Field Type** | **Validation** | **null** | **blank** | **default** | **on_delete** | **editable** | **related_name** |
 |-----------------|----------------|----------------|----------|-----------|-------------|---------------|--------------|------------------|
@@ -231,7 +232,7 @@ The User model is created by Django allauth and connects to a separate Email Add
 
 #### Wireframes (see below)
 
-Whilst traditionally wireframes are included in the Skeleton section I have included mine in the Surface section below. I have developed a way of working where I flesh out the full design of the site in [Figma](https://www.figma.com/), including making all colour, typography and layout decisions at this stage, to make sure that during development I am free to focus on the nuts and bolts of how to build the site, rather than getting distracted by design decisions at that stage. It has been successful for me in the past and so I have chosen to develop the site in this way again. 
+Whilst traditionally wireframes are included in the Skeleton section I have included mine in the Surface section below. I have developed a way of working where I pull out the full design of the site in [Figma](https://www.figma.com/), including making all colour, typography and layout decisions at this stage, to make sure that during development I can focus on how to build the site, rather than getting distracted by design decisions.
 
 ---
 
@@ -239,9 +240,9 @@ Whilst traditionally wireframes are included in the Skeleton section I have incl
 
 ![Website Colour Scheme](media/docs/color_palette.png)
 
-I used a colour palette of light and dark green, as well as a beige colour for the products section to create contrast. I also added additional colours for all success/edit/info features and delete/warning/error features as well as to help categorise different statuses of messages & reviews on the profile & manage pages. 
+I used a colour palette of light and dark green, as well as a beige colour for the products section to create contrast. I also added additional colours for all success/edit/info features and delete/warning/error features as well as to help categorise different statuses of messages & reviews on the profile pages. 
 
-The buttons were styled using BootStrap v4 so all colours used were standard bootstrap classes and were not implemented in the css files. 
+The buttons were styled using BootStrap4 so all colours used were standard bootstrap classes and were not implemented in the css files. 
 
 - - -
 
@@ -279,14 +280,16 @@ I also created a 'no-image' graphic to be used whenever a product doesn't have a
 
 #### Wireframes
 
-At this point I was able to bring together all the work I had done in creating the flow diagram (which included a lot of page content and structure decisions), my user stories, my scope chart and my database schema to create full visual designs for my site. This was more than just making colour and font choices however. Every design decision creates questions about what goes where, what colour should it be, does it even need to be there or would it be better somewhere else. I was able to ask informed questions at each stage to make sure the design reflected the user stories and site aims. E.g. What does a user need to see when they arrive on a page? What is the most important thing on a page and how can the design emphasise that? etc.
+At this point I was able to bring together all the work I had done in creating the flow diagram (which included a lot of page content and structure decisions), my user stories, my scope chart and my database schema to create full visual designs for my site. This was more than just making colour and font choices however. Every design decision creates questions about where every feature is placed in relation to everything else.
 
-I created the designs below, making sure that all pages would work just as well on mobile and tablet as on desktop devices.
+The pages were designed to work on desktop, tablet and mobile screens. 
 
 **View the Wireframes/Site Designs in the Dropdowns Below**
 
-<details><summary>HOME</summary>
-<img src="media/docs/design_wireframes_home.png">
+<details><summary>Wireframes</summary>
+<img src="">
+<img src="">
+<img src="">
 </details>
 
 ## Business Model and Web Marketing
@@ -355,7 +358,7 @@ Allows the site to be found easily by shoppers when searching online. Gives clar
 
 <details><summary>Layout</summary>
 
-- Site width is restricted to 1400px so that the contents display correctly on wider screens as well as limiting the width of the hero image on the home page to maintain the quality. The area around the site has been set to a grey that fits with the site branding.
+- Site width is restricted to 1400px so that the contents display correctly on wider screens as well as limiting the width of the hero image on the home page to maintain the quality. The area around the site has been set to a beige that fits with the site branding.
 
 **Value To User**
 
@@ -396,7 +399,7 @@ Builds the brand & creates brand consistency, continues the site design in the u
     - Clickable logo which takes the user back to the home page
     - Search box (permanently visible) which allows users to search for products. Site searches based on product name & description.
     - Account Menu - links to account based pages including authentication pages (sign in, sign out, register), profile page and site management. These links vary based on whether a user is logged in and whether they are an admin.
-    - Shopping cart current contents icon - this icon's styling dynamically changes based on whether the current user has contents in their cart. It also tells the user the current total of all products in their cart.
+    - Shopping cart icon - tells the user the current total of all products in their cart.
     - Home page link
     - Products dropdown - links to the products page with a number of options to view products by category or all products.
 - Medium screen & smaller:
@@ -429,13 +432,11 @@ This encourages users to spend more to reach this amount, as well as informing t
 
 </details>
 
-
 <details><summary>Back To Top Button</summary>
 
 - Fixed position button which scrolls the page back up to the top with a smooth scroll
 - The button only appears when the user has scrolled down the page slightly. This means it won't appear when a page is very short and doesn't require scrolling e.g. 404 page.
 - Uses JavaScript to implement functionality.
-- I had originally only included this on the products page but I decided it was really useful and included in on all pages.
 
 **Value to User**
 
@@ -451,7 +452,7 @@ Allows users to move around the site easily, particularly on longer pages and sm
         - Green is used for actions which relate to purchases
     - CRUD buttons - used for edit / delete functionality
         - These are styled differently to make it clear that they have a very different purpose, helping to avoid confusion and to enhance user experience
-        - Blue is used for positive actions e.g. 'EDIT'
+        - Blue is used for positive actions e.g. 'UPDATE'
         - Red (warning / error) is used for riskier actions e.g. 'DELETE'
         - Grey is used for cancel buttons
 
@@ -467,7 +468,6 @@ Buttons allow users to take actions on the site such as purchasing, adding revie
 
 <details><summary>Footer</summary>
 
-
 - Visible on all pages of the site, separated in to 2 sections
     - Upper footer
         - Social links - include both the social icon & name with a hover effect. All external links open in a new tab.
@@ -480,13 +480,13 @@ Buttons allow users to take actions on the site such as purchasing, adding revie
 
 **Value to User**
 
-Provides additional links to aid site navigation. Links in the footer are for secondary features such as FAQs & Contact and so are separated from the main site links to keep the navigation simple. Allows users to connect with the company on social media. Provides context to the purpose of the site with the company info. Explains that the site is fictional to add context and clarity for users.
+Provides additional links to aid site navigation. Links in the footer are for secondary features such as FAQs and so are separated from the main site links to keep the navigation simple. Allows users to connect with the company on social media. Provides context to the purpose of the site with the company info. 
 
 </details>
 
 <details><summary>Messages & User Feedback</summary>
 
-- Throughout the site I have used the Django messaging framework along with Bootstrap's Toast element to communicate with users as they take actions on the site. These appear as a popup message in the corner of the site which lets the user know if their action has been successful or not. It offers reassurance for the user, provides a good user experience and helps make the site seem robust and secure. The messages use conditional colours based on the type of message (success - green / error or warning - red / info - blue )
+- Throughout the site I have used the Django messaging framework along with Bootstrap's Toast element to communicate with users as they take actions on the site. These appear as a popup message in the corner of the site which lets the user know if their action has been successful or not. It offers reassurance for the user, provides a good user experience and helps make the site seem robust and secure. The messages use conditional colours based on the type of message (success - green / error or warning - red)
 
 - Examples of usage
     - Adding an item to cart (success message and cart summary)
