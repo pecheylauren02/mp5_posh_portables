@@ -1,6 +1,6 @@
 # Posh Portables - E-Commerce Site - Testing
 
-![Mock-up]()
+![Mock-up](media/docs/amiresponsive.png)
 
 #### **By Lauren Pechey**
 [Click here to view the live web application](https://posh-portables-6801c9648247.herokuapp.com/)
@@ -118,8 +118,6 @@ I ran the app.py code through [Code Institute's Python Lintor](https://pep8ci.he
 
 | **App** | **File** | **Expected Outcome** | **Test Performed** | **Result** | **Pass / Fail** |
 |---|---|---|---|---|---|
-| posh_portables | settings | Code passes with no errors | Ran app.py through https://pep8ci.herokuapp.com/ | Code passes with no errors | PASS |
-| posh_portables | urls | Code passes with no errors | Ran app.py through https://pep8ci.herokuapp.com/ | Code passes with no errors | PASS |
 | shopping_cart | urls | Code passes with no errors | Ran app.py through https://pep8ci.herokuapp.com/ | Code passes with no errors | PASS |
 | shopping_cart | views | Code passes with no errors | Ran app.py through https://pep8ci.herokuapp.com/ | Code passes with no errors | PASS |
 | shopping_cart | contexts | Code passes with no errors | Ran app.py through https://pep8ci.herokuapp.com/ | Code passes with no errors | PASS |
@@ -201,7 +199,7 @@ I ran the site through the Chrome Dev Tool's Lighthouse, and scored over 90 for 
 <img src="media/test_docs/lighthouse_results.png">
 </details>
 
-The score for best practices was not ideal, but when I checked the issues found, it was to do with the versions of the modules being used for this project. Upgrading the versions was not accessible for the scope of this project, but if this was to be a real e-commerce site, I would have used the latest versions of all modules, including django. 
+The score for best practices was not ideal, but when I checked the issues found, it was to do with the versions of the modules being used for this project. Upgrading the versions was not part of the scope of this project, but if this was to be a real e-commerce site, I would have used the latest versions of all modules, including django. I also double checked if these issues were solvable through the Tutor Support section, and it was advised that these issues are out of my control within the scope of this project.
 
 <details><summary>Best Practices Results</summary>
 <img src="media/test_docs/lighthouse_best_practices.png.png">
@@ -428,7 +426,7 @@ The manual testing was done on the following browsers
 | **Add Review form**                                    | Product name & image match expected product                                                    | Navigate to ‘add review’ from product details page. Check form header.                                                                                          | PASS            |
 | **Add Review form**                                    | Title and contents inputs are required                                                         | Check form for ‘*’ symbol. Attempt to submit form with empty inputs.                                                                                            | PASS            |
 | **Add Review - Non existent Product**                  | 404 page displays if product doesn’t exist                                                     | Navigate to add review for a product id that doesn’t exist on database.                                                                                         | PASS            |
-| **Add Review form - rating**                           | Clicking on rating hexes changes colour correctly                                              | "Click on hexes, check colour changes with multiple selections."                                                                                                | PASS            |
+| **Add Review form - rating**                           | Clicking on rating stars changes colour correctly                                              | "Click on stars, check colour changes with multiple selections."                                                                                                | PASS            |
 | **Add Review form - submission**                       | Submitted review only visible on profile page until approved.                                  | Submit form and check review doesn’t appear on product details page. Check product rating hasn’t updated. Go to profile page & check review has ‘pending’ flag. | PASS            |
 | **Add Review form - submission**                       | Success message displays. Review contents match form submission                                | "Submit form, check message, navigate to profile page, check review contents."                                                                                  | PASS            |
 | **Authentication Tests - Edit Review - Logged Out**    | Redirects to login for unauthenticated user with error message & redirects back after sign in. | Log out of site. Navigate to edit_review direct via URL                                                                                                         | PASS            |
@@ -495,7 +493,7 @@ The site was built from the outset with user stories at its core. The site was t
 
 <details><summary>User Stories Testing Table</summary>
 
-<img src="media/docs/user_stories_testing.png">
+<img src="media/test_docs/user_stories_testing.png">
 </details>
 
 - - -

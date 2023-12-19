@@ -107,7 +107,7 @@ I then created a list of all the features I would like to add to the site in ord
 
 I created a flow diagram using [Lucidchart](https://www.lucidchart.com/pages/) to map out the structure of the site. This was an important step in the user experience design process, working out the structure and skeleton of the site, to provide the best user experience whilst keeping the user stories at the heart of the decision-making process. It allowed me to think through the paths of users through the site and what would need to link to where based on the different user stories. It would also allow me to make sure the site functioned as expected and everything was easy to find. It was also a vital tool to manage the scope of the project during the design and development stages, a blueprint to keep everything on track.
 
-![Lucid Flow Diagram](LINK HERE)
+![Lucid Flow Diagram](media/docs/flowchart.png)
 
 ### Skeleton
 
@@ -115,7 +115,7 @@ I created a flow diagram using [Lucidchart](https://www.lucidchart.com/pages/) t
 
 An important stage in the planning was building a database schema, as well as planning my data clearly from the beginning to make the development process as easy as possible. This database schema was informed by my work in the previous planes, the user stories, the scope chart and the flow diagram. I used [DrawSQL](https://drawsql.app/) to create a visual representation of the database, which I used throughout the development process to keep track of what my database looked like, updating it and amending it as the project grew and adapted. 
 
-![Posh Portables Database Schema]()
+![Posh Portables Database Schema](media/docs/schema.png)
 
 #### Models
 
@@ -512,7 +512,7 @@ Provides user feedback at all stages so that users know if their actions have be
 
 <details><summary>Hero & Intro Sections</summary>
 
-- A visually impactful, colourful image of bees on comb to grab the user's attention and make the site's purpose clear on first arrival
+- A visually impactful, colourful image of gaming accessories to grab the user's attention and make the site's purpose clear on first arrival
 - A 'SHOP NOW' button with smooth hover effect which leads to the products page
 - Text on a light beige or green background to create separation and hierarchy in the design with info about the company to help expand on the site's purpose and what users can expect to find there.
 
@@ -1032,7 +1032,7 @@ The Reviews model allows users to find out more information about a product, as 
 - The form has built in validation to make sure that all required fields are completed and contain valid content.
 - The form header has the name and image of the product to remind the user what they are reviewing.
 - The text fields (title & content) have max limits to avoid overly long reviews ruining the design of the site and to keep information easy to digest for users viewing reviews.
-- The rating select has a user-friendly clickable hexagon styling, which matches the styling of the ratings on the product pages. A user can click on a hexagon to set the rating, or change their mind and select another hexagon to revise their choice.
+- The rating select has a user-friendly clickable star styling, which matches the styling of the ratings on the product pages. A user can click on a star to set the rating, or change their mind and select another star to revise their choice.
 - If no rating is selected it is set to 0
 - The rating selection is not appropriate for screen readers so to make the page accessible there is a hidden input which is visible to screen readers only where a user can input a numeric value.
 - The form has bespoke styled buttons to either submit the form using the non-purchasing themed yellow button or cancel using the button in secondary grey. [See Whole Site Features](#whole-site)
