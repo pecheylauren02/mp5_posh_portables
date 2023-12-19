@@ -64,11 +64,11 @@
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-start" type="text" name="q"
-                            placeholder="Search our site">
+                            placeholder="Search our site" aria-label="Search">
                         <div class="input-group-append">
                             <button class="form-control btn btn-green border border-black rounded-end" type="submit">
                                 <span class="icon">
-                                    <i class="fas fa-search"></i>
+                                    <i class="fas fa-search" aria-hidden="true"></i>
                                 </span>
                             </button>
                         </div>
@@ -79,9 +79,9 @@
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false" aria-label="My Account">
+                            aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
+                                <div><i class="fas fa-user fa-lg" aria-hidden="true"></i></div>
                                 <p class="my-0">My Account</p>
                             </div>
                         </a>
@@ -111,7 +111,7 @@
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_shopping_cart' %}" aria-label="Shopping Cart Total">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <div><i class="fas fa-shopping-bag fa-lg" aria-hidden="true"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
                                     ${{ grand_total|floatformat:2 }}
@@ -216,7 +216,7 @@
                                 </div>
                                 <div class="mc-field-group"><label for="mce-EMAIL">Email Address <span
                                             class="asterisk">*</span></label><input type="email" name="EMAIL"
-                                        class="required email" id="mce-EMAIL" required="" value=""><span
+                                        class="required email" id="mce-EMAIL" required="" value="" aria-required="true"><span
                                         id="mce-EMAIL-HELPERTEXT" class="helper_text"></span></div>
                                 <div id="mce-responses" class="clear foot">
                                     <div class="response" id="mce-error-response" style="display: none;"></div>

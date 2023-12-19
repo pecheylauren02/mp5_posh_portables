@@ -16,7 +16,7 @@
                         <button class="form-control form-control btn btn-green border border-black rounded"
                             type="submit">
                             <span class="icon">
-                                <i class="fas fa-search"></i>
+                                <i class="fas fa-search" aria-hidden="true"></i>
                             </span>
                         </button>
                     </div>
@@ -28,7 +28,7 @@
         <a class="text-black nav-link d-block d-lg-none" href="#" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
             <div class="text-center">
-                <div><i class="fas fa-user fa-lg"></i></div>
+                <div><i class="fas fa-user fa-lg" aria-hidden="true"></i></div>
                 <p class="my-0">My Account</p>
             </div>
         </a>
@@ -57,7 +57,7 @@
         <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
             href="{% url 'view_shopping_cart' %}" aria-label="Grand Total link" rel="noopener noreferrer">
             <div class="text-center">
-                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                <div><i class="fas fa-shopping-bag fa-lg" aria-hidden="true"></i></div>
                 <p class="my-0">
                     {% if grand_total %}
                     ${{ grand_total|floatformat:2 }}

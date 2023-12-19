@@ -186,6 +186,20 @@ I used the inbuilt linting in GitPod (Flake8) to check my code and keep it as cl
 [Go to Top](#posh-portables---e-commerce-site---testing)
 - - -
 
+### Accessibility
+
+I ran the site through the Chrome Dev Tool's Lighthouse, and scored over 90 for accessibility (see below). I also ran it through [Wave Web Accessibility Evaluation Tool](https://wave.webaim.org/). There were some minor warnings which are detailed in the notes below.
+
+<details><summary>Accessibility Results</summary>
+<img src="media/test_docs/lighthouse_results.png">
+</details>
+
+The score for best practices was not ideal, but when I checked the issues found, it was to do with the versions of the modules being used for this project. Upgrading the versions was not accessible for the scope of this project, but if this was to be a real e-commerce site, I would have used the latest versions of all modules, including django. 
+
+<details><summary>Best Practices Results</summary>
+<img src="media/test_docs/lighthouse_best_practices.png.png">
+</details>
+
 ### Performance
 
 I ran the site through Google Chrome Dev Tools' Lighthouse to check on its performance scores. All pages passed the validation tests. For full results see the dropdowns below.
@@ -219,96 +233,8 @@ I ran the site through Google Chrome Dev Tools' Lighthouse to check on its perfo
 
 </details>
 
-<details><summary>Performance Results Images</summary>
-
-<details><summary>HOME</summary>
-<img src="m">
-</details>
-
-<details><summary>PRODUCTS</summary>
-<img src="g">
-</details>
-
-<details><summary>PRODUCT DETAILS</summary>
-<img src="">
-</details>
-
-<details><summary>CREATE PRODUCT</summary>
-<img src="">
-</details>
-
-<details><summary>UPDATE PRODUCT</summary>
-<img src="">
-</details>
-
-<details><summary>CREATE REVIEW</summary>
-<img src="">
-</details>
-
-<details><summary>UPDATE REVIEW</summary>
-<img src="">
-</details>
-
-<details><summary>SHOPPING CART</summary>
-<img src="">
-</details>
-
-<details><summary>CHECKOUT</summary>
-<img src="media/docs/docs_val_perf_9.jpg">
-</details>
-
-<details><summary>CHECKOUT SUCCESS</summary>
-<img src="">
-</details>
-
-<details><summary>PROFILE</summary>
-<img src="">
-</details>
-
-<details><summary>FAQS</summary>
-<img src="">
-</details>
-
-<details><summary>CREATE FAQ</summary>
-<img src="media/docs/docs_val_perf_13.jpg">
-</details>
-
-<details><summary>UPDATE FAQ</summary>
-<img src="media/docs/docs_val_perf_14.jpg">
-</details>
-
-<details><summary>SIGN IN (AllAuth Name - login)</summary>
-<img src="media/docs/docs_val_perf_17.jpg">
-</details>
-
-<details><summary>REGISTER (AllAuth Name - signup)</summary>
-<img src="media/docs/docs_val_perf_18.jpg">
-</details>
-
-<details><summary>MANAGE EMAIL (AllAuth name - email)</summary>
-<img src="media/docs/docs_val_perf_19.jpg">
-</details>
-
-<details><summary>CHANGE PASSWORD (AllAuth name - password/change)</summary>
-<img src="media/docs/docs_val_perf_20.jpg">
-</details>
-
-<details><summary>FORGOT PASSWORD (AllAuth name - password/reset)</summary>
-<img src="media/docs/docs_val_perf_21.jpg">
-</details>
-
-<details><summary>SIGN OUT (AllAuth name - logout)</summary>
-<img src="media/docs/docs_val_perf_22.jpg">
-</details>
-
-<details><summary>VERFICATION SENT (AllAuth name - confirm-email)</summary>
-<img src="media/docs/docs_val_perf_23.jpg">
-</details>
-
-<details><summary>CONFIRM EMAIL (AllAuth name - confirm-email/(key))</summary>
-<img src="media/docs/docs_val_perf_2.jpg">
-</details>
-
+<details><summary>Performance Results Overall</summary>
+<img src="media/test_docs/lighthouse_results.png">
 </details>
 
 #### Issues resolved during performance validation:
