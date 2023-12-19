@@ -10,12 +10,12 @@ class Reviews(models.Model):
     """
     A model that handles user reviews
     """
-    class Meta: 
+    class Meta:
         verbose_name_plural = 'Reviews'
 
     product = models.ForeignKey(
-            Product, on_delete=models.CASCADE, 
-            null=True, blank=True, 
+            Product, on_delete=models.CASCADE,
+            null=True, blank=True,
             related_name="reviews")
 
     user = models.ForeignKey(

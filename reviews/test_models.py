@@ -48,7 +48,8 @@ class TestReviewModels(TestCase):
 
     def test_review_string_method(self):
         """ Tests the string method on the review model """
-        review = Reviews(title='test review title', user=self.userTest, product=self.productTest)
+        review = Reviews(title='test review title',
+                         user=self.userTest, product=self.productTest)
         self.assertEqual(str(review), 'test review title by user1 for Gaming Keyboard')
 
     def test_review_title(self):

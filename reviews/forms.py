@@ -24,9 +24,9 @@ class ReviewForm(forms.ModelForm):
         self.fields['content'].widget.attrs['autofocus'] = True
 
         # Set aria-labels on input fields
-        self.fields['title'].widget.attrs['aria-label'] = 'Title of your review'
-        self.fields['content'].widget.attrs['aria-label'] = 'Write your review here'
-        self.fields['rating'].widget.attrs['aria-label'] = 'Rating: Choose a value between 1-5'
+        self.fields['title'].widget.attrs['aria-label'] = 'Title of review'
+        self.fields['content'].widget.attrs['aria-label'] = 'Write your review'
+        self.fields['rating'].widget.attrs['aria-label'] = 'Rating: 1-5'
 
         for field in self.fields:
             # Asterisk for required fields

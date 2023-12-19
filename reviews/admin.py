@@ -32,4 +32,3 @@ class ReviewAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Reviews, ReviewAdmin)
-

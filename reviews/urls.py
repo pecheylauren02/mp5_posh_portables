@@ -3,7 +3,7 @@ from . import views
 
 urlpatterns = [
     path(
-        'create_reviews/<int:product_id>', 
+        'create_reviews/<int:product_id>',
         views.create_reviews, name='create_reviews'),
     path(
         'update_reviews/<int:review_id>/',
@@ -13,4 +13,4 @@ urlpatterns = [
         'remove_review/<int:review_id>/',
         views.remove_review, name='remove_review'
     ),
-]   
+]

@@ -13,7 +13,7 @@ from products.models import Product
 @login_required()
 def create_reviews(request, product_id):
     """
-    Renders the form for logged in only users 
+    Renders the form for logged in only users
     to write a review for a product.
     Adds the new review to the database.
     """
@@ -55,7 +55,7 @@ def create_reviews(request, product_id):
             return redirect(reverse('product_detail', args=[product.id]))
         else:
             print(form.errors)
-            messages.error(request, "Uh Oh! Looks like your form is invalid, please try again.")
+            messages.error(request, "Uh Oh! Your form is invalid, try again.")
 
     # Handles the View Rendering
     else:
@@ -100,7 +100,9 @@ def update_review(request, review_id):
             review.save()
 
             # Gets URL to redirect user back to previous page
-            redirect_url = request.POST.get('redirect_url', reverse('product_detail', args=[product.id]))
+            redirect_url = request.POST.get('redirect_url',
+                                            reverse('product_detail',
+                                                    args=[product.id]))
 
             # Updates product rating on product object
             if product.reviews.filter(is_approved=True).count() > 0:
