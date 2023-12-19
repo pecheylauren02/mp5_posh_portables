@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect, reverse, HttpResponse, get_object
 from django.contrib import messages
 from products.models import Product
 
-# Create your views here.
 
 def view_shopping_cart(request):
     """ A view that renders the shopping cart contents page """
@@ -19,10 +18,10 @@ def add_to_shopping_cart(request, item_id):
 
     if item_id in shopping_cart:
         shopping_cart[item_id] += quantity
-        messages.success(request, f'UPDATED {product.name} QUANTITY TO {shopping_cart[item_id]}!')
+        messages.success(request, f'UPDATED {product.name} QTY TO {shopping_cart[item_id]}!')
     else:
         shopping_cart[item_id] = quantity
-        messages.success(request, f'ADDED {product.name} TO YOUR SHOPPING CART!')
+        messages.success(request, f'ADDED {product.name} TO YOUR CART!')
 
     request.session['shopping_cart'] = shopping_cart
     return redirect(redirect_url)
@@ -37,7 +36,7 @@ def adjust_shopping_cart(request, item_id):
 
     if quantity > 0:
         shopping_cart[item_id] = quantity
-        messages.success(request, f'UPDATED {product.name} TO YOUR SHOPPING CART!')
+        messages.success(request, f'UPDATED {product.name} TO YOUR CART!')
     else:
         shopping_cart.pop(item_id)
 
@@ -53,7 +52,7 @@ def remove_from_shopping_cart(request, item_id):
 
     if item_id in shopping_cart:
         shopping_cart.pop(item_id)
-        messages.success(request, f'REMOVED {product.name} FROM YOUR SHOPPING CART!')
+        messages.success(request, f'REMOVED {product.name} FROM YOUR CART!')
         request.session['shopping_cart'] = shopping_cart
         return HttpResponse(status=200)
 
@@ -62,4 +61,3 @@ def remove_from_shopping_cart(request, item_id):
         return HttpResponse(status=500)
 
     return redirect(reverse('view_shopping_cart'))
-

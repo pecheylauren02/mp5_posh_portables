@@ -3,6 +3,7 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from products.models import Product
 
+
 def shopping_cart_contents(request):
     """ A function to handle the shopping cart item variables """
 
@@ -24,7 +25,7 @@ def shopping_cart_contents(request):
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE/100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total
-    else: 
+    else:
         delivery = 0
         free_delivery_delta = 0
 
