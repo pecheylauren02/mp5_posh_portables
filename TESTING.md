@@ -43,9 +43,17 @@ I found it to be a challenging but useful process, a number of times during deve
 
 ### Automated testing coverage and results
 
-**Automated Testing - Test Results**
+A total of 92 tests were run, which tested the models, views and forms of each app in the project. Please see the overall results below. 
 
-<img src="">
+<details><summary>Automated Testing Results</summary>
+
+<img src="media/test_docs/automated_testcases.png">
+
+In order to carry out automated testing, please comment out the DATABASE URL as follows (see below), as this will prevent the main database from being overridden by accident. 
+
+<img src="media/test_docs/renaming_database.png">
+
+</details>
 
 ## Validation
 
@@ -53,9 +61,8 @@ I found it to be a challenging but useful process, a number of times during deve
 
 I ran the code for all the pages through the [W3C HTML Validator](https://validator.w3.org/nu/) using the textarea input by generating the source code from the deployed site (right click and select 'View Page Source' in Chrome) and pasting it in to allow me to check all pages whether requiring log in or not. All code passed the validation tests. Results below.
 
-
 <details><summary>HTML Validation Results</summary>
-<img src="media/docs/html_val.png">
+<img src="media/test_docs/html_val.png">
 </details>
 
 #### Issues resolved during validation:
@@ -68,7 +75,7 @@ I ran the CSS code through the [W3C CSS Validator](LINK). All code passed the va
 
 <details><summary>CSS Validation Results</summary>
 
-<img src="media/docs/css_val.png">
+<img src="media/test_docs/css_val.png">
 
 </details>
 
@@ -97,8 +104,8 @@ I ran the JavaScript code through [JSHint](https://jshint.com/). For full result
 | **rating_select.js** | Page passes validation with no errors | Ran JavaScript through https://jshint.com/ | Missing semi-colons. All fixed. No errors remaining | PASS |
 | **scroll_top.js** | Page passes validation with no errors | Ran JavaScript through https://jshint.com/ | Missing semi-colons. All fixed. No errors remaining | PASS |
 
-<img src="media/docs/js_result_one.png">
-<img src="media/docs/js_result_two.png">
+<img src="media/test_docs/js_result_one.png">
+<img src="media/test_docs/js_result_two.png">
 
 </details>
 
