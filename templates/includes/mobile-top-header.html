@@ -35,8 +35,8 @@
         <div class="dropdown-menu border-0">
             {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
-            <a href="{% url 'add_product' %}" class="dropdown-item" aria-label="Link to Manage My Products"
-                rel="noopener noreferrer">Manage My Products</a>
+            <a href="{% url 'add_product' %}" class="dropdown-item" aria-label="Link to Manage Products"
+                rel="noopener noreferrer">Manage Products</a>
             <a href="{% url 'wishlist' %}" class="dropdown-item" aria-label="My Wishlist link"
                 rel="noopener noreferrer">My
                 Wishlist</a>

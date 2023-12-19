@@ -8,8 +8,10 @@
     <div class="row justify-content-center">
         <div class="col-12 col-md-8">
             <hr>
-            <h1 class="text-center logo-font">FAQs</h1>
+            <h1 class="text-center logo-font display-4 text-black">FAQs</h1>
             <hr>
+            <p class="mb-3">All you need to know about delivery, returns, refunds and general info. Click on a question
+                to reveal the answer.</p>
             {% for faq in faqs %}
             <div class="card border-0 border-bottom mb-3">
                 <div class="card-header" id="header-{{ faq.id }}">
@@ -61,12 +63,11 @@
     </div>
     <div class="row justify-content-center">
         <div class="col-12 col-md-8">
-            <hr>
-            <h1 class="mb-4 text-center logo-font">Create a new FAQ</h1>
-            <hr>
-            <p class="mb-3">All you need to know about delivery, returns, refunds and general info. Click on a question
-                to reveal the answer.</p>
             {% if request.user.is_superuser %}
+            <hr>
+            <h1 class="mb-4 text-center logo-font display-4 text-black">Create a new FAQ</h1>
+            <hr>
+            <p class="mb-3">Click on this button below and fill out the form to add new FAQs and answers.</p>
             <div class="text-center">
                 <a href="{% url 'create_faq' %}" class="shop-now-button btn btn-green btn-lg text-uppercase py-3">Create
                     FAQ</a>

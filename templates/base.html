@@ -88,8 +88,8 @@
                         <div class="dropdown-menu border-0">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <a href="{% url 'add_product' %}" class="dropdown-item" aria-label="Manage my products link"
-                                rel="noopener noreferrer">Manage My Products</a>
+                            <a href="{% url 'add_product' %}" class="dropdown-item" aria-label="Manage Products link"
+                                rel="noopener noreferrer">Manage Products</a>
                             {% endif %}
                             <a href="{% url 'profile' %}" class="dropdown-item" aria-label="My Profile link"
                                 rel="noopener noreferrer">My
