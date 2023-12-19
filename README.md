@@ -235,6 +235,46 @@ Whilst traditionally wireframes are included in the Skeleton section I have incl
 
 ---
 
+#### Colour
+
+![Website Colour Scheme](media/docs/color_palette.png)
+
+I used a colour palette of light and dark green, as well as a beige colour for the products section to create contrast. I also added additional colours for all success/edit/info features and delete/warning/error features as well as to help categorise different statuses of messages & reviews on the profile & manage pages. 
+
+The buttons were styled using BootStrap v4 so all colours used were standard bootstrap classes and were not implemented in the css files. 
+
+- - -
+
+#### Typography
+
+The website uses 2 typefaces that I felt worked well together and complemented each other:
+- Open Sans for headings, paragraphs & the site logo.
+- Sans Serif as the default backup font.
+
+- - -
+
+#### Images & Graphics
+
+All images are fully credited [here](#credits).
+
+##### Logo
+
+I created a logo for the site in the shape of a simplified gaming controller as it is a strong iconic image and gives an immediate sense of the purpose of the site and a strong brand image. I also created a Favicon with a very similar design.
+
+<details><summary>Logo and Favicon</summary>
+<img src="media/docs/logo.png">
+<img src="media/docs/favicon.png">
+</details>
+
+##### No Image Graphic
+I also created a 'no-image' graphic to be used whenever a product doesn't have an image using the site logo.
+
+<details><summary>No Image</summary>
+<img src="media/noimage.png">
+</details>
+
+- - -
+
 ### Surface
 
 #### Wireframes
