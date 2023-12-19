@@ -678,7 +678,7 @@ This gives admins the ability to control their product catalogue and which produ
 
 ### Shopping cart
 
-![shopping cart](media/docs/)
+![Shopping cart](media/docs/shopping_cart.png)
 
 #### Feature Information
 
@@ -774,7 +774,7 @@ The shopping cart page provides users with a comprehensive breakdown of the item
 
 ### Checkout
 
-![Checkout Page](media/docs/)
+![Checkout Page](media/docs/checkout.png)
 
 #### Feature Information
 
@@ -851,7 +851,7 @@ This page gives the user a clear indication that their purchase has been success
 
 ### Authentication
 
-![Sign In Page](media/docs/)
+![Sign In Page](media/docs/sign_in.png)
 
 #### Feature Information
 
@@ -1093,6 +1093,8 @@ Putting in a layer of approval prior to a review appearing on the site allows ad
 
 ### Profile
 
+![Sign In Page](media/docs/profile.png)
+
 #### Feature Information
 
 <details><summary>Profile</summary>
@@ -1129,7 +1131,6 @@ The profile page gives users a single point to access all of their information. 
 This form allows users to store their information to make future purchases quicker and easier without the need to enter their data every time. It also provides them convenient links to manage their email and password, providing easy navigation and good user experience.
 
 </details>
-
 
 <details><summary>Profile Page - Order History</summary>
 
@@ -1260,8 +1261,7 @@ Provides admins with a quick, easy way to remove FAQs from the site. This allows
 
 ### Error Pages
 
-![Reviews](media/docs/)
-
+![404 Page](media/docs/errors_404.png)
 
 #### Feature Information
 
