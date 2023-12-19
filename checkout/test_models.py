@@ -89,3 +89,19 @@ class TestCheckoutModels(TestCase):
         """ Tests the string method on the order model """
         order = Order(order_number='1234567890')
         self.assertEqual(str(order), order.order_number)
+    
+    def test_order_number(self):
+        """ Test the order number """
+        self.assertEqual(self.orderTest.order_number, '1234567890')
+
+    def test_order_name(self):
+        """ Test the order full name """
+        self.assertEqual(self.orderTest.first_name, 'Test User')
+
+    def test_order_email(self):
+        """ Test the order email """
+        self.assertEqual(self.orderTest.email, 'testemail@email.com')
+
+    def test_order_phone(self):
+        """ Test the order phone """
+        self.assertEqual(self.orderTest.phone, '0123456789')
