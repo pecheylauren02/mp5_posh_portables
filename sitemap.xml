@@ -9,337 +9,397 @@
 
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/shopping_cart/</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/products/?sort=rating&amp;direction=desc</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/products/?sort=category&amp;direction=asc</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/products/</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/products/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/products/?sort=category&amp;direction=asc</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/products/?category=laptops_and_monitors</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/products/?category=speakers_and_headgear</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/products/?category=keyboards</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/products/?category=laptops_and_monitors,speakers_and_headgear,keyboards</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/products/?category=twenty_five_off</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/products/?category=package_deals</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/products/?category=twenty_five_off,package_deals</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/password/reset/</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/10</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/11</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/20</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/19</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/17</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/14</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/13</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/18</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/16</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/15</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/9</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/8</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/11</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/12</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/7</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/13</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/1</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/15</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/18</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/19</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/20</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/4</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/16</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/14</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/30</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/32</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/17</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/6</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F10</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/1</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/33</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/34</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/7</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/10</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=/products/31</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F9</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F11</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F20</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F19</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F17</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F14</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F13</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F18</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F16</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F15</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F9</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F8</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F12</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F7</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F13</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F1</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F15</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F18</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F19</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F20</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F4</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F16</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F14</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F30</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F32</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F17</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F6</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 <url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F10</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F1</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F33</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F34</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F7</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F10</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/signup/?next=%2Fproducts%2F31</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F9</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F11</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F20</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F19</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F17</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F14</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F13</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F18</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F16</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F15</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F9</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
-  <priority>0.41</priority>
-</url>
-<url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F8</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F12</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F7</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F13</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
-  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F1</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F15</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F18</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F19</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F20</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F4</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F16</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F14</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F30</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F32</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F17</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 <url>
   <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F6</loc>
-  <lastmod>2023-12-13T10:53:54+00:00</lastmod>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F1</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F33</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F34</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F7</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F10</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://posh-portables-6801c9648247.herokuapp.com/accounts/login/?next=%2Fproducts%2F31</loc>
+  <lastmod>2023-12-19T12:10:03+00:00</lastmod>
   <priority>0.41</priority>
 </url>
 
