@@ -89,7 +89,7 @@ class TestCheckoutModels(TestCase):
         """ Tests the string method on the order model """
         order = Order(order_number='1234567890')
         self.assertEqual(str(order), order.order_number)
-    
+
     def test_order_number(self):
         """ Test the order number """
         self.assertEqual(self.orderTest.order_number, '1234567890')
@@ -105,7 +105,7 @@ class TestCheckoutModels(TestCase):
     def test_order_phone(self):
         """ Test the order phone """
         self.assertEqual(self.orderTest.phone, '0123456789')
-    
+
     def test_order_address(self):
         """ Test the order address """
         self.assertEqual(self.orderTest.street_address1, 'Test Address 1')
