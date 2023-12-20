@@ -230,6 +230,15 @@ The User model is created by Django allauth and connects to a separate Email Add
 
 </details>
 
+<details><summary>Wishlist Model</summary>
+
+| **Field**       | **Field Type** | **Validation** | **null** | **blank** | **default** | **on_delete** | **editable** | **related_name** |
+|-----------------|----------------|----------------|----------|-----------|-------------|---------------|--------------|------------------|
+| **user**        | ForeignKey     | n/a            | TRUE     | TRUE      | n/a         | SET_NULL      | n/a          | wishlist          |
+| **product**     | ForeignKey     | n/a            | TRUE     | TRUE      | n/a         | CASCADE       | n/a          | wishlist          |
+
+</details>
+
 #### Wireframes (see below)
 
 Whilst traditionally wireframes are included in the Skeleton section I have included mine in the Surface section below. I have developed a way of working where I pull out the full design of the site in [Figma](https://www.figma.com/), including making all colour, typography and layout decisions at this stage, to make sure that during development I can focus on how to build the site, rather than getting distracted by design decisions.
