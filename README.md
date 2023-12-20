@@ -255,13 +255,19 @@ Whilst traditionally wireframes are included in the Skeleton section I have incl
 <img src="media/docs/mobile_cart.png">
 </details>
 <details><summary>PROFILE</summary>
-<img src="media/docs/design_wireframes_profile.png">
+<img src="media/docs/desktop_profile">
+<img src="media/docs/ipad_profile">
+<img src="media/docs/mobile_profile">
 </details>
 <details><summary>WISHLIST</summary>
-<img src="media/docs/design_wireframes_profile_order_history.png">
+<img src="media/docs/desktop_wishlist">
+<img src="media/docs/ipad_wishlist">
+<img src="media/docs/mobile_wishlist">
 </details>
 <details><summary>FAQS</summary>
-<img src="media/docs/design_wireframes_faqs.png">
+<img src="media/docs/desktop_faqs.png">
+<img src="media/docs/ipad_faqs.png">
+<img src="media/docs/mobile_faqs.png">
 </details>
 
 ---
