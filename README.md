@@ -234,6 +234,36 @@ The User model is created by Django allauth and connects to a separate Email Add
 
 Whilst traditionally wireframes are included in the Skeleton section I have included mine in the Surface section below. I have developed a way of working where I pull out the full design of the site in [Figma](https://www.figma.com/), including making all colour, typography and layout decisions at this stage, to make sure that during development I can focus on how to build the site, rather than getting distracted by design decisions.
 
+<details><summary>HOME</summary>
+<img src="media/docs/desktop_home.png">
+<img src="media/docs/ipad_home.png">
+<img src="media/docs/mobile_home.png">
+</details>
+<details><summary>PRODUCTS</summary>
+<img src="media/docs/desktop_products.png">
+<img src="media/docs/ipad_products.png">
+<img src="media/docs/mobile_products.png">
+</details>
+<details><summary>SIGN IN</summary>
+<img src="media/docs/desktop_login.png">
+<img src="media/docs/ipad_login.png">
+<img src="media/docs/mobile_login.png">
+</details>
+<details><summary>SHOPPING CART</summary>
+<img src="media/docs/desktop_cart.png">
+<img src="media/docs/ipad_cart.png">
+<img src="media/docs/mobile_cart.png">
+</details>
+<details><summary>PROFILE</summary>
+<img src="media/docs/design_wireframes_profile.png">
+</details>
+<details><summary>WISHLIST</summary>
+<img src="media/docs/design_wireframes_profile_order_history.png">
+</details>
+<details><summary>FAQS</summary>
+<img src="media/docs/design_wireframes_faqs.png">
+</details>
+
 ---
 
 #### Colour
