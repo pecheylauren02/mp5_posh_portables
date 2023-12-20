@@ -234,42 +234,6 @@ The User model is created by Django allauth and connects to a separate Email Add
 
 Whilst traditionally wireframes are included in the Skeleton section I have included mine in the Surface section below. I have developed a way of working where I pull out the full design of the site in [Figma](https://www.figma.com/), including making all colour, typography and layout decisions at this stage, to make sure that during development I can focus on how to build the site, rather than getting distracted by design decisions.
 
-<details><summary>HOME</summary>
-<img src="media/docs/desktop_home.png">
-<img src="media/docs/ipad_home.png">
-<img src="media/docs/mobile_home.png">
-</details>
-<details><summary>PRODUCTS</summary>
-<img src="media/docs/desktop_products.png">
-<img src="media/docs/ipad_products.png">
-<img src="media/docs/mobile_products.png">
-</details>
-<details><summary>SIGN IN</summary>
-<img src="media/docs/desktop_login.png">
-<img src="media/docs/ipad_login.png">
-<img src="media/docs/mobile_login.png">
-</details>
-<details><summary>SHOPPING CART</summary>
-<img src="media/docs/desktop_cart.png">
-<img src="media/docs/ipad_cart.png">
-<img src="media/docs/mobile_cart.png">
-</details>
-<details><summary>PROFILE</summary>
-<img src="media/docs/desktop_profile">
-<img src="media/docs/ipad_profile">
-<img src="media/docs/mobile_profile">
-</details>
-<details><summary>WISHLIST</summary>
-<img src="media/docs/desktop_wishlist">
-<img src="media/docs/ipad_wishlist">
-<img src="media/docs/mobile_wishlist">
-</details>
-<details><summary>FAQS</summary>
-<img src="media/docs/desktop_faqs.png">
-<img src="media/docs/ipad_faqs.png">
-<img src="media/docs/mobile_faqs.png">
-</details>
-
 ---
 
 #### Colour
@@ -322,10 +286,40 @@ The pages were designed to work on desktop, tablet and mobile screens.
 
 **View the Wireframes/Site Designs in the Dropdowns Below**
 
-<details><summary>Wireframes</summary>
-<img src="">
-<img src="">
-<img src="">
+<details><summary>HOME</summary>
+<img src="media/docs/desktop_home.png">
+<img src="media/docs/ipad_home.png">
+<img src="media/docs/mobile_home.png">
+</details>
+<details><summary>PRODUCTS</summary>
+<img src="media/docs/desktop_products.png">
+<img src="media/docs/ipad_products.png">
+<img src="media/docs/mobile_products.png">
+</details>
+<details><summary>SIGN IN</summary>
+<img src="media/docs/desktop_login.png">
+<img src="media/docs/ipad_login.png">
+<img src="media/docs/mobile_login.png">
+</details>
+<details><summary>SHOPPING CART</summary>
+<img src="media/docs/desktop_cart.png">
+<img src="media/docs/ipad_cart.png">
+<img src="media/docs/mobile_cart.png">
+</details>
+<details><summary>PROFILE</summary>
+<img src="media/docs/desktop_profile.png">
+<img src="media/docs/ipad_profile.png">
+<img src="media/docs/mobile_profile.png">
+</details>
+<details><summary>WISHLIST</summary>
+<img src="media/docs/desktop_wishlist.png">
+<img src="media/docs/ipad_wishlist.png">
+<img src="media/docs/mobile_wishlist.png">
+</details>
+<details><summary>FAQS</summary>
+<img src="media/docs/desktop_faqs.png">
+<img src="media/docs/ipad_faqs.png">
+<img src="media/docs/mobile_faqs.png">
 </details>
 
 ## Business Model and Web Marketing
@@ -348,8 +342,8 @@ This project also implemented an email marketing strategy through MailChimp, whi
 
 I kept the form simple with only an email address section, so users would be more likely to subscribe, and this will allow Posh Portables to send their customers promotions, special packages and more.
 
-<details><summary>Facebook Business Page</summary>
-<img src="media/docs/facebook_1.png">
+<details><summary>MailChimp Newsletter</summary>
+<img src="media/docs/footer_and_newsletter.png">
 </details>
 
 Perhaps for future business endeavours, it would be beneficial to use other more popular social media platforms, such as Instagram, TikTok or YouTube, as well as paid advertising to ensure Posh Portables shows up in search engines. 
@@ -366,7 +360,7 @@ This e-commerce site is considered a B2C (Business to Customer) model, because i
 
 More of the results of SEO can be seen in the TESTING.md document, however from a business perspective, SEO was considered an important part of promoting Posh Portables. Keywords were added to meta tags with relevant references to the business, such as "gaming accessories, Posh Portables, pc gaming monitors" etc. 
 
-Additionally, headings were placed in <strong> tags, which increases SEO on google search engines. 
+Additionally, headings were placed in strong tags, which increases SEO on google search engines. 
 
 ### Robots.txt and Site Maps
 
@@ -672,8 +666,7 @@ This is the page which helps users decide if they are going to buy the product, 
 
 - The form then has an 'add product' button using the site admin blue styling, or a cancel button in secondary grey. [See Whole Site Features](#whole-site).
 
-- Once submitted users are directed to the product details page for that product so they can see their newly added product immediately appearing on the site. The only exception for this is if the product has been set to discontinued, in which case they are sent to the products page and an info message appears. However in the form there is text to explain that discontinued are accessible in the admin panel.
-
+- Once submitted users are directed to the product details page for that product so they can see their newly added product immediately appearing on the site. 
 
 **Value to User**
 
@@ -685,7 +678,7 @@ This gives admins the ability to create a new product and set all its informatio
 
 - The edit product page includes all of the same functionality and value as the 'add product' form (see above)
 - In addition, in the image field, it includes a thumbnail of the current image (if one exists) and the ability to remove it or replace it.
-- Once submitted users are directed back to the product details page for that product so they can see their changes immediately reflected on the page. The only exception for this is if the product has been set to discontinued, in which case they are sent to the products page and an info message appears. However in the form there is text to explain that discontinued are accessible in the admin panel.
+- Once submitted users are directed back to the product details page for that product so they can see their changes immediately reflected on the page.
 
 **Value to User**
 
@@ -698,11 +691,8 @@ This gives admins the ability to create edit or update a product and set all its
 - Admins have the ability to remove a product from the site in one of 2 ways
     - By deleting the product
         - This is only possible if the product has never been ordered. Once it has been ordered deleting it causes errors in the order history as it is associated with an OrderLineItem object. It would change the total of historic orders which would mean the business' records were incorrect. It can also cause errors in the functionality of the site.
-    - By setting the product to 'discontinued'
-        - This keeps the product in the database but removes it from appearing on the site. This avoids the issues listed above.
 
-- When an admin clicks on 'delete' they are presented with a modal which is dynamically populated based on whether a product has associated OrderLineItem objects. If it is possible to delete it (ie no associated OrderLineItem objects) then they have the option to delete, if it isn't they can mark it as discontinued.
-- Admins are also able to mark an object as discontinued by using the edit product form.
+- When an admin clicks on 'delete' they are presented with a modal which is dynamically populated based on whether a product has associated OrderLineItem objects. If it is possible to delete it (ie no associated OrderLineItem objects) then they have the option to delete.
 
 **Value to User**
 
@@ -746,8 +736,7 @@ The shopping cart is a vital tool for an e-commerce site. It allows users to gat
 - It includes:
     - The number of items in the shopping cart
     - Image / name / quantity for each item in the shopping cart
-    - The total excluding delivery
-        - I made the decision to exclude delivery so that how close they were to the free delivery threshold was clear to users
+    - The total including delivery
     - If the total is less than the free delivery threshold users are told how much more they need to spend for free delivery.
     - A link button (button styled using 'purchasing' action blue [See Whole Site Features](#whole-site)) with a lock icon to show that the checkout is secure.
         - The content and link are set dynamically depending on what page the user is on:
@@ -788,7 +777,7 @@ This provides users with a constant point of information about the contents of t
             - update link to update the shopping cart after changing the quantity
             - remove link to remove the item from the shopping cart
         - Subtotal (quantity x price)
-    - shopping cart total (total without delivery)
+    - Shopping cart total
     - Delivery cost
     - Grand total (shopping cart total + delivery)
     - If the shopping cart total is less than the free delivery threshold users see a message telling them how much more they need to spend to get free delivery
@@ -798,7 +787,6 @@ This provides users with a constant point of information about the contents of t
     - The delivery charge is 10% of the total amount spent on items that are subject to delivery
     - If a user has spent over $100 (including on products that are not subject to delivery) then delivery is free.
 - If the shopping cart is empty users see a message telling them that the shopping cart has no contents with a link back to products to encourage them to shop.
-
 
 **Value to User**
 
@@ -1071,7 +1059,7 @@ The Reviews model allows users to find out more information about a product, as 
 - The rating select has a user-friendly clickable star styling, which matches the styling of the ratings on the product pages. A user can click on a star to set the rating, or change their mind and select another star to revise their choice.
 - If no rating is selected it is set to 0
 - The rating selection is not appropriate for screen readers so to make the page accessible there is a hidden input which is visible to screen readers only where a user can input a numeric value.
-- The form has bespoke styled buttons to either submit the form using the non-purchasing themed yellow button or cancel using the button in secondary grey. [See Whole Site Features](#whole-site)
+- The form has bespoke styled buttons to either submit the form using the non-purchasing themed green button or cancel using the button in secondary grey. [See Whole Site Features](#whole-site)
 - On submission the review is set to 'unapproved' with an explanatory message that an admin will need to approve it and information about where to find the review in the mean time (profile page). It also reassures users that reviews are only rejected for inappropriate content, not for bad reviews, which helps build trust.
 
 <img src="media/docs/create_review.png">
@@ -1155,7 +1143,7 @@ The profile page gives users a single point to access all of their information. 
 - The form gives them a way to add extra information for use in future purchases
 - The first and last names connect to the User model
 - The default delivery info is stored in the UserProfile model
-- Model models are updated using a single update button located at the bottom of the form (button styled using 'non-purchasing' action yellow [See Whole Site Features](#whole-site))
+- Model models are updated using a single update button located at the bottom of the form (button styled using 'non-purchasing' action green [See Whole Site Features](#whole-site))
 - None of the form inputs are required, users can choose to add their data each time they place an order, rather than store it on their profile
 - The form also contains links to 2 authentication pages which control other fields in their User model - both handled by allauth [see below](#authentication)
     - Manage Email (allows them to change, add and remove their email addresses)
@@ -1318,6 +1306,11 @@ This creates a positive user experience when taking an action that results in an
 
 There are a number of features I would like to implement in the future, particularly if I were adapting this in to a real live site for an online shop as there is some functionality I feel it would really benefit from.
 
+#### More user-friendly wishlist Liking system 
+At the moment, when you like a product, it takes you straight to the wishlist page. Upon completing the development stage, I realised that it would be better if the user stays on the product page after liking the product, and their likes are still added to the wishlist page. 
+
+I would also like to change the state of the like button to a different colour so the user can see the products they have liked. 
+
 #### Admin Messaging System
 I would like to build a messaging system, giving the site admins the ability to reply directly from the site, to be able to view the historic chain of communication, to have multiple statuses for messages e.g. in-process, and to connect messaging to the user so that users could also reply from within the site rather than via email. I would also like to add notifications to both admins and users when they receive a message, with an icon appearing in the navbar to alert them.
 
@@ -1419,7 +1412,7 @@ I also think some sort of stock control would be useful for an e-commerce site, 
 
 ### Testing & Bugs
 
-The site has been thoroughly tested using both automated and manual testing as well as validation for code, performance & accessibility full test results and details of bugs and their fixes can be found in the [TESTING document](TESTING.md)
+The site has been thoroughly tested using both automated and manual testing as well as validation for code, performance & accessibility full test results and details of bugs and their fixes can be found in the TESTING.md document.
 
 - - -
 [Go to Top](#posh-portables---a-gaming-accessories-e-commerce-site)

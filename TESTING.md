@@ -48,9 +48,12 @@ A total of 92 tests were run, which tested the models, views and forms of each a
 <details><summary>Automated Testing Results</summary>
 
 <img src="media/test_docs/automated_testcases.png">
+</details>
+
 
 In order to carry out automated testing, please comment out the DATABASE URL as follows (see below), as this will prevent the main database from being overridden by accident. 
 
+<details><summary>Database Urls for Testing</summary>
 <img src="media/test_docs/renaming_database.png">
 
 </details>
@@ -113,7 +116,6 @@ I ran the JavaScript code through [JSHint](https://jshint.com/). For full result
 
 I ran the app.py code through [Code Institute's Python Lintor](https://pep8ci.herokuapp.com/) to check the Syntax. GitPod also has a built in Python Linter which was used throughout the development process (see below). All code passed the validation tests. For full results see the dropdowns below.
 
-<details><summary>Python Results Table</summary></details>
 <details><summary>Python Results Table</summary>
 
 | **App** | **File** | **Expected Outcome** | **Test Performed** | **Result** | **Pass / Fail** |
@@ -168,7 +170,15 @@ I ran the app.py code through [Code Institute's Python Lintor](https://pep8ci.he
 | reviews | views | Code passes with no errors | Ran app.py through https://pep8ci.herokuapp.com/ | Code passes with no errors | PASS |
 | reviews | test_forms | Code passes with no errors | Ran app.py through https://pep8ci.herokuapp.com/ | Code passes with no errors | PASS |
 | reviews | test_models | Code passes with no errors | Ran app.py through https://pep8ci.herokuapp.com/ | Code passes with no errors | PASS |
-| reviews | test_views | Code passes with no errors | Ran app.py through https://pep8ci.herokuapp.com/ | Code passes with no errors | PASS |
+| wishlist | test_views | Code passes with no errors | Ran app.py through https://pep8ci.herokuapp.com/ | Code passes with no errors | PASS |
+| wishlist | admin | Code passes with no errors | Ran app.py through https://pep8ci.herokuapp.com/ | Code passes with no errors | PASS |
+| wishlist | forms | Code passes with no errors | Ran app.py through https://pep8ci.herokuapp.com/ | Code passes with no errors | PASS |
+| wishlist | models | Code passes with no errors | Ran app.py through https://pep8ci.herokuapp.com/ | Code passes with no errors | PASS |
+| wishlist | urls | Code passes with no errors | Ran app.py through https://pep8ci.herokuapp.com/ | Code passes with no errors | PASS |
+| wishlist | views | Code passes with no errors | Ran app.py through https://pep8ci.herokuapp.com/ | Code passes with no errors | PASS |
+| wishlist | test_forms | Code passes with no errors | Ran app.py through https://pep8ci.herokuapp.com/ | Code passes with no errors | PASS |
+| wishlist | test_models | Code passes with no errors | Ran app.py through https://pep8ci.herokuapp.com/ | Code passes with no errors | PASS |
+| wishlist | test_views | Code passes with no errors | Ran app.py through https://pep8ci.herokuapp.com/ | Code passes with no errors | PASS |
 
 </details>
 
@@ -202,7 +212,7 @@ I ran the site through the Chrome Dev Tool's Lighthouse, and scored over 90 for 
 The score for best practices was not ideal, but when I checked the issues found, it was to do with the versions of the modules being used for this project. Upgrading the versions was not part of the scope of this project, but if this was to be a real e-commerce site, I would have used the latest versions of all modules, including django. I also double checked if these issues were solvable through the Tutor Support section, and it was advised that these issues are out of my control within the scope of this project.
 
 <details><summary>Best Practices Results</summary>
-<img src="media/test_docs/lighthouse_best_practices.png.png">
+<img src="media/test_docs/lighthouse_best_practices.png">
 </details>
 
 ### Performance
@@ -314,7 +324,6 @@ The manual testing was done on the following browsers
 | **Product Category Filter Links** | All category links lead to products page with correct products visible | Click on category links & categories in product cards & check products page contents.                   | PASS            |
 | **Hover effects**                 | Buttons and links have hover effect with smooth transition             | Hover over buttons & links                                                                              | PASS            |
 | **Authentication Tests**          | Page is visible to all users                                           | "Navigate to page as an unauthenticated, authenticatied & superuser"                                    | PASS            |
-| **Featured Products**             | Only featured products appear                                          | "Go to admin panel, change ‘is_featured’ boolean value on a product, check if product appears on page." | PASS            |
 
 </details>
 
@@ -347,7 +356,6 @@ The manual testing was done on the following browsers
 | **Authentication Tests - Edit Review**         | Edit buttons only visible to creator                                                                | "Navigate to page as an unauthenticated, authenticatied & superuser"                                                           | PASS            |
 | **Authentication Tests - Delete Review**       | Delete buttons only visible to creator & superusers                                                 | "Navigate to page as an unauthenticated, authenticatied & superuser"                                                           | PASS            |
 | **Non-existent product**                       | 404 page displays if product doesn’t exist                                                          | Navigate to product details for a product id that doesn’t exist on database.                                                   | PASS            |
-| **Discontinued product**                       | Error message shows if product is discontinued and user redirected to ‘products’ page               | "Set a product to ‘discontinued’, attempt to navigate to that product using direct URL input."                                 | PASS            |
 | **Quantity Input**                             | Quantity Buttons increment/decrement quantity. Quantity can be typed in.                            | Click on quantity buttons. Type in to quantity box.                                                                            | PASS            |
 | **Quantity Input**                             | Buttons are disabled when lower/upper limit is reached                                              | Input 1 as quantity & check decrement button. Input 99 as quantity & check increment button                                    | PASS            |
 | **Add to shopping cart Button**                          | Adds the correct item and quantity to the shopping cart. Shows a message & shopping cart summary with correct contents. | Input quantity and click on ‘add to shopping cart’. Add another of the same item. Add a different item. Check shopping cart matches at each stage. | PASS            |
@@ -370,7 +378,7 @@ The manual testing was done on the following browsers
 | **Authentication Tests - Add Product - Superuser**        | Opens Add Product Form                                                                                             | "Log in as superuser, navigate to add product page"                                                                                                                                           | PASS            |
 | **Add product form**                                      | Has correct fields & all are required (apart from image)                                                           | Navigate to add product form. Attempt to submit form with empty inputs.                                                                                                                       | PASS            |
 | **Add product form**                                      | Form can be submitted without an image                                                                             | Submit form without selecting an image                                                                                                                                                        | PASS            |
-| **Add product form - submission**                         | "On submission success message displays, product is created in database with correct information"                  | "Submit form, check message and check database (and site if product is not discontinued)"                                                                                                     | PASS            |
+| **Add product form - submission**                         | "On submission success message displays, product is created in database with correct information"                  | "Submit form, check message and check database"                                                                                                     | PASS            |
 | **Authentication Tests - Edit Product - Logged Out**      | Redirects to login for unauthenticated user with error message & redirects back after sign in.                     | Log out of site. Navigate to edit product direct via URL                                                                                                                                      | PASS            |
 | **Authentication Tests - Edit Product - Non-superuser**   | Redirects to home with error message if user is not superuser                                                      | "Log in as non-superuser, navigate to edit product direct via URL"                                                                                                                            | PASS            |
 | **Authentication Tests - Edit Product - Superuser**       | Opens Edit Product Form                                                                                            | "Log in as superuser, navigate to edit product page"                                                                                                                                          | PASS            |
@@ -379,7 +387,7 @@ The manual testing was done on the following browsers
 | **Edit product form**                                     | Form contains correct information for product                                                                      | Click on edit product and check form contents                                                                                                                                                 | PASS            |
 | **Edit product form**                                     | Has correct fields & all are required (apart from image)                                                           | Navigate to add product form. Attempt to submit form with empty inputs.                                                                                                                       | PASS            |
 | **Edit product form**                                     | Form can be submitted without an image                                                                             | Remove image if required. Submit form without selecting an image                                                                                                                              | PASS            |
-| **Edit product form - submission**                        | "On submission success message displays, product is updated in database with correct information"                  | "Submit form, check message and check database (and site if product is not discontinued)"                                                                                                     | PASS            |
+| **Edit product form - submission**                        | "On submission success message displays, product is updated in database with correct information"                  | "Submit form, check message and check database"                                                                                                     | PASS            |
 | **Authentication Tests - Delete Product - Logged Out**    | Redirects to login for unauthenticated user with error message & redirects back after sign in.                     | Log out of site. Navigate to delete product direct via URL                                                                                                                                    | PASS            |
 | **Authentication Tests - Delete Product - Non-superuser** | Redirects to home page if user is not superuser with error message                                                 | "Log in as non-superuser, navigate to delete product direct via URL."                                                                                                                         | PASS            |
 | **Authentication Tests - Delete Product - superuser**     | Superuser is able to delete or discontinue product                                                                 | Sign in to site. Navigate to delete product.                                                                                                                                                  | PASS            |
@@ -388,7 +396,7 @@ The manual testing was done on the following browsers
 | **Delete Product Modal**                                  | Clicking on ‘close’  or cross icon closes the modal and doesn’t delete product                                     | "Click on delete product, click on close button, check product details page still exists, repeat with cross icon."                                                                            | PASS            |
 | **Delete Product Modal - non-protected product**          | Clicking on ‘delete’ deletes product from site & displays success message                                          | "Click on delete product, then ‘delete’ in modal. Check message. Check product has gone from site and database."                                                                              | PASS            |
 | **Delete Product Modal - protected product**              | Clicking on delete for a product that appears on an previous order brings up modal with option to ‘remove’ product | Attempt to delete a product which appears as a line item on an order. Check modal contents                                                                                                    | PASS            |
-| **Delete Product Modal - protected product**              | Clicking ‘remove’ sets the ‘discontinued’ field to True & removes product from site                                | Attempt to delete a product which appears as a line item on an order. Click on remove & check product has gone from site. Check product exists on database with correct ‘discontinued’ value. | PASS            |
+| **Delete Product Modal - protected product**              | Clicking ‘remove’ removes product from site                                | Attempt to delete a product which appears as a line item on an order. Click on remove & check product has gone from site. | PASS            |
 | **Products General - Missing Image**                      | Product without an image displays no-image alternative                                                             | Log in as a superused. Add a new product without an image. Check product on all relevant pages.                                                                                               | PASS            |
 
 </details>
@@ -508,13 +516,13 @@ I encountered the following significant or interesting bugs during development. 
 
 **Issue:** After initial deployment my products page wouldn't load and returned a 400 error.
 
-**Fix:** I turned debug back on in the deployed site and discovered that it couldn't load the sort_box.js file and was throwing up a suspicious operation error and blocking the page. I fixed this error with the help of this [Slackoverflow Post](https://stackoverflow.com/questions/43529912/suspicious-operation-attempted-access-to-denied-while-loading-static-files) by removing the leading '/' on the script tag in the template.
+**Fix:** I realised I had commented out my original PostGreSQL database during the automated testcases process, so the site was not deploying the media files. Thankfully, after fixing the url, the products displayed once more. 
 
 #### Bug 2 - Checkout creating duplicate orders
 
 **Issue:** Whilst initially working correctly I found that my checkout began to create duplicates when placing an order - one in the view and another in the webhook.
 
-**Fix:** After extensive research and testing using print statements I discovered that the problem was at the point where the webhook searches for the order in the database and if it didn't find it, creates the order. The problem stemmed from the form fields which were not required and so could be empty - phone number and street address 2. I fixed the problem by removing these fields from the search parameters in the webhook query.
+**Fix:** After extensive research and testing using print statements I discovered that the problem was at the point where the webhook searches for the order in the database and if it didn't find it, creates the order. The problem stemmed from the form fields which were not required and so could be empty - phone and street address 2. I fixed the problem by removing these fields from the search parameters in the webhook query.
 
 #### Bug 3 - Broken Image Links show icon rather than backup no-image
 
