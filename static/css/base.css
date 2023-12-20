@@ -294,6 +294,12 @@ input[name='q']::placeholder {
     }
 }
 
+@media (min-width: 1024px) {
+    .header-container {
+        padding-top: 194px;
+    }
+}
+
 /* For screens that are 991px or less */
 @media (max-width: 991px) {
     .header-container {
